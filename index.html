@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>CONSULT - Consultancy Website Template</title>
+    <title>Freed</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Free HTML Templates" name="keywords">
     <meta content="Free HTML Templates" name="description">
@@ -38,24 +38,37 @@
     <!-- Navbar Start -->
   <!-- Navbar Start -->
   <nav class="navbar navbar-expand-lg shadow-sm px-5 py-3 py-lg-0" style="background-color: black; height: 100px;">
-    <a href="index.html" class="navbar-brand p-0">
-        <h1 style="color: white;">Freed</h1>
+    <a href="index.html" class="navbar-brand p-0" style="display: flex; align-items: center; text-decoration: none;">
+        <div style="display: flex; flex-direction: column; margin-left: 0px; justify-content: center; text-align: right;">
+            <h1 style="color: white; font-size: 1em; margin: 0; font-family: Arial, sans-serif; line-height: 1;">FREED</h1>
+            <h1 style="color: white; font-size: 1em; margin: 0; font-family: Arial, sans-serif; line-height: 1;">ASSOCIATES</h1>
+        </div>
     </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-        <span class="navbar-toggler-icon"></span>
+
+    <!-- Hamburger button for mobile -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" 
+            style="border: none; background-color: transparent; position: relative; z-index: 9999;">
+        <!-- Custom Hamburger Icon -->
+        <span class="navbar-toggler-icon" style="background-color: white; position: relative; width: 30px; height: 3px; display: block; background: linear-gradient(transparent, transparent);">
+            <span style="display: block; background-color: white; width: 30px; height: 3px; margin: 6px auto;"></span>
+            <span style="display: block; background-color: white; width: 30px; height: 3px; margin: 6px auto;"></span>
+            <span style="display: block; background-color: white; width: 30px; height: 3px; margin: 6px auto;"></span>
+        </span>
     </button>
+
+    <!-- Navbar items collapse -->
     <div class="collapse navbar-collapse" id="navbarCollapse">
-        <div style="font-size: 20px;" class="navbar-nav mx-auto py-0 text-center">
-            <a href="why.html" class="nav-item nav-link active" style="color: white; font-weight: bold;">Why Freed?</a>
+        <div class="navbar-nav mx-auto py-0 text-center" style="font-size: 20px; font-family: Arial, Helvetica, sans-serif;">
+            <a href="why.html" class="nav-item nav-link active" style="color: white; font-weight: bold;">Why Freed</a>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownSolutions" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: white; font-weight: bold;">
                     Solutions
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownSolutions" style="background-color: black; border: none;">
-                    <li><a class="dropdown-item" href="#" style="color: white; font-weight: bold; transition: background-color 0.3s ease;">Healthcare Strategy Consulting</a></li>
-                    <li><a class="dropdown-item" href="#" style="color: white; font-weight: bold; transition: background-color 0.3s ease;">Healthcare Analytics & Technology Consulting</a></li>
-                    <li><a class="dropdown-item" href="#" style="color: white; font-weight: bold; transition: background-color 0.3s ease;">Healthcare Regulatory Compliance Consulting</a></li>
-                    <li><a class="dropdown-item" href="#" style="color: white; font-weight: bold; transition: background-color 0.3s ease;">Healthcare Revenue Cycle Consulting</a></li>
+                    <li><a class="dropdown-item" href="stratergy.html" style="color: white; font-weight: bold; transition: background-color 0.3s ease;">Healthcare Strategy Consulting</a></li>
+                    <li><a class="dropdown-item" href="analytics.html" style="color: white; font-weight: bold; transition: background-color 0.3s ease;">Healthcare Analytics & Technology Consulting</a></li>
+                    <li><a class="dropdown-item" href="compliance.html" style="color: white; font-weight: bold; transition: background-color 0.3s ease;">Healthcare Regulatory Compliance Consulting</a></li>
+                    <li><a class="dropdown-item" href="consulting.html" style="color: white; font-weight: bold; transition: background-color 0.3s ease;">Healthcare Revenue Cycle Consulting</a></li>
                     <li><a class="dropdown-item" href="operations.html" style="color: white; font-weight: bold; transition: background-color 0.3s ease;">Healthcare Operations Consulting</a></li>
                 </ul>
             </li>
@@ -64,35 +77,90 @@
                     Company
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownCompany" style="background-color: black; border: none;">
-                    <li><a class="dropdown-item" href="#" style="color: white; font-weight: bold; transition: background-color 0.3s ease;">Our Leaders</a></li>
-                    <li><a class="dropdown-item" href="#" style="color: white; font-weight: bold; transition: background-color 0.3s ease;">Clients</a></li>
-                    <li><a class="dropdown-item" href="#" style="color: white; font-weight: bold; transition: background-color 0.3s ease;">We Are Freed</a></li>
+                    <li><a class="dropdown-item" href="leadership.html" style="color: white; font-weight: bold; transition: background-color 0.3s ease;">Our Leaders</a></li>
+                    <li><a class="dropdown-item" href="clients.html" style="color: white; font-weight: bold; transition: background-color 0.3s ease;">Clients</a></li>
+                    <li><a class="dropdown-item" href="company.html" style="color: white; font-weight: bold; transition: background-color 0.3s ease;">We Are Freed</a></li>
                 </ul>
             </li>
-            <a href="" class="nav-item nav-link" style="color: white; font-weight: bold;">Health Equity</a>
+            <a href="equity.html" class="nav-item nav-link" style="color: white; font-weight: bold;">Health Equity</a>
+        </div>
+        <div class="navbar-nav ms-auto py-0 text-center" style="display: flex; align-items: center;">
+            <a href="knowledge.html" class="nav-item nav-link d-flex align-items-center" style="color: #65CFE9; font-weight: bold; font-family: Arial, Helvetica, sans-serif;font-weight: bold;">
+                <img src="https://img.icons8.com/emoji/48/null/light-bulb-emoji.png" alt="Knowledge Center Icon" width="20" height="20" style="margin-right: 8px;">
+                Knowledge Center
+            </a>
         </div>
     </div>
 </nav>
+
+<!-- Custom CSS to show background change on click and overlay effect -->
+<style>
+    /* When the navbar toggle button is clicked, change the background color */
+    .navbar-toggler.collapsed {
+        background-color: black; /* Blue background on click */
+    }
+
+    /* Add overlay effect */
+    .navbar-collapse.show {
+        position: relative;
+    }
+    
+    .navbar-collapse.show::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7); /* Overlay color */
+        z-index: -1; /* Place overlay below the menu */
+    }
+
+    /* Ensure the navbar content is on top of the page text */
+    .collapse.navbar-collapse {
+        position: relative;
+        z-index: 999;
+    }
+</style>
+
+
 
 <!-- Navbar End -->
 
     <!-- Navbar End -->
 
 
-    <div class="container-fluid p-0" style="background-color: #6534ac;">
-        <div class="row g-0">
+    <div class="container-fluid p-0" style="background-color: #451885;">
+        <div class="row g-0" >
             <!-- Text Column -->
-            <div class="col-lg-6 py-6 px-5">
-                <h1 style="color: aquamarine;font-size: 20px;">
-                    WHY FREED
+            <div class="col-lg-6 py-6 px-5" style="color: white; text-align: left;">
+                <h1 style="color: aquamarine; font-size: 20px; margin-bottom: 20px;">
+                    <!-- Optional Heading Content -->
                 </h1>
-                <h2 style="font-size: 50px;">
-                    The fastest path to positive change.
+                <h2 style="font-size: 50px; color: white; margin-bottom: 10px;">
+                    Better consulting.
                 </h2>
-                <h5>
-                    Gain invaluable expertise to support your projects in all the right ways and achieve the right results right away.
+                <h2 style="font-size: 50px; color: white; margin-bottom: 10px;">
+                    Better outcomes.
+                </h2>
+                <h5 style="color: white; font-size: 18px; line-height: 1.5;">
+                    When it comes to advancing healthcare, Freed Associates is the healthcare consulting firm that delivers the fastest path to realizing maximum value from your improvement initiatives.
                 </h5>
+                <a href="#" style="
+    display: inline-block;
+    text-decoration: none;
+    font-size: 16px;
+    color: white;
+    border: 2px solid #65CFE9;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    background-color: transparent;">
+    Learn More
+</a>
+
             </div>
+            
             <!-- Image Column -->
             <div class="col-lg-6" style="min-height: 500px;">
                 <div class="position-relative h-100">
@@ -123,10 +191,10 @@
                     </div>
                 </div>
                 <div class="col-lg-6 py-6 px-5">
-                    <h1 style="font-size:20px;font-weight: bold;" >Why Freed?</h1>
+                    <h1 style="font-size:20px;font-weight: bold;color: rgb(15, 15, 49);" >Why Freed?</h1>
                     <div class="owl-carousel testimonial-carousel">
                         <div class="testimonial-item">
-                            <p style="font-size: 30px;color: blue;">Some healthcare consultants are all talk. We’re all action</p>
+                            <p style="font-size: 30px;color: rgb(22, 22, 68);">Some healthcare consultants are all talk. We’re all action</p>
                             <p style="color: black;font-size: 20px;"> At Freed, our clients consistently tell us that we’re the quickest, most cost-effective way to enact positive change with proven value — and receive quality work that exceeds that of other healthcare consulting firms.</p>
                             
                         </div>
@@ -156,7 +224,7 @@
                      style="object-fit: cover; object-position: center;">
             </div>
         </div>
-        <div class="container-fluid" style="background-color: #65CFE9; padding: 50px;">
+        <div class="container-fluid" style="background-color: #65CFE9; padding: 50px; text-align: center;">
             <p style="color: #6534ac; font-size: 14px; font-weight: bold; text-transform: uppercase; margin-bottom: 10px;">
                 Health Equity Consulting
             </p>
@@ -171,6 +239,7 @@
                 Learn More
             </a>
         </div>
+        
         
     </div>
 </div>
@@ -237,29 +306,35 @@
         <img src="https://www.freedassociates.com/wp-content/uploads/2024/12/flex-lp_healing-healthcare07_featured.jpg" alt="Team Member 1" style="width: 100%; height: auto;">
        
       </div>
-      <h2 style="font-size: 24px; margin: 0 0 10px 0;">The Power of Partnership.</h2>
-      <p style="font-size: 16px; margin: 0;">How do we strengthen collaborations between healthcare providers and community-based organizations to improve health?</p>
-      <a href="https://www.freedassociates.com/knowledge-center/health-plan-improves-quality-scores-with-freed-guidance/" style="color: white; text-decoration: none; font-size: 14px;">https://www.freedassociates.com/knowledge-center/health-plan-improves-quality-scores-with-freed-guidance/</a>
+      <h2 style="font-size: 30px; margin: 0 0 10px 0;">The Power of Partnership.</h2>
+      <p style="font-size: 20px; margin: 0;">How do we strengthen collaborations between healthcare providers and community-based organizations to improve health?</p>
+      <a href="https://www.freedassociates.com/knowledge-center/health-plan-improves-quality-scores-with-freed-guidance/" style="color: white; text-decoration: none; font-size: 14px;">https://www.freedassociates.com/knowledge-center/health-plan-improves-quality-scores-with-freed-guidance/</a> <br>
+      <a href="#" style="display: inline-block; text-decoration: none; font-size: 16px; color: #6534ac; border: 2px solid #6534ac; padding: 10px 20px; font-weight: bold; border-radius: 5px;">
+        Watch Now
+    </a>
     </div>
     <div style="flex: 1; padding: 20px; background-color: white; margin-left: 20px; position: relative;">
-      <div style="background-color: #f0f0f0; padding: 20px; border-radius: 5px; margin-bottom: 20px;">
-        <p style="color: #8a2be2; font-size: 12px; margin: 0 0 10px 0;">CASE STUDY</p>
-        <h3 style="font-size: 18px; margin: 0 0 10px 0;">Health Plan Improves Quality Scores with Freed Guidance</h3>
-        <p style="font-size: 14px; margin: 0 0 10px 0;">Freed Associates helped a national health plan improve its CMS Quality Star Ratings by two stars in just two years. Learn how breaking down silos within the...</p>
-        <a href="#" style="color: #8a2be2; text-decoration: none; font-size: 14px;">Read More »</a>
-      </div>
-      <div style="background-color: #e0e0e0; padding: 20px; border-radius: 5px;">
-        <p style="color: #8a2be2; font-size: 12px; margin: 0 0 10px 0;">POINT OF VIEW</p>
-        <h3 style="font-size: 18px; margin: 0 0 10px 0;">Improving Healthcare Access by Reducing Transportation Barriers.</h3>
-        <p style="font-size: 14px; margin: 0 0 10px 0;">eterminants of health, including</p>
-      </div>
-      <div style="position: absolute; bottom: 20px; right: 20px; background: rgba(0, 0, 0, 0.5); color: white; padding: 10px; border-radius: 5px;">
-        Contact Freed
-      </div>
+        <div style="background-color: #f0f0f0; padding: 20px; border-radius: 5px; margin-bottom: 20px; display: flex; align-items: center;">
+            <div style="flex: 1;">
+              <p style="color: #8a2be2; font-size: 18px; margin: 0 0 10px 0;">CASE STUDY</p>
+              <h3 style="font-size: 18px; margin: 0 0 10px 0;">Health Plan Improves Quality Scores with Freed Guidance</h3>
+              <p style="font-size: 14px; margin: 0 0 10px 0;">Freed Associates helped a national health plan improve its CMS Quality Star Ratings by two stars in just two years. Learn how breaking down silos within the...</p>
+              <a href="#" style="color: #8a2be2; text-decoration: none; font-size: 14px;">Read More »</a>
+            </div>
+            <img src="https://www.freedassociates.com/wp-content/uploads/2024/09/FREED-0049_Anthem-CA-Exchange_thumb-288x400.webp" alt="Case Study Image" style="width: 150px; height: auto; margin-left: 20px; border-radius: 5px;">
+          </div>
+          <div style="background-color: #e0e0e0; padding: 20px; border-radius: 5px; display: flex; align-items: center;">
+            <div style="flex: 1;">
+              <p style="color: #8a2be2; font-size: 18px; margin: 0 0 10px 0;">POINT OF VIEW</p>
+              <h3 style="font-size: 18px; margin: 0 0 10px 0;">Improving Healthcare Access by Reducing Transportation Barriers</h3>
+              <p style="font-size: 14px; margin: 0 0 10px 0;">Determinants of health, including transportation, play a critical role in healthcare access.</p>
+            </div>
+            <img src="https://www.freedassociates.com/wp-content/uploads/2024/09/insights_medical-transportation_thumb-288x400.webp" alt="Point of View Image" style="width: 150px; height: auto; margin-left: 20px; border-radius: 5px;">
+          </div>
     </div>
   </div>
 
-  <div class="container-fluid" style="background-color: #65CFE9; padding: 50px;">
+  <div class="container-fluid" style="background-color: #65CFE9; padding: 50px; text-align: center;">
     <p style="color: #6534ac; font-size: 14px; font-weight: bold; text-transform: uppercase; margin-bottom: 10px;">
         Healing Healthcare
     </p>
@@ -270,7 +345,7 @@
         Welcome to your home for news, insights, inspiration, and expert guidance from industry professionals making a difference. This new webisode series of valuable content from leading voices is just one of many ways we’re helping advocate for, and working toward, better healthcare.
     </p>
     <a href="#" style="display: inline-block; text-decoration: none; font-size: 16px; color: #6534ac; border: 2px solid #6534ac; padding: 10px 20px; font-weight: bold; border-radius: 5px;">
-        Learn More
+        Watch Now
     </a>
 </div>
 

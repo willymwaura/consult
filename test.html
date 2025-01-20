@@ -1,0 +1,139 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freed Associates</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .navbar {
+            background-color: #000;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .navbar .logo {
+            display: flex;
+            align-items: center;
+        }
+        .navbar .logo img {
+            height: 40px;
+            margin-right: 10px;
+        }
+        .navbar .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+        .navbar .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        .navbar .search-icon {
+            display: flex;
+            align-items: center;
+        }
+        .navbar .search-icon img {
+            height: 20px;
+            margin-left: 10px;
+        }
+        .content {
+            display: flex;
+        }
+        .left-section {
+            background-color: #4A00E0;
+            color: white;
+            padding: 50px;
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .left-section h1 {
+            font-size: 2em;
+            margin: 0 0 20px 0;
+        }
+        .left-section p {
+            font-size: 1em;
+            margin: 0 0 20px 0;
+        }
+        .left-section .button {
+            background-color: transparent;
+            color: cyan;
+            border: 2px solid cyan;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+        .right-section {
+            width: 50%;
+            background: url('path_to_image.jpg') no-repeat center center;
+            background-size: cover;
+        }
+        .chat-icon {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background-color: white;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .contact-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #000;
+            color: cyan;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <img src="https://www.freedassociates.com/wp-content/themes/freed/assets/img/logo-text-dark.svg" alt="Freed Associates Logo">
+            <span>FREED ASSOCIATES</span>
+        </div>
+        <div class="nav-links">
+            <a href="#">Why Freed</a>
+            <a href="#">Solutions</a>
+            <a href="#">Company</a>
+            <a href="#">Health Equity</a>
+        </div>
+        <div class="search-icon">
+            <img src="" alt="Knowledge Center">
+            <span>Knowledge Center</span>
+            <img src="path_to_search_icon.png" alt="Search">
+        </div>
+    </div>
+    <div class="content">
+        <div class="left-section">
+            <h1>Better consulting.<br>Better outcomes.</h1>
+            <p>When it comes to advancing healthcare, Freed Associates is the healthcare consulting firm that delivers the fastest path to realizing maximum value from your improvement initiatives.</p>
+            <a href="#" class="button">Learn More</a>
+        </div>
+        <div class="right-section"></div>
+    </div>
+    <div class="chat-icon">
+        <img src="path_to_chat_icon.png" alt="Chat">
+    </div>
+    <a href="#" class="contact-button">Contact Freed</a>
+</body>
+</html>

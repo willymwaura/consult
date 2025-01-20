@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>CONSULT - Consultancy Website Template</title>
+    <title>Freed</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Free HTML Templates" name="keywords">
     <meta content="Free HTML Templates" name="description">
@@ -35,17 +35,31 @@
     <!-- Topbar End -->
 
 
+    <!-- Navbar Start -->
   <!-- Navbar Start -->
   <nav class="navbar navbar-expand-lg shadow-sm px-5 py-3 py-lg-0" style="background-color: black; height: 100px;">
-    <a href="index.html" class="navbar-brand p-0">
-        <h1 style="color: white;">Freed</h1>
+    <a href="index.html" class="navbar-brand p-0" style="display: flex; align-items: center; text-decoration: none;">
+        <div style="display: flex; flex-direction: column; margin-left: 0px; justify-content: center; text-align: right;">
+            <h1 style="color: white; font-size: 1em; margin: 0; font-family: Arial, sans-serif; line-height: 1;">FREED</h1>
+            <h1 style="color: white; font-size: 1em; margin: 0; font-family: Arial, sans-serif; line-height: 1;">ASSOCIATES</h1>
+        </div>
     </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-        <span class="navbar-toggler-icon"></span>
+
+    <!-- Hamburger button for mobile -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" 
+            style="border: none; background-color: transparent; position: relative; z-index: 9999;">
+        <!-- Custom Hamburger Icon -->
+        <span class="navbar-toggler-icon" style="background-color: white; position: relative; width: 30px; height: 3px; display: block; background: linear-gradient(transparent, transparent);">
+            <span style="display: block; background-color: white; width: 30px; height: 3px; margin: 6px auto;"></span>
+            <span style="display: block; background-color: white; width: 30px; height: 3px; margin: 6px auto;"></span>
+            <span style="display: block; background-color: white; width: 30px; height: 3px; margin: 6px auto;"></span>
+        </span>
     </button>
+
+    <!-- Navbar items collapse -->
     <div class="collapse navbar-collapse" id="navbarCollapse">
-        <div style="font-size: 20px;" class="navbar-nav mx-auto py-0 text-center">
-            <a href="why.html" class="nav-item nav-link active" style="color: white; font-weight: bold;">Why Freed?</a>
+        <div class="navbar-nav mx-auto py-0 text-center" style="font-size: 20px; font-family: Arial, Helvetica, sans-serif;">
+            <a href="why.html" class="nav-item nav-link active" style="color: white; font-weight: bold;">Why Freed</a>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownSolutions" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: white; font-weight: bold;">
                     Solutions
@@ -70,15 +84,49 @@
             </li>
             <a href="equity.html" class="nav-item nav-link" style="color: white; font-weight: bold;">Health Equity</a>
         </div>
+        <div class="navbar-nav ms-auto py-0 text-center" style="display: flex; align-items: center;">
+            <a href="knowledge.html" class="nav-item nav-link d-flex align-items-center" style="color: #65CFE9; font-weight: bold; font-family: Arial, Helvetica, sans-serif;font-weight: bold;">
+                <img src="https://img.icons8.com/emoji/48/null/light-bulb-emoji.png" alt="Knowledge Center Icon" width="20" height="20" style="margin-right: 8px;">
+                Knowledge Center
+            </a>
+        </div>
     </div>
 </nav>
 
-<!-- Navbar End -->
+<!-- Custom CSS to show background change on click and overlay effect -->
+<style>
+    /* When the navbar toggle button is clicked, change the background color */
+    .navbar-toggler.collapsed {
+        background-color: black; /* Blue background on click */
+    }
+
+    /* Add overlay effect */
+    .navbar-collapse.show {
+        position: relative;
+    }
+    
+    .navbar-collapse.show::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7); /* Overlay color */
+        z-index: -1; /* Place overlay below the menu */
+    }
+
+    /* Ensure the navbar content is on top of the page text */
+    .collapse.navbar-collapse {
+        position: relative;
+        z-index: 999;
+    }
+</style>
 
     <!-- Navbar End -->
 
 
-    <div class="container-fluid p-0" style="background-color: #6534ac;">
+    <div class="container-fluid p-0" style="background-color: #451885;">
         <div class="row g-0">
             <!-- Text Column -->
             <div class="col-lg-6 py-6 px-5">
@@ -87,7 +135,7 @@
 
 
                 </h1>
-                <h5 style="font-size: 50px;">
+                <h5 style="font-size: 50px;color: white;">
                     Prepare your organization to meet the challenges of healthcare regulatory requirements.
                 </h5>
                 
