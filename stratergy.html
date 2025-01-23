@@ -31,6 +31,13 @@
 </head>
 
 <div>
+    <div id="topBanner" style="background-color: aquamarine; color: black; padding: 10px; display: flex; justify-content: space-between; align-items: center; position: relative; z-index: 1000;">
+        <div style="display: flex; align-items: center; margin: 0 auto;">
+            <button class="watch-now-btn" style="background-color: #451885; color: white; border: none; padding: 10px 20px; margin-right: 10px; cursor: pointer;">WATCH NOW</button>
+            <span>Learn how the power of social care and medical care partnerships are improving health equity.</span>
+        </div>
+        <button class="close-btn" onclick="document.getElementById('topBanner').style.display = 'none';" style="background: none; border: none; color: white; font-size: 20px; cursor: pointer;">✖</button>
+    </div>
    
     <!-- Topbar End -->
 
@@ -122,7 +129,6 @@
         z-index: 999;
     }
 </style>
-
 
     <div class="container-fluid p-0" style="background-color: #451885;">
         <div class="row g-0">
@@ -471,6 +477,19 @@
           }
         }
       </script>
+    <script>
+        // Show dropdown
+        function showDropdown() {
+            document.getElementById('dropdownSolutions').style.display = 'block';
+            document.getElementById('dropdownCompany').style.display = 'block';
+        }
+    
+        // Hide dropdown
+        function hideDropdown() {
+            document.getElementById('dropdownSolutions').style.display = 'none';
+            document.getElementById('dropdownCompany').style.display = 'none';
+        }
+    </script>
       
        
 </body>

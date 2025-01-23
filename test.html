@@ -1,139 +1,224 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Freed Associates</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
-        .navbar {
-            background-color: #000;
-            color: white;
-            padding: 10px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .navbar .logo {
-            display: flex;
-            align-items: center;
-        }
-        .navbar .logo img {
-            height: 40px;
-            margin-right: 10px;
-        }
-        .navbar .nav-links {
-            display: flex;
-            gap: 20px;
-        }
-        .navbar .nav-links a {
-            color: white;
-            text-decoration: none;
-            font-size: 16px;
-        }
-        .navbar .search-icon {
-            display: flex;
-            align-items: center;
-        }
-        .navbar .search-icon img {
-            height: 20px;
-            margin-left: 10px;
-        }
-        .content {
-            display: flex;
-        }
-        .left-section {
-            background-color: #4A00E0;
-            color: white;
-            padding: 50px;
-            width: 50%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-        .left-section h1 {
-            font-size: 2em;
-            margin: 0 0 20px 0;
-        }
-        .left-section p {
-            font-size: 1em;
-            margin: 0 0 20px 0;
-        }
-        .left-section .button {
-            background-color: transparent;
-            color: cyan;
-            border: 2px solid cyan;
-            padding: 10px 20px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            margin: 4px 2px;
-            cursor: pointer;
-        }
-        .right-section {
-            width: 50%;
-            background: url('path_to_image.jpg') no-repeat center center;
-            background-size: cover;
-        }
-        .chat-icon {
-            position: fixed;
-            bottom: 20px;
-            left: 20px;
-            background-color: white;
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .contact-button {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: #000;
-            color: cyan;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-    </style>
+    <meta charset="utf-8">
+    <title>Freed</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"> 
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
-    <div class="navbar">
-        <div class="logo">
-            <img src="https://www.freedassociates.com/wp-content/themes/freed/assets/img/logo-text-dark.svg" alt="Freed Associates Logo">
-            <span>FREED ASSOCIATES</span>
+ 
+<body>
+    <!-- Top Banner -->
+    <div id="topBanner" style="background-color: aquamarine; color: black; padding: 10px; display: flex; justify-content: space-between; align-items: center; position: relative; z-index: 1000;">
+        <div style="display: flex; align-items: center; margin: 0 auto;">
+            <button class="watch-now-btn" style="background-color: #451885; color: white; border: none; padding: 10px 20px; margin-right: 10px; cursor: pointer;">WATCH NOW</button>
+            <span>Learn how the power of social care and medical care partnerships are improving health equity.</span>
         </div>
-        <div class="nav-links">
-            <a href="#">Why Freed</a>
-            <a href="#">Solutions</a>
-            <a href="#">Company</a>
-            <a href="#">Health Equity</a>
-        </div>
-        <div class="search-icon">
-            <img src="" alt="Knowledge Center">
-            <span>Knowledge Center</span>
-            <img src="path_to_search_icon.png" alt="Search">
-        </div>
+        <button class="close-btn" onclick="document.getElementById('topBanner').style.display = 'none';" style="background: none; border: none; color: white; font-size: 20px; cursor: pointer;">✖</button>
     </div>
-    <div class="content">
-        <div class="left-section">
-            <h1>Better consulting.<br>Better outcomes.</h1>
-            <p>When it comes to advancing healthcare, Freed Associates is the healthcare consulting firm that delivers the fastest path to realizing maximum value from your improvement initiatives.</p>
-            <a href="#" class="button">Learn More</a>
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg shadow-sm px-5 py-3 py-lg-0" style="background-color: black; height: 100px;">
+        <a href="index.html" class="navbar-brand p-0" style="display: flex; align-items: center; text-decoration: none;">
+            <div style="display: flex; flex-direction: column; margin-left: 0px; justify-content: center; text-align: right;">
+                <h1 style="color: white; font-size: 1em; margin: 0; font-family: Arial, sans-serif; line-height: 1;">FREED</h1>
+                <h1 style="color: white; font-size: 1em; margin: 0; font-family: Arial, sans-serif; line-height: 1;">ASSOCIATES</h1>
+            </div>
+        </a>
+
+        <!-- Hamburger button for mobile -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" 
+                style="border: none; background-color: transparent; position: relative; z-index: 9999;">
+            <!-- Custom Hamburger Icon -->
+            <span class="navbar-toggler-icon" style="background-color: white; position: relative; width: 30px; height: 3px; display: block; background: linear-gradient(transparent, transparent);">
+                <span style="display: block; background-color: white; width: 30px; height: 3px; margin: 6px auto;"></span>
+                <span style="display: block; background-color: white; width: 30px; height: 3px; margin: 6px auto;"></span>
+                <span style="display: block; background-color: white; width: 30px; height: 3px; margin: 6px auto;"></span>
+            </span>
+        </button>
+
+        <!-- Navbar items collapse -->
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav mx-auto py-0 text-center" style="font-size: 20px; font-family: Arial, Helvetica, sans-serif;">
+                <a href="why.html" class="nav-item nav-link active" style="color: white; font-weight: bold;">Why Freed</a>
+                <a href="#solutions" class="nav-item nav-link" onclick="showSection('solutions')" style="color: white; font-weight: bold;">Solutions</a>
+                <a href="#company" class="nav-item nav-link" onclick="showSection('company')" style="color: white; font-weight: bold;">Company</a>
+                <a href="#health-equity" class="nav-item nav-link" style="color: white; font-weight: bold;">Health Equity</a>
+            </div>
+            <div class="navbar-nav ms-auto py-0 text-center" style="display: flex; align-items: center;">
+                <a href="#knowledge-center" class="nav-item nav-link d-flex align-items-center" style="color: #65CFE9; font-weight: bold; font-family: Arial, Helvetica, sans-serif;font-weight: bold;">
+                    <img src="https://img.icons8.com/emoji/48/null/light-bulb-emoji.png" alt="Knowledge Center Icon" width="20" height="20" style="margin-right: 8px;">
+                    Knowledge Center
+                </a>
+            </div>
         </div>
-        <div class="right-section"></div>
-    </div>
-    <div class="chat-icon">
-        <img src="path_to_chat_icon.png" alt="Chat">
-    </div>
-    <a href="#" class="contact-button">Contact Freed</a>
+    </nav>
+
+    <!-- Custom CSS -->
+    <style>
+        /* Your existing CSS */
+        .hidden {
+            display: none;
+        }
+        .section-content {
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+         /* When the navbar toggle button is clicked, change the background color */
+    .navbar-toggler.collapsed {
+        background-color: black; /* Blue background on click */
+    }
+
+    /* Add overlay effect */
+    .navbar-collapse.show {
+        position: relative;
+    }
+    
+    .navbar-collapse.show::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7); /* Overlay color */
+        z-index: -1; /* Place overlay below the menu */
+    }
+
+    /* Ensure the navbar content is on top of the page text */
+    .collapse.navbar-collapse {
+        position: relative;
+        z-index: 999;
+    }
+    .hidden {
+    display: none;
+}
+
+section {
+    transition: opacity 0.3s ease-in-out;
+}
+
+section.hidden {
+    opacity: 0;
+}
+
+    </style>
+
+    <!-- Content Sections -->
+ 
+
+    <section id="solutions" class="hidden">
+        <div class="section-content">
+            <h2>Solutions</h2>
+            <div>
+                <h3>Healthcare Strategy Consulting</h3>
+                <p>Put strategic plans into action that meet and exceed your performance goals.</p>
+            </div>
+            <div>
+                <h3>Healthcare Analytics & Technology Consulting</h3>
+                <p>Advance your business operations and care delivery through data insights and technology enablement.</p>
+            </div>
+            <div>
+                <h3>Healthcare Regulatory Compliance Consulting</h3>
+                <p>Prepare your organization to meet the challenges of healthcare regulatory requirements.</p>
+            </div>
+            <div>
+                <h3>Healthcare Revenue Cycle Consulting</h3>
+                <p>Improve your efficiency, quality of care, and patient outcomes while increasing revenue.</p>
+            </div>
+            <div>
+                <h3>Healthcare Operations Consulting</h3>
+                <p>Optimize key aspects of your care delivery and health plan operations.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="company" class="hidden">
+        <div class="section-content" style="height: 40px;">
+            <h2>Company</h2>
+            <div>
+                <h3>Our Leaders</h3>
+                <p>Information about the leadership team of Freed Associates.</p>
+            </div>
+            <div>
+                <h3>Clients</h3>
+                <p>Details about Freed Associates' clients or case studies.</p>
+            </div>
+            <div>
+                <h3>We Are Freed</h3>
+                <p>Overview of the company culture, mission, or history.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="health-equity" style="padding: 20px;">
+        <h2>Health Equity</h2>
+        <p>Information on how Freed Associates contributes to health equity.</p>
+    </section>
+
+    <section id="knowledge-center" style="padding: 20px;">
+        <h2>Knowledge Center</h2>
+        <p>Resources, articles, or educational content provided by Freed Associates.</p>
+    </section>
+    <h2>
+        famoose
+    </h2>
+
+    <script>
+        function showSection(sectionId) {
+            var sections = document.querySelectorAll('section');
+            sections.forEach(function(section) {
+                section.classList.add('hidden');
+            });
+            document.getElementById(sectionId).classList.remove('hidden');
+        }
+    </script>
+    <script>
+        document.querySelectorAll('.nav-item.nav-link').forEach(function(navLink) {
+            navLink.addEventListener('mouseenter', function() {
+                var sectionId = this.getAttribute('href').replace('#', ''); // Extract section ID from href
+                showSection(sectionId);
+            });
+    
+            navLink.addEventListener('mouseleave', function() {
+                // Optionally, you can hide the section again or keep it displayed
+                // document.getElementById(this.getAttribute('href').replace('#', '')).classList.add('hidden');
+            });
+        });
+    
+        function showSection(sectionId) {
+            var sections = document.querySelectorAll('section');
+            sections.forEach(function(section) {
+                section.classList.add('hidden');
+            });
+            document.getElementById(sectionId).classList.remove('hidden');
+        }
+    </script>
+    
 </body>
+
 </html>
