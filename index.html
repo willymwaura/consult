@@ -66,38 +66,19 @@
     <!-- Navbar items collapse -->
     <div class="collapse navbar-collapse" id="navbarCollapse">
         <div class="navbar-nav mx-auto py-0 text-center" style="font-size: 20px; font-family: Arial, Helvetica, sans-serif;">
-            <a href="why.html" class="nav-item nav-link active" style="color: white; font-weight: bold;">Why Freed</a>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownSolutions" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: white; font-weight: bold;">
-                    Solutions
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdownSolutions" style="background-color: black; border: none;">
-                    <li><a class="dropdown-item" href="stratergy.html" style="color: white; font-weight: bold; transition: background-color 0.3s ease;">Healthcare Strategy Consulting</a></li>
-                    <li><a class="dropdown-item" href="analytics.html" style="color: white; font-weight: bold; transition: background-color 0.3s ease;">Healthcare Analytics & Technology Consulting</a></li>
-                    <li><a class="dropdown-item" href="compliance.html" style="color: white; font-weight: bold; transition: background-color 0.3s ease;">Healthcare Regulatory Compliance Consulting</a></li>
-                    <li><a class="dropdown-item" href="consulting.html" style="color: white; font-weight: bold; transition: background-color 0.3s ease;">Healthcare Revenue Cycle Consulting</a></li>
-                    <li><a class="dropdown-item" href="operations.html" style="color: white; font-weight: bold; transition: background-color 0.3s ease;">Healthcare Operations Consulting</a></li>
-                </ul>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownCompany" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: white; font-weight: bold;">
-                    Company
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdownCompany" style="background-color: black; border: none;">
-                    <li><a class="dropdown-item" href="leadership.html" style="color: white; font-weight: bold; transition: background-color 0.3s ease;">Our Leaders</a></li>
-                    <li><a class="dropdown-item" href="clients.html" style="color: white; font-weight: bold; transition: background-color 0.3s ease;">Clients</a></li>
-                    <li><a class="dropdown-item" href="company.html" style="color: white; font-weight: bold; transition: background-color 0.3s ease;">We Are Freed</a></li>
-                </ul>
-            </li>
-            <a href="equity.html" class="nav-item nav-link" style="color: white; font-weight: bold;">Health Equity</a>
+            <a class="underlinepage pageam nav-item nav-link " href="why.html" style="color: white; font-weight: bold; padding: 5px;">Why Freed</a>
+            <a class="underlinepage pageam nav-item nav-link" href="index.html#our-solutions" style="color: white; font-weight: bold; padding: 5px;">Solutions</a>
+            <a class="underlinepage pageam nav-item nav-link" href="company.html" style="color: white; font-weight: bold; padding: 5px;">Company</a>
+            <a class="underlinepage pageam nav-item nav-link" href="equity.html" style="color: white; font-weight: bold; padding: 5px;">Recruitment</a>
         </div>
         <div class="navbar-nav ms-auto py-0 text-center" style="display: flex; align-items: center;">
-            <a href="knowledge.html" class="nav-item nav-link d-flex align-items-center" style="color: #65CFE9; font-weight: bold; font-family: Arial, Helvetica, sans-serif;font-weight: bold;">
+            <a class="underlinepage pageam nav-item nav-link d-flex align-items-center" href="knowledge.html" style="color: #65CFE9; font-weight: bold; font-family: Arial, Helvetica, sans-serif; padding: 5px;">
                 <img src="https://img.icons8.com/emoji/48/null/light-bulb-emoji.png" alt="Knowledge Center Icon" width="20" height="20" style="margin-right: 8px;">
                 Knowledge Center
             </a>
         </div>
     </div>
+    
 </nav>
 
 <!-- Custom CSS to show background change on click and overlay effect -->
@@ -128,6 +109,23 @@
         position: relative;
         z-index: 999;
     }
+      /* Underline the navbar link on hover */
+      .underlinepage:hover {
+        text-decoration: underline; /* Add underline on hover */
+        text-decoration-color: aquamarine; /* Set underline color to red */
+        text-underline-offset: 8px; /* Add some space between the text and underline */
+        transition: text-decoration-color 0.3s ease-in-out; /* Smooth transition for underline color */
+       
+    }
+
+    /* Optional: Underline the active page link */
+    .pageam.active {
+        text-decoration: underline;
+        text-decoration-color: aquamarine;
+        text-underline-offset: 8px;
+    }
+ 
+
 </style>
 
 
@@ -177,11 +175,82 @@
         </div>
     </div>
     
+    <div style="background-color: white; padding: 20px;">
+        <div style="
+            display: flex; 
+            flex-wrap: wrap; 
+            justify-content: space-around; 
+            align-items: center; 
+            gap: 20px;">
+            <!-- Logo 1 -->
+            <div style="
+                flex: 1 1 calc(20% - 20px); 
+                max-width: calc(20% - 20px); 
+                text-align: center; 
+               
+                padding: 10px; 
+               
+                border-radius: 8px;">
+                <img src="https://www.freedassociates.com/wp-content/uploads/2021/07/logo_hill-physicians-300x152.png" 
+                     alt="Logo 1" 
+                     style="width: 100%; max-width: 120px; filter: grayscale(100%);">
+            </div>
+            <!-- Logo 2 -->
+            <div style="
+                flex: 1 1 calc(20% - 20px); 
+                max-width: calc(20% - 20px); 
+                text-align: center; 
+              
+                padding: 10px; 
+           
+                border-radius: 8px;">
+                <img src="https://www.freedassociates.com/wp-content/uploads/2021/07/logo_integrated-healthcare-300x92.png" 
+                     alt="Logo 2" 
+                     style="width: 100%; max-width: 120px; filter: grayscale(100%);">
+            </div>
+            <!-- Logo 3 -->
+            <div style="
+                flex: 1 1 calc(20% - 20px); 
+                max-width: calc(20% - 20px); 
+                text-align: center; 
+             
+                padding: 10px; 
+              
+                border-radius: 8px;">
+                <img src="https://www.freedassociates.com/wp-content/uploads/2021/07/logo_canopy-health-300x69.png" 
+                     alt="Logo 3" 
+                     style="width: 100%; max-width: 120px; filter: grayscale(100%);">
+            </div>
+            <!-- Logo 4 -->
+            <div style="
+                flex: 1 1 calc(20% - 20px); 
+                max-width: calc(20% - 20px); 
+                text-align: center; 
+                padding: 10px; 
+               
+                border-radius: 8px;">
+                <img src="https://www.freedassociates.com/wp-content/uploads/2024/03/logo_hcai-300x187.png" 
+                     alt="Logo 4" 
+                     style="width: 100%; max-width: 120px; filter: grayscale(100%);">
+            </div>
+            <!-- Logo 5 -->
+            <div style="
+                flex: 1 1 calc(20% - 20px); 
+                max-width: calc(20% - 20px); 
+                text-align: center; 
+              
+                padding: 10px; 
+                
+                border-radius: 8px;">
+                <img src="https://www.freedassociates.com/wp-content/uploads/2021/07/logo_brown-and-toland-physicians-300x63.png" 
+                     alt="Logo 5" 
+                     style="width: 100%; max-width: 120px; filter: grayscale(100%);">
+            </div>
+        </div>
+    </div>
     
-  <div style="text-align: center; padding: 50px; background-color: white;">
- 
     
-  </div>
+    
 
 
 
@@ -190,26 +259,44 @@
        <!-- Services End -->
 
         <!-- Testimonial Start -->
-        <div class="container-fluid bg-secondary p-0">
+        <div class="bg-secondary" style="padding: 20px;"> <!-- Added padding directly to this container -->
             <div class="row g-0">
+                <!-- Left Image Column -->
                 <div class="col-lg-6" style="min-height: 500px;">
                     <div class="position-relative h-100">
-                        <img class="position-absolute w-100 h-100" src="https://www.freedassociates.com/wp-content/uploads/2021/07/photo_home_why-freed-1000x815.webp" style="object-fit: cover;">
+                        <img class="position-absolute w-100 h-100" 
+                             src="https://www.freedassociates.com/wp-content/uploads/2021/07/photo_home_why-freed-1000x815.webp" 
+                             style="object-fit: cover;">
                     </div>
                 </div>
-                <div class="col-lg-6 py-6 px-5">
-                    <h1 style="font-size:20px;font-weight: bold;color: rgb(15, 15, 49);" >Why Freed?</h1>
+                
+                <!-- Right Content Column -->
+                <div class="col-lg-6 py-5 px-4"> <!-- Adjusted padding here -->
+                    <h1 style="font-size: 20px; font-weight: bold; color: #8a2be2;">Why Freed?</h1>
                     <div class="owl-carousel testimonial-carousel">
                         <div class="testimonial-item">
-                            <p style="font-size: 30px;color: rgb(22, 22, 68);">Some healthcare consultants are all talk. We’re all action</p>
-                            <p style="color: black;font-size: 20px;"> At Freed, our clients consistently tell us that we’re the quickest, most cost-effective way to enact positive change with proven value — and receive quality work that exceeds that of other healthcare consulting firms.</p>
-                            
+                            <p style="font-size: 40px; color: rgb(22, 22, 68); font-weight: 800;">
+                                Some healthcare consultants are all talk. We’re all action
+                            </p>
+                            <p style="color: black; font-size: 20px;">
+                                At Freed, our clients consistently tell us that we’re the quickest, most cost-effective way to enact positive change with proven value — and receive quality work that exceeds that of other healthcare consulting firms.
+                            </p>
+                            <a href="why.html">
+                                <h1 style="color: #8a2be2; font-weight: bold; font-size: 15px; display: inline-flex; align-items: center;">
+                                    Learn More 
+                                    <svg xmlns="http://www.w3.org/2000/svg" 
+                                         style="width: 20px; height: 20px; margin-left: 5px; fill: #8a2be2;" 
+                                         viewBox="0 0 24 24">
+                                        <path d="M10 17l5-5-5-5v10z"></path>
+                                    </svg>
+                                </h1>
+                            </a>
                         </div>
-                       
                     </div>
                 </div>
             </div>
         </div>
+        
         <!-- Testimonial End -->
     <!-- Testimonial Start -->
    <!-- Testimonial Start -->
@@ -221,8 +308,7 @@
    
     
   </div>
-
-<div class="container-fluid bg-secondary p-0">
+  <div class="mss" class="bg-secondary" style="padding: 30px;"> <!-- Added padding to the main container -->
     <div class="row g-0">
         <div class="col-12" style="min-height: 100vh;"> <!-- Full screen height -->
             <div class="position-relative h-100">
@@ -231,7 +317,7 @@
                      style="object-fit: cover; object-position: center;">
             </div>
         </div>
-        <div class="container-fluid" style="background-color: #65CFE9; padding: 50px; text-align: center;">
+        <div class="container" style="background-color: #65CFE9; padding: 50px 10px; text-align: center;"> <!-- Changed container-fluid to container -->
             <p style="color: #6534ac; font-size: 14px; font-weight: bold; text-transform: uppercase; margin-bottom: 10px;">
                 Health Equity Consulting
             </p>
@@ -246,54 +332,49 @@
                 Learn More
             </a>
         </div>
-        
-        
     </div>
 </div>
 
-<div style="text-align: center; padding: 50px; background-color: white;">
-    <p style="color: #8a2be2; font-size: 14px; margin-bottom: 20px;">OUR SOLUTIONS</p>
+
+<div  id="our-solutions" style="text-align: center; padding: 50px; background-color: white;">
+    <p style="color: #8a2be2; font-size: 20px; margin-bottom: 20px;font-weight: bold;">OUR SOLUTIONS</p>
     <h1 style="color: #2c2c54; font-size: 36px; line-height: 1.2; margin: 0;">Strategic consulting and services for<br>healthcare organizations.</h1>
   </div>
 
-<div style="display: flex; width: 100%;">
+  <div style="display: flex; width: 100%; padding: 30px;">
     <div id="left-panel" style="flex: 1; background-color: #2c2c54; color: white; padding: 20px;">
-      <h2 style="color: #00d1b2; cursor: pointer;" onclick="toggleSection('operations')">- Healthcare Operations Consulting</h2>
-      <div id="operations" style="display: block;">
-        <p>The rapid evolution of healthcare is forcing all organizations to continuously adjust. Freed has the expert consultants you need to advance your operational improvements, from business practices to care delivery, to care management practices and facilities planning.</p>
-        <a href="#" style="color: #00d1b2; text-decoration: none;">Learn More »</a>
-      </div>
-      <h2 style="color: #00d1b2; cursor: pointer;" onclick="toggleSection('strategy')">+ Healthcare Strategy Consulting</h2>
-      <div id="strategy" style="display: none;">
-        <p>
-
-            Implementing sustainable, strategic change in healthcare has always been a challenge. That’s why so many organizations turn to Freed Associates. Our healthcare consultants not only guide senior leadership to help make transformation initiatives a reality, but we also roll up our sleeves and work side by side with your implementation teams to get initiatives across the finish line..</p>
-        <a href="#" style="color: #00d1b2; text-decoration: none;">Learn More »</a>
-      </div>
-      <h2 style="color: #00d1b2; cursor: pointer;" onclick="toggleSection('analytics')">+ Healthcare Analytics & Technology Consulting</h2>
-      <div id="analytics" style="display: none;">
-        <p>Improving efficiencies and delivering better care depends on robust data analytics capabilities and well-designed systems. Freed has decades of experience helping to realize the value of these investments, from data strategy and analytics initiatives to digital transformation and complex system implementations.</p>
-        <a href="#" style="color: #00d1b2; text-decoration: none;">Learn More »</a>
-      </div>
-      <h2 style="color: #00d1b2; cursor: pointer;" onclick="toggleSection('analytics')">+ Healthcare Regulatory Compliance Consulting</h2>
-      <div id="compliance" style="display: none;">
-        <p>Meeting state and federal-issued regulations is an intensely confusing, time-consuming and constant endeavor. Freed can help you accurately interpret regulations, evaluate appropriate actions, drive impact assessments, achieve regulatory preparedness and successfully complete health plan audits.</p>
-        <a href="#" style="color: #00d1b2; text-decoration: none;">Learn More »</a>
-      </div>
-      <h2 style="color: #00d1b2; cursor: pointer;" onclick="toggleSection('analytics')">+ 
-        Healthcare Revenue Cycle Consulting</h2>
-      <div id="revenue" style="display: none;">
-        <p>
-            Maximizing revenue while improving the quality of care is more challenging than ever. Freed consultants expertly evaluate every aspect of your organization’s revenue cycle — from a provider, patient and health plan perspective. Our experts partner with you on increasing revenue and containing costs by implementing reimbursement models and applying a strategic approach to provider network management.</p>
-        <a href="#" style="color: #00d1b2; text-decoration: none;">Learn More »</a>
-      </div>
+        <h2 style="color: #00d1b2; cursor: pointer;" onclick="toggleSection('operations')">- Healthcare Operations Consulting</h2>
+        <div id="operations" style="display: block; padding: 10px;">
+            <p>The rapid evolution of healthcare is forcing all organizations to continuously adjust. Freed has the expert consultants you need to advance your operational improvements, from business practices to care delivery, to care management practices and facilities planning.</p>
+            <a href="operations.html" style="color: #00d1b2; text-decoration: none;">Learn More »</a>
+        </div>
+        <h2 style="color: #00d1b2; cursor: pointer;" onclick="toggleSection('strategy')">+ Healthcare Strategy Consulting</h2>
+        <div id="strategy" style="display: none; padding: 10px;">
+            <p>Implementing sustainable, strategic change in healthcare has always been a challenge. That’s why so many organizations turn to Freed Associates. Our healthcare consultants not only guide senior leadership to help make transformation initiatives a reality, but we also roll up our sleeves and work side by side with your implementation teams to get initiatives across the finish line.</p>
+            <a href="stratergy.html" style="color: #00d1b2; text-decoration: none;">Learn More »</a>
+        </div>
+        <h2 style="color: #00d1b2; cursor: pointer;" onclick="toggleSection('analytics')">+ Healthcare Analytics & Technology Consulting</h2>
+        <div id="analytics" style="display: none; padding: 10px;">
+            <p>Improving efficiencies and delivering better care depends on robust data analytics capabilities and well-designed systems. Freed has decades of experience helping to realize the value of these investments, from data strategy and analytics initiatives to digital transformation and complex system implementations.</p>
+            <a href="analytics.html" style="color: #00d1b2; text-decoration: none;">Learn More »</a>
+        </div>
+        <h2 style="color: #00d1b2; cursor: pointer;" onclick="toggleSection('compliance')">+ Healthcare Regulatory Compliance Consulting</h2>
+        <div id="compliance" style="display: none; padding: 10px;">
+            <p>Meeting state and federal-issued regulations is an intensely confusing, time-consuming and constant endeavor. Freed can help you accurately interpret regulations, evaluate appropriate actions, drive impact assessments, achieve regulatory preparedness and successfully complete health plan audits.</p>
+            <a href="compliance.html" style="color: #00d1b2; text-decoration: none;">Learn More »</a>
+        </div>
+        <h2 style="color: #00d1b2; cursor: pointer;" onclick="toggleSection('revenue')">+ Healthcare Revenue Cycle Consulting</h2>
+        <div id="revenue" style="display: none; padding: 10px;">
+            <p>Maximizing revenue while improving the quality of care is more challenging than ever. Freed consultants expertly evaluate every aspect of your organization’s revenue cycle — from a provider, patient and health plan perspective. Our experts partner with you on increasing revenue and containing costs by implementing reimbursement models and applying a strategic approach to provider network management.</p>
+            <a href="consulting.html" style="color: #00d1b2; text-decoration: none;">Learn More »</a>
+        </div>
     </div>
     <div style="flex: 1; background: url('https://www.freedassociates.com/wp-content/uploads/2021/07/photo_home_our-solutions-1000x967.webp') no-repeat center center; background-size: cover; position: relative;">
-      <div style="position: absolute; bottom: 20px; right: 20px; background: rgba(0, 0, 0, 0.5); color: white; padding: 10px; border-radius: 5px;">
-        Contact Freed
-      </div>
+        <div style="position: absolute; bottom: 20px; right: 20px; background: rgba(0, 0, 0, 0.5); color: white; padding: 10px; border-radius: 5px;">
+            Contact Freed
+        </div>
     </div>
-  </div>
+</div>
 
 
 
@@ -306,55 +387,71 @@
 
 
 
-
-  <div style="display: flex; width: 100%; margin-bottom: 20px;">
-    <div style="flex: 1; background-color: #00aabb; padding: 20px; color: white;">
-      <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-bottom: 20px;">
-        <img src="https://www.freedassociates.com/wp-content/uploads/2024/12/flex-lp_healing-healthcare07_featured.jpg" alt="Team Member 1" style="width: 100%; height: auto;">
-       
+  <div style="display: flex; width: 100%; margin-bottom: 20px; padding: 30px;">
+    <!-- Left Section -->
+    <div style="flex: 1; background-color: #00aabb; padding: 30px; color: white; border-radius: 10px;">
+      <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; margin-bottom: 20px;">
+        <img src="https://www.freedassociates.com/wp-content/uploads/2024/12/flex-lp_healing-healthcare07_featured.jpg" alt="Team Member 1" style="width: 100%; height: auto; border-radius: 10px;">
       </div>
-      <h2 style="font-size: 30px; margin: 0 0 10px 0;">The Power of Partnership.</h2>
-      <p style="font-size: 20px; margin: 0;">How do we strengthen collaborations between healthcare providers and community-based organizations to improve health?</p>
-      <a href="https://www.freedassociates.com/knowledge-center/health-plan-improves-quality-scores-with-freed-guidance/" style="color: white; text-decoration: none; font-size: 14px;">https://www.freedassociates.com/knowledge-center/health-plan-improves-quality-scores-with-freed-guidance/</a> <br>
-      <a href="#" style="display: inline-block; text-decoration: none; font-size: 16px; color: #6534ac; border: 2px solid #6534ac; padding: 10px 20px; font-weight: bold; border-radius: 5px;">
+      <h2 style="font-size: 30px; margin: 0 0 15px 0;">The Power of Partnership.</h2>
+      <p style="font-size: 20px; margin: 0 0 15px 0;">How do we strengthen collaborations between healthcare providers and community-based organizations to improve health?</p>
+      <a href="https://www.freedassociates.com/knowledge-center/health-plan-improves-quality-scores-with-freed-guidance/" 
+         style="color: white; text-decoration: none; font-size: 14px; display: block; margin-bottom: 15px;">
+        https://www.freedassociates.com/knowledge-center/health-plan-improves-quality-scores-with-freed-guidance/
+      </a>
+      <a href="#" 
+         style="display: inline-block; text-decoration: none; font-size: 16px; color: #6534ac; border: 2px solid #6534ac; padding: 10px 20px; font-weight: bold; border-radius: 5px;">
         Watch Now
-    </a>
+      </a>
     </div>
-    <div style="flex: 1; padding: 20px; background-color: white; margin-left: 20px; position: relative;">
-        <div style="background-color: #f0f0f0; padding: 20px; border-radius: 5px; margin-bottom: 20px; display: flex; align-items: center;">
-            <div style="flex: 1;">
-              <p style="color: #8a2be2; font-size: 18px; margin: 0 0 10px 0;">CASE STUDY</p>
-              <h3 style="font-size: 18px; margin: 0 0 10px 0;">Health Plan Improves Quality Scores with Freed Guidance</h3>
-              <p style="font-size: 14px; margin: 0 0 10px 0;">Freed Associates helped a national health plan improve its CMS Quality Star Ratings by two stars in just two years. Learn how breaking down silos within the...</p>
-              <a href="#" style="color: #8a2be2; text-decoration: none; font-size: 14px;">Read More »</a>
-            </div>
-            <img src="https://www.freedassociates.com/wp-content/uploads/2024/09/FREED-0049_Anthem-CA-Exchange_thumb-288x400.webp" alt="Case Study Image" style="width: 150px; height: auto; margin-left: 20px; border-radius: 5px;">
-          </div>
-          <div style="background-color: #e0e0e0; padding: 20px; border-radius: 5px; display: flex; align-items: center;">
-            <div style="flex: 1;">
-              <p style="color: #8a2be2; font-size: 18px; margin: 0 0 10px 0;">POINT OF VIEW</p>
-              <h3 style="font-size: 18px; margin: 0 0 10px 0;">Improving Healthcare Access by Reducing Transportation Barriers</h3>
-              <p style="font-size: 14px; margin: 0 0 10px 0;">Determinants of health, including transportation, play a critical role in healthcare access.</p>
-            </div>
-            <img src="https://www.freedassociates.com/wp-content/uploads/2024/09/insights_medical-transportation_thumb-288x400.webp" alt="Point of View Image" style="width: 150px; height: auto; margin-left: 20px; border-radius: 5px;">
-          </div>
+  
+    <!-- Right Section -->
+    <div style="flex: 1; padding: 30px; background-color: white; margin-left: 20px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">
+      <!-- Case Study Section -->
+      <div style="background-color: #f0f0f0; padding: 20px; border-radius: 10px; margin-bottom: 20px; display: flex; align-items: center; gap: 20px;">
+        <div style="flex: 1;">
+          <p style="color: #8a2be2; font-size: 18px; margin: 0 0 10px 0;">CASE STUDY</p>
+          <h3 style="font-size: 18px; margin: 0 0 10px 0;">Health Plan Improves Quality Scores with Freed Guidance</h3>
+          <p style="font-size: 14px; margin: 0 0 10px 0;">Freed Associates helped a national health plan improve its CMS Quality Star Ratings by two stars in just two years. Learn how breaking down silos within the...</p>
+          <a href="#" style="color: #8a2be2; text-decoration: none; font-size: 14px;">Read More »</a>
+        </div>
+        <img src="https://www.freedassociates.com/wp-content/uploads/2024/09/FREED-0049_Anthem-CA-Exchange_thumb-288x400.webp" alt="Case Study Image" style="width: 150px; height: auto; border-radius: 10px;">
+      </div>
+  
+      <!-- Point of View Section -->
+      <div style="background-color: #e0e0e0; padding: 20px; border-radius: 10px; display: flex; align-items: center; gap: 20px;">
+        <div style="flex: 1;">
+          <p style="color: #8a2be2; font-size: 18px; margin: 0 0 10px 0;">POINT OF VIEW</p>
+          <h3 style="font-size: 18px; margin: 0 0 10px 0;">Improving Healthcare Access by Reducing Transportation Barriers</h3>
+          <p style="font-size: 14px; margin: 0 0 10px 0;">Determinants of health, including transportation, play a critical role in healthcare access.</p>
+        </div>
+        <img src="https://www.freedassociates.com/wp-content/uploads/2024/09/insights_medical-transportation_thumb-288x400.webp" alt="Point of View Image" style="width: 150px; height: auto; border-radius: 10px;">
+      </div>
     </div>
   </div>
+  
 
-  <div class="container-fluid" style="background-color: #65CFE9; padding: 50px; text-align: center;">
-    <p style="color: #6534ac; font-size: 14px; font-weight: bold; text-transform: uppercase; margin-bottom: 10px;">
-        Healing Healthcare
-    </p>
-    <h2 style="font-size: 32px; font-weight: bold; color: #000; margin-bottom: 20px;">
-        How industry change makers are improving healthcare.
-    </h2>
-    <p style="color: #000; font-size: 16px; line-height: 1.6; margin-bottom: 30px;">
-        Welcome to your home for news, insights, inspiration, and expert guidance from industry professionals making a difference. This new webisode series of valuable content from leading voices is just one of many ways we’re helping advocate for, and working toward, better healthcare.
-    </p>
-    <a href="#" style="display: inline-block; text-decoration: none; font-size: 16px; color: #6534ac; border: 2px solid #6534ac; padding: 10px 20px; font-weight: bold; border-radius: 5px;">
-        Watch Now
-    </a>
+  <div style="padding: 30px;">
+    <div class="container-fluid" style="background-color: #65CFE9; padding: 50px; text-align: center;">
+        <p style="color: #6534ac; font-size: 14px; font-weight: bold; text-transform: uppercase; margin-bottom: 20px;">
+            Healing Healthcare
+        </p>
+        <h2 style="font-size: 32px; font-weight: bold; color: #000; margin-bottom: 20px;">
+            How industry change makers are improving healthcare.
+        </h2>
+        <p style="color: #000; font-size: 16px; line-height: 1.8; margin-bottom: 30px; padding: 0 20px;">
+            Welcome to your home for news, insights, inspiration, and expert guidance from industry professionals making a difference. This new webisode series of valuable content from leading voices is just one of many ways we’re helping advocate for, and working toward, better healthcare.
+        </p>
+        <a href="#" style="display: inline-block; text-decoration: none; font-size: 16px; color: #6534ac; border: 2px solid #6534ac; padding: 15px 25px; font-weight: bold; border-radius: 5px; margin-top: 20px;">
+            Watch Now
+        </a>
+    </div>
 </div>
+
+
+
+
+
 
 
 <div style="text-align: center; padding: 50px; background-color: white;">
@@ -367,48 +464,68 @@
 <!-- Footer Start -->
 <div class="container-fluid text-secondary p-5" style="background-color: #000;">
     <div class="row g-5">
-        <div class="col-12 text-center">
-            <h1 class="display-5 mb-4">Stay Update!!!</h1>
+        <!-- Left Section -->
+        <div class="col-lg-6 text-white">
+            <h3 class="mb-3" style="color: #65CFE9;">Stay Connected</h3>
+            <p>
+                Subscribe to our newsletter to get the latest updates, insights, and expert advice delivered straight to your inbox.
+                Join a community of like-minded professionals shaping the future!
+            </p>
+        </div>
+
+        <!-- Right Section -->
+        <div class="col-lg-6 text-center">
+            <h1 class="display-5 mb-4 text-white">Stay Updated!!!</h1>
             <form class="mx-auto" style="max-width: 600px;">
                 <div class="input-group">
                     <input type="text" class="form-control border-white p-3" placeholder="Your Email">
-                    <button class="btn btn-dark px-4">Sign Up</button>
+                    <button class="btn btn-dark px-4 " style="color: #65CFE9;" >Sign Up</button>
                 </div>
             </form>
+            <!-- LinkedIn Section -->
+            <div class="mt-4">
+               
+                <a href="https://www.linkedin.com" target="_blank" style="text-decoration: none; display: flex; align-items: center; gap: 5px;">
+                    <i class="fab fa-linkedin fa-2x text-white"></i>
+                    <span class="text-white">Follow us on LinkedIn</span>
+                </a>
+            </div>
         </div>
     </div>
 </div>
 
+
 <div class="container-fluid text-secondary p-5" style="background-color: #000;">
     <div class="row g-5">
         <div class="col-lg-3 col-md-6">
-            <h3 class="text-white mb-4">How We Can Help</h3>
+            <h3 style="color: #65CFE9;">How We Can Help</h3>
             <div class="d-flex flex-column justify-content-start">
-                <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Healthcare Operations Consulting</a>
-                <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Healthcare Strategy Consulting</a>
-                <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Healthcare Analytics & Technology Consulting</a>
-                <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Healthcare Regulatory Compliance Consulting</a>
-                <a class="text-secondary" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Healthcare Revenue Cycle Consulting</a>
+                <a class="text-secondary mb-2" href="operations.html"><i class="bi bi-arrow-right text-primary me-2"></i>Healthcare Operations Consulting</a>
+                <a class="text-secondary mb-2" href="stratergy.html"><i class="bi bi-arrow-right text-primary me-2"></i>Healthcare Strategy Consulting</a>
+                <a class="text-secondary mb-2" href="analytics.html"><i class="bi bi-arrow-right text-primary me-2"></i>Healthcare Analytics & Technology Consulting</a>
+                <a class="text-secondary mb-2" href="compliance.html"><i class="bi bi-arrow-right text-primary me-2"></i>Healthcare Regulatory Compliance Consulting</a>
+                <a class="text-secondary" href="consulting.html"><i class="bi bi-arrow-right text-primary me-2"></i>Healthcare Revenue Cycle Consulting</a>
             </div>
         </div>
         <div class="col-lg-3 col-md-6">
-            <h3 class="text-white mb-4">Explore</h3>
+            <h3  style="color: #65CFE9;">Explore</h3>
             <div class="d-flex flex-column justify-content-start">
-                <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Why Freed</a>
-                <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Knowledge Center</a>
-                <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>We Are Freed</a>
+                <a class="text-secondary mb-2" href="why.html"><i class="bi bi-arrow-right text-primary me-2"></i>Why Freed</a>
+                <a class="text-secondary mb-2" href="knowledge.html"><i class="bi bi-arrow-right text-primary me-2"></i>Knowledge Center</a>
+                <a class="text-secondary mb-2" href="company.html"><i class="bi bi-arrow-right text-primary me-2"></i>company</a>
                 <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Careers</a>
-                <a class="text-secondary" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Contact</a>
+                <a class="text-secondary" href="contact.html"><i class="bi bi-arrow-right text-primary me-2"></i>Contact</a>
+                <a class="text-secondary" href="index.html#our-solutions"><i class="bi bi-arrow-right text-primary me-2"></i>Solutions</a>
             </div>
         </div>
-        <div class="col-lg-3 col-md-6">
-            <h3 class="text-white mb-4">Get In Touch</h3>
+        <div class="col-lg-3 col-md-6" >
+            <h3 style="color: #65CFE9;">Get In Touch</h3>
             <p class="mb-2"><i class="bi bi-geo-alt text-primary me-2"></i>123 Street, New York, USA</p>
             <p class="mb-2"><i class="bi bi-envelope-open text-primary me-2"></i>info@example.com</p>
             <p class="mb-0"><i class="bi bi-telephone text-primary me-2"></i>+012 345 67890</p>
         </div>
         <div class="col-lg-3 col-md-6">
-            <h3 class="text-white mb-4">Follow Us</h3>
+            <h3  style="color: #65CFE9;">Follow Us</h3>
             <div class="d-flex">
                 <a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-2" href="#" style="background-color: transparent; border: none;">
                     <i class="fab fa-twitter fw-normal" style="color: white;"></i>
@@ -451,15 +568,7 @@
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
     <script>
-        // Function to run when the page loads to hide all sections except the first one
-        window.onload = function() {
-          var sections = ['strategy', 'analytics', 'compliance', 'revenue'];
-          sections.forEach(function(id) {
-            document.getElementById(id).style.display = 'none';
-          });
-          // Ensure 'operations' is visible
-          document.getElementById('operations').style.display = 'block';
-        };
+       
         
         // Toggle function for sections
         function toggleSection(sectionId) {
@@ -486,6 +595,49 @@
           }
         }
         </script>
+       <script>
+        function toggleSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            const header = document.querySelector(`[onclick="toggleSection('${sectionId}')"]`);
+            
+            if (section.style.maxHeight === "0px" || !section.style.maxHeight) {
+                // Expand the section smoothly
+                section.style.display = "block"; // Ensure visibility
+                section.style.transition = "max-height 0.5s ease-in-out, opacity 0.5s ease-in-out";
+                section.style.maxHeight = section.scrollHeight + "px";
+                section.style.opacity = 1;
+                header.innerHTML = header.innerHTML.replace("+", "-");
+            } else {
+                // Collapse the section smoothly
+                section.style.transition = "max-height 0.5s ease-in-out, opacity 0.5s ease-in-out";
+                section.style.maxHeight = "0px";
+                section.style.opacity = 0;
+                setTimeout(() => {
+                    section.style.display = "none"; // Ensure it's hidden after animation
+                }, 500); // Match the transition duration
+                header.innerHTML = header.innerHTML.replace("-", "+");
+            }
+        }
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const links = document.querySelectorAll('a[href^="#"]');
+            links.forEach(link => {
+                link.addEventListener("click", (e) => {
+                    e.preventDefault();
+                    const targetId = link.getAttribute("href").substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: "smooth",
+                            block: "start"
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+    
        
 </body>
 

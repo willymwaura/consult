@@ -31,6 +31,8 @@
 </head>
 
 <div>
+   
+    <!-- Topbar End -->
     <div id="topBanner" style="background-color: aquamarine; color: black; padding: 10px; display: flex; justify-content: space-between; align-items: center; position: relative; z-index: 1000;">
         <div style="display: flex; align-items: center; margin: 0 auto;">
             <button class="watch-now-btn" style="background-color: #451885; color: white; border: none; padding: 10px 20px; margin-right: 10px; cursor: pointer;">WATCH NOW</button>
@@ -38,8 +40,6 @@
         </div>
         <button class="close-btn" onclick="document.getElementById('topBanner').style.display = 'none';" style="background: none; border: none; color: white; font-size: 20px; cursor: pointer;">✖</button>
     </div>
-   
-    <!-- Topbar End -->
 
 
     <!-- Navbar Start -->
@@ -66,38 +66,19 @@
     <!-- Navbar items collapse -->
     <div class="collapse navbar-collapse" id="navbarCollapse">
         <div class="navbar-nav mx-auto py-0 text-center" style="font-size: 20px; font-family: Arial, Helvetica, sans-serif;">
-            <a href="why.html" class="nav-item nav-link active" style="color: white; font-weight: bold;">Why Freed</a>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownSolutions" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: white; font-weight: bold;">
-                    Solutions
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdownSolutions" style="background-color: black; border: none;">
-                    <li><a class="dropdown-item" href="stratergy.html" style="color: white; font-weight: bold; transition: background-color 0.3s ease;">Healthcare Strategy Consulting</a></li>
-                    <li><a class="dropdown-item" href="analytics.html" style="color: white; font-weight: bold; transition: background-color 0.3s ease;">Healthcare Analytics & Technology Consulting</a></li>
-                    <li><a class="dropdown-item" href="compliance.html" style="color: white; font-weight: bold; transition: background-color 0.3s ease;">Healthcare Regulatory Compliance Consulting</a></li>
-                    <li><a class="dropdown-item" href="consulting.html" style="color: white; font-weight: bold; transition: background-color 0.3s ease;">Healthcare Revenue Cycle Consulting</a></li>
-                    <li><a class="dropdown-item" href="operations.html" style="color: white; font-weight: bold; transition: background-color 0.3s ease;">Healthcare Operations Consulting</a></li>
-                </ul>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownCompany" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: white; font-weight: bold;">
-                    Company
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdownCompany" style="background-color: black; border: none;">
-                    <li><a class="dropdown-item" href="leadership.html" style="color: white; font-weight: bold; transition: background-color 0.3s ease;">Our Leaders</a></li>
-                    <li><a class="dropdown-item" href="clients.html" style="color: white; font-weight: bold; transition: background-color 0.3s ease;">Clients</a></li>
-                    <li><a class="dropdown-item" href="company.html" style="color: white; font-weight: bold; transition: background-color 0.3s ease;">We Are Freed</a></li>
-                </ul>
-            </li>
-            <a href="equity.html" class="nav-item nav-link" style="color: white; font-weight: bold;">Health Equity</a>
+            <a class="underlinepage pageam nav-item nav-link " href="why.html" style="color: white; font-weight: bold; padding: 5px;">Why Freed</a>
+            <a class="underlinepage pageam nav-item nav-link" href="index.html#our-solutions" style="color: white; font-weight: bold; padding: 5px;">Solutions</a>
+            <a class="underlinepage pageam nav-item nav-link" href="company.html" style="color: white; font-weight: bold; padding: 5px;">Company</a>
+            <a class="underlinepage pageam nav-item nav-link" href="equity.html" style="color: white; font-weight: bold; padding: 5px;">Recruitment</a>
         </div>
         <div class="navbar-nav ms-auto py-0 text-center" style="display: flex; align-items: center;">
-            <a href="knowledge.html" class="nav-item nav-link d-flex align-items-center" style="color: #65CFE9; font-weight: bold; font-family: Arial, Helvetica, sans-serif;font-weight: bold;">
+            <a class="underlinepage pageam nav-item nav-link d-flex align-items-center" href="knowledge.html" style="color: #65CFE9; font-weight: bold; font-family: Arial, Helvetica, sans-serif; padding: 5px;">
                 <img src="https://img.icons8.com/emoji/48/null/light-bulb-emoji.png" alt="Knowledge Center Icon" width="20" height="20" style="margin-right: 8px;">
                 Knowledge Center
             </a>
         </div>
     </div>
+    
 </nav>
 
 <!-- Custom CSS to show background change on click and overlay effect -->
@@ -128,7 +109,25 @@
         position: relative;
         z-index: 999;
     }
+      /* Underline the navbar link on hover */
+      .underlinepage:hover {
+        text-decoration: underline; /* Add underline on hover */
+        text-decoration-color: aquamarine; /* Set underline color to red */
+        text-underline-offset: 8px; /* Add some space between the text and underline */
+        transition: text-decoration-color 0.3s ease-in-out; /* Smooth transition for underline color */
+       
+    }
+
+    /* Optional: Underline the active page link */
+    .pageam.active {
+        text-decoration: underline;
+        text-decoration-color: aquamarine;
+        text-underline-offset: 8px;
+    }
+ 
+
 </style>
+
 
     <!-- Navbar End -->
 
@@ -256,43 +255,7 @@ Care management Key Performance Indicator (KPI) development
   </div>
 
 
-    <!-- Team Start -->
-    <div class="container-fluid py-6 px-5">
-        <div class="text-center mx-auto mb-5" style="max-width: 600px;">
-            <h1 class="display-5 mb-0">Our Team Members</h1>
-            <hr class="w-25 mx-auto bg-primary">
-        </div>
-        <div class="row g-5">
-            <div class="col-lg-4">
-                <div class="team-item position-relative overflow-hidden">
-                    <img class="img-fluid w-100" src="img/team-1.jpg" alt="">
-                    <div class="team-text w-100 position-absolute top-50 text-center bg-primary p-4">
-                        <h3 class="text-white">Full Name</h3>
-                        <p class="text-white text-uppercase mb-0">Designation</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="team-item position-relative overflow-hidden">
-                    <img class="img-fluid w-100" src="img/team-2.jpg" alt="">
-                    <div class="team-text w-100 position-absolute top-50 text-center bg-primary p-4">
-                        <h3 class="text-white">Full Name</h3>
-                        <p class="text-white text-uppercase mb-0">Designation</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="team-item position-relative overflow-hidden">
-                    <img class="img-fluid w-100" src="img/team-3.jpg" alt="">
-                    <div class="team-text w-100 position-absolute top-50 text-center bg-primary p-4">
-                        <h3 class="text-white">Full Name</h3>
-                        <p class="text-white text-uppercase mb-0">Designation</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Team End -->
+   
 
 
 
@@ -349,51 +312,72 @@ Care management Key Performance Indicator (KPI) development
 
     <!-- Blog End -->
  <!-- Footer Start -->
+ <!-- Footer Start -->
 <!-- Footer Start -->
 <div class="container-fluid text-secondary p-5" style="background-color: #000;">
     <div class="row g-5">
-        <div class="col-12 text-center">
-            <h1 class="display-5 mb-4">Stay Update!!!</h1>
+        <!-- Left Section -->
+        <div class="col-lg-6 text-white">
+            <h3 class="mb-3" style="color: #65CFE9;">Stay Connected</h3>
+            <p>
+                Subscribe to our newsletter to get the latest updates, insights, and expert advice delivered straight to your inbox.
+                Join a community of like-minded professionals shaping the future!
+            </p>
+        </div>
+
+        <!-- Right Section -->
+        <div class="col-lg-6 text-center">
+            <h1 class="display-5 mb-4 text-white">Stay Updated!!!</h1>
             <form class="mx-auto" style="max-width: 600px;">
                 <div class="input-group">
                     <input type="text" class="form-control border-white p-3" placeholder="Your Email">
-                    <button class="btn btn-dark px-4">Sign Up</button>
+                    <button class="btn btn-dark px-4 " style="color: #65CFE9;" >Sign Up</button>
                 </div>
             </form>
+            <!-- LinkedIn Section -->
+            <div class="mt-4">
+               
+                <a href="https://www.linkedin.com" target="_blank" style="text-decoration: none; display: flex; align-items: center; gap: 5px;">
+                    <i class="fab fa-linkedin fa-2x text-white"></i>
+                    <span class="text-white">Follow us on LinkedIn</span>
+                </a>
+            </div>
         </div>
     </div>
 </div>
 
+
 <div class="container-fluid text-secondary p-5" style="background-color: #000;">
     <div class="row g-5">
         <div class="col-lg-3 col-md-6">
-            <h3 class="text-white mb-4">How We Can Help</h3>
+            <h3 style="color: #65CFE9;">How We Can Help</h3>
             <div class="d-flex flex-column justify-content-start">
-                <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Healthcare Operations Consulting</a>
-                <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Healthcare Strategy Consulting</a>
-                <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Healthcare Analytics & Technology Consulting</a>
-                <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Healthcare Regulatory Compliance Consulting</a>
-                <a class="text-secondary" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Healthcare Revenue Cycle Consulting</a>
+                <a class="text-secondary mb-2" href="operations.html"><i class="bi bi-arrow-right text-primary me-2"></i>Healthcare Operations Consulting</a>
+                <a class="text-secondary mb-2" href="stratergy.html"><i class="bi bi-arrow-right text-primary me-2"></i>Healthcare Strategy Consulting</a>
+                <a class="text-secondary mb-2" href="analytics.html"><i class="bi bi-arrow-right text-primary me-2"></i>Healthcare Analytics & Technology Consulting</a>
+                <a class="text-secondary mb-2" href="compliance.html"><i class="bi bi-arrow-right text-primary me-2"></i>Healthcare Regulatory Compliance Consulting</a>
+                <a class="text-secondary" href="consulting.html"><i class="bi bi-arrow-right text-primary me-2"></i>Healthcare Revenue Cycle Consulting</a>
             </div>
         </div>
         <div class="col-lg-3 col-md-6">
-            <h3 class="text-white mb-4">Explore</h3>
+            <h3  style="color: #65CFE9;">Explore</h3>
             <div class="d-flex flex-column justify-content-start">
-                <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Why Freed</a>
-                <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Knowledge Center</a>
-                <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>We Are Freed</a>
+                <a class="text-secondary mb-2" href="why.html"><i class="bi bi-arrow-right text-primary me-2"></i>Why Freed</a>
+                <a class="text-secondary mb-2" href="knowledge.html"><i class="bi bi-arrow-right text-primary me-2"></i>Knowledge Center</a>
+                <a class="text-secondary mb-2" href="company.html"><i class="bi bi-arrow-right text-primary me-2"></i>company</a>
                 <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Careers</a>
-                <a class="text-secondary" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Contact</a>
+                <a class="text-secondary" href="contact.html"><i class="bi bi-arrow-right text-primary me-2"></i>Contact</a>
+                <a class="text-secondary" href="index.html#our-solutions"><i class="bi bi-arrow-right text-primary me-2"></i>Solutions</a>
             </div>
         </div>
-        <div class="col-lg-3 col-md-6">
-            <h3 class="text-white mb-4">Get In Touch</h3>
+        <div class="col-lg-3 col-md-6" >
+            <h3 style="color: #65CFE9;">Get In Touch</h3>
             <p class="mb-2"><i class="bi bi-geo-alt text-primary me-2"></i>123 Street, New York, USA</p>
             <p class="mb-2"><i class="bi bi-envelope-open text-primary me-2"></i>info@example.com</p>
             <p class="mb-0"><i class="bi bi-telephone text-primary me-2"></i>+012 345 67890</p>
         </div>
         <div class="col-lg-3 col-md-6">
-            <h3 class="text-white mb-4">Follow Us</h3>
+            <h3  style="color: #65CFE9;">Follow Us</h3>
             <div class="d-flex">
                 <a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-2" href="#" style="background-color: transparent; border: none;">
                     <i class="fab fa-twitter fw-normal" style="color: white;"></i>
@@ -418,6 +402,8 @@ Care management Key Performance Indicator (KPI) development
 </div>
 <!-- Footer End -->
 
+<!-- Footer End -->
+
 
 
 
@@ -437,25 +423,25 @@ Care management Key Performance Indicator (KPI) development
     <script src="js/main.js"></script>
     <script>
        function toggleSection(sectionId) {
-  // Hide all sections
-  document.getElementById('operations').style.display = 'none';
-  document.getElementById('strategy').style.display = 'none';
-  document.getElementById('analytics').style.display = 'none';
-  
-  // Show the clicked section
-  document.getElementById(sectionId).style.display = 'block';
-  
-  // Change the '+' to '-' for the clicked section and vice versa for others
-  var sections = ['operations', 'strategy', 'analytics'];
-  sections.forEach(function(id) {
-    var h2 = document.querySelector('h2[onclick="toggleSection(\'' + id + '\')"]');
-    if (id === sectionId) {
-      h2.textContent = id === 'operations' ? '- Healthcare Operations Consulting' : '+ ' + h2.textContent.slice(2);
-    } else {
-      h2.textContent = '+ ' + h2.textContent.slice(2);
-    }
-  });
-}
+            // Hide all sections
+            document.getElementById('operations').style.display = 'none';
+            document.getElementById('strategy').style.display = 'none';
+            document.getElementById('analytics').style.display = 'none';
+            
+            // Show the clicked section
+            document.getElementById(sectionId).style.display = 'block';
+            
+            // Change the '+' to '-' for the clicked section and vice versa for others
+            var sections = ['operations', 'strategy', 'analytics'];
+            sections.forEach(function(id) {
+                var h2 = document.querySelector('h2[onclick="toggleSection(\'' + id + '\')"]');
+                if (id === sectionId) {
+                h2.textContent = id === 'operations' ? '- Healthcare Operations Consulting' : '+ ' + h2.textContent.slice(2);
+                } else {
+                h2.textContent = '+ ' + h2.textContent.slice(2);
+                }
+            });
+            }
         </script>
        <script>
         // Function to run when the page loads to hide all sections except the first one
