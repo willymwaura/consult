@@ -124,6 +124,13 @@
         text-decoration-color: aquamarine;
         text-underline-offset: 8px;
     }
+   
+    .content-section {
+        overflow: hidden;
+        transition: max-height 0.4s ease, opacity 0.4s ease;
+    }
+  
+</style>
  
 
 </style>
@@ -165,150 +172,82 @@
 
     
 
-       <!-- Services End -->
+     <!-- Services End -->
 
-        <!-- Testimonial Start -->
-        <div class="container-fluid bg-secondary p-0">
-            <div class="row g-0">
-                <div class="col-lg-6" style="min-height: 500px;">
-                    <div class="position-relative h-100">
-                        <img class="position-absolute w-100 h-100" src="https://www.freedassociates.com/wp-content/uploads/2021/06/photo_solutions_02-1000x929.webp" style="object-fit: cover;">
-                    </div>
-                </div>
-                <d class="col-lg-6 py-6 px-5">
-                    <h1 style="font-size:20px;font-weight: bold;" >Drive lasting change for the better.</h1>
-                    <div class="owl-carousel testimonial-carousel">
-                        <div class="testimonial-item">
-                            
-                            <p style="color: black;font-size: 20px;"> Healthcare never stands still. Neither do our clients. They turn to Freed’s expert healthcare operations consultants to help them grow, optimize, evolve, improve and keep up with ever-changing challenges.  Freed can help you drive improvement opportunities ranging from care management to facilities planning and from member administration to patient experience and outcomes — and more.
+<!-- Testimonial Start -->
+<div class="container-fluid bg-secondary p-0" style="padding: 30px;">
+    <div class="row g-0">
+        <div class="col-lg-6" style="min-height: 500px; padding: 30px;">
+            <div class="position-relative h-100">
+                <img class="position-absolute w-100 h-100" src="https://www.freedassociates.com/wp-content/uploads/2021/06/photo_solutions_02-1000x929.webp" style="object-fit: cover; border-radius: 8px;">
+            </div>
+        </div>
+        <div class="col-lg-6 py-6 px-5" style="padding: 30px;">
+            <h1 style="font-size: 20px; font-weight: bold; padding-bottom: 10px;">Drive lasting change for the better.</h1>
+            <div class="owl-carousel testimonial-carousel" style="padding: 10px;">
+                <div class="testimonial-item" style="padding: 10px; background-color: #f8f9fa; border-radius: 8px;">
+                    <p style="color: black; font-size: 20px;">Healthcare never stands still. Neither do our clients. They turn to Freed’s expert healthcare operations consultants to help them grow, optimize, evolve, improve, and keep up with ever-changing challenges. Freed can help you drive improvement opportunities ranging from care management to facilities planning and from member administration to patient experience and outcomes — and more.</p>
 
-                                At Freed, our healthcare operations consultants are steeped in applying Lean, Six-Sigma and Agile methodologies. We work closely alongside all stakeholders to understand your business needs and processes. We dig into your challenges and partner with the frontline professionals managing day-to-day work. And we build solutions that achieve significant, lasting improvement.</p>
-                            
-                        </div>
-                       
-                    </div>
+                    <p style="color: black; font-size: 20px; padding-top: 10px;">At Freed, our healthcare operations consultants are steeped in applying Lean, Six-Sigma, and Agile methodologies. We work closely alongside all stakeholders to understand your business needs and processes. We dig into your challenges and partner with the frontline professionals managing day-to-day work. And we build solutions that achieve significant, lasting improvement.</p>
                 </div>
             </div>
         </div>
-        <!-- Testimonial End -->
-    <!-- Testimonial Start -->
-   <!-- Testimonial Start -->
+    </div>
+</div>
+<!-- Testimonial End -->
 
+
+
+
+  <div style="text-align: center; padding: 50px; background-color: white;">
+    <p style="color:#2c2c54; font-size: 30px; margin-bottom: 20px;font-weight: bold;">Areas of Focus</p>
+</div>
+
+<div style="display: flex; justify-content: center; background-color: white;color: black;  padding: 20px;">
+    <div style="max-width: 800px; width: 100%;">
+        <h2 style="color: #2c2c54; cursor: pointer;" onclick="toggleSection('operations')">- Healthcare Operations Consulting</h2>
+        <div id="operations" class="content-section" style="display: block;">
+            <p>Freed helps you tackle the most complex operational challenges, whether that’s creating a better experience for patients and members, improving access to services, or addressing escalating costs.</p>
+            <ul>
+                <li>Operational assessment, design, and implementation</li>
+                <li>Consumer experience research and analysis</li>
+                <li>Operating model, workflow redesign, and supporting technology improvements</li>
+                <li>Performance measurement development and monitoring</li>
+            </ul>
+        </div>
+
+        <h2 style="color: #2c2c54; cursor: pointer;" onclick="toggleSection('strategy')">+ Healthcare Strategy Consulting</h2>
+        <div id="strategy" class="content-section" style="display: none;">
+            <p>Now, more than ever, integrated delivery systems and health plans are adjusting care management practices to address the needs of patients across the continuum of care and to achieve the best possible outcomes.</p>
+            <ul>
+                <li>Assessment of the end-to-end care continuum and associated recommendations</li>
+                <li>Future state organizational model development</li>
+                <li>Implementation support for technology solutions</li>
+                <li>Program development for end-of-life programs</li>
+                <li>Care management Key Performance Indicator (KPI) development</li>
+            </ul>
+        </div>
+
+        <h2 style="color: #2c2c54; cursor: pointer;" onclick="toggleSection('analytics')">+ Healthcare Analytics & Technology Consulting</h2>
+        <div id="analytics" class="content-section" style="display: none;">
+            <p>Making sure patients get the right care in the right place at the right time can mean consolidating, moving, or building facilities. Freed has the expertise you need to maximize efficiency and deliver the best possible patient experiences.</p>
+            <ul>
+                <li>Demand, capacity, and space planning</li>
+                <li>Site selection</li>
+                <li>Workflow redesign, including Lean process optimization</li>
+                <li>Staffing model optimization</li>
+                <li>Device management and technical integration</li>
+                <li>Communication planning, move logistics, and go-live support</li>
+            </ul>
+            <a href="#" style="color: #00d1b2; text-decoration: none;">Learn More »</a>
+        </div>
+    </div>
 </div>
 
 
-<div style="text-align: center; padding: 50px; background-color: white;">
-   
-    
-  </div>
-  <div style="text-align: center; padding: 50px; background-color: white;">
-    <p style="color: black; font-size: 30px; margin-bottom: 20px;">Areas of focus</p>
-   
-  </div>
-
-<div style="display: flex;">
-    <div style=" background-color: #2c2c54; color: white; padding: 20px;">
-      <h2 style="color: #00d1b2; cursor: pointer;" onclick="toggleSection('operations')">- Healthcare Operations Consulting</h2>
-      <div id="operations" style="display: block;">
-        <p>Freed helps you tackle the most complex operational challenges, whether that’s creating a better experience for patients and members, improving access to services, or addressing escalating costs.
-
-            We bring an iterative approach to assessing, planning and implementing improvement initiatives to ensure that we deliver what you and your customers truly need through a collegial, partnering relationship.
-            
-            Operational assessment, design and implementation
-            Consumer experience research and analysis
-            Operating model, workflow redesign, and supporting technology improvements
-            Performance measurement development and monitoring
-            </p>
-
-      </div>
-      <h2 style="color: #00d1b2; cursor: pointer;" onclick="toggleSection('strategy')">+ Healthcare Strategy Consulting</h2>
-      <div id="strategy" style="display: none;">
-        <p>
-
-            Now, more than ever, integrated delivery systems and health plans are adjusting care management practices to address the needs of patients across the continuum of care and to achieve the best possible outcomes.
-
-The care management experts at Freed are adept at engaging and partnering with clinicians, staff, patients, and families to design and improve the care and support provided to patients.
-
-Assessment of the end-to-end care continuum and associated recommendations, including development of continuum of care strategies
-Future state organizational model development, including identifying roles and responsibilities and workflows
-Implementation support for technology solutions that optimize scheduling and management of post-acute care
-Program development for the advancement of end-of-life programs
-Care management Key Performance Indicator (KPI) development
-</p>
-       
-      </div>
-      <h2 style="color: #00d1b2; cursor: pointer;" onclick="toggleSection('analytics')">+ Healthcare Analytics & Technology Consulting</h2>
-      <div id="analytics" style="display: none;">
-        <p>Making sure patients get the right care in the right place at the right time can mean consolidating, moving or building facilities. When it comes to accommodating your patient population within the four walls of your buildings, Freed has the expertise you need to maximize efficiency and deliver the best possible patient experiences.
-
-            Demand, capacity and space planning
-            Site selection
-            Workflow redesign, including Lean process optimization
-            Staffing model optimization
-            Device management and technical integration
-            Communication planning, move logistics, and go-live support</p>
-        <a href="#" style="color: #00d1b2; text-decoration: none;">Learn More »</a>
-      </div>
-     
-    </div>
-   
-  </div>
-
-
    
 
 
-
-    <div style="text-align: center; padding: 50px; background-color: white;">
-        <p style="color: #8a2be2; font-size: 14px; margin-bottom: 20px;">OUR SOLUTIONS</p>
-        <h1 style="color: #2c2c54; font-size: 36px; line-height: 1.2; margin: 0;">Strategic consulting and services for<br>healthcare organizations.</h1>
-      </div>
-    
-      <div style="display: flex; width: 100%;">
-        <div id="left-panel" style="flex: 1; background-color: #2c2c54; color: white; padding: 20px;">
-          <h2 style="color: #00d1b2; cursor: pointer;" onclick="toggleSection('operationss')">- Healthcare Operations Consulting</h2>
-          <div id="operationss" style="display: block;">
-            <p>
-              The rapid evolution of healthcare is forcing all organizations to continuously adjust. Freed has the expert consultants you need to advance your operational improvements, from business practices to care delivery, to care management practices and facilities planning.
-            </p>
-            <a href="#" style="color: #00d1b2; text-decoration: none;">Learn More »</a>
-          </div>
-          <h2 style="color: #00d1b2; cursor: pointer;" onclick="toggleSection('strategys')">+ Healthcare Strategy Consulting</h2>
-          <div id="strategys" style="display: none;">
-            <p>
-              Implementing sustainable, strategic change in healthcare has always been a challenge. That’s why so many organizations turn to Freed Associates. Our healthcare consultants not only guide senior leadership to help make transformation initiatives a reality, but we also roll up our sleeves and work side by side with your implementation teams to get initiatives across the finish line.
-            </p>
-            <a href="#" style="color: #00d1b2; text-decoration: none;">Learn More »</a>
-          </div>
-          <h2 style="color: #00d1b2; cursor: pointer;" onclick="toggleSection('analyticss')">+ Healthcare Analytics & Technology Consulting</h2>
-          <div id="analyticss" style="display: none;">
-            <p>
-              Improving efficiencies and delivering better care depends on robust data analytics capabilities and well-designed systems. Freed has decades of experience helping to realize the value of these investments, from data strategy and analytics initiatives to digital transformation and complex system implementations.
-            </p>
-            <a href="#" style="color: #00d1b2; text-decoration: none;">Learn More »</a>
-          </div>
-          <h2 style="color: #00d1b2; cursor: pointer;" onclick="toggleSection('compliances')">+ Healthcare Regulatory Compliance Consulting</h2>
-          <div id="compliances" style="display: none;">
-            <p>
-              Meeting state and federal-issued regulations is an intensely confusing, time-consuming and constant endeavor. Freed can help you accurately interpret regulations, evaluate appropriate actions, drive impact assessments, achieve regulatory preparedness and successfully complete health plan audits.
-            </p>
-            <a href="#" style="color: #00d1b2; text-decoration: none;">Learn More »</a>
-          </div>
-          <h2 style="color: #00d1b2; cursor: pointer;" onclick="toggleSection('revenues')">+ Healthcare Revenue Cycle Consulting</h2>
-          <div id="revenues" style="display: none;">
-            <p>
-              Maximizing revenue while improving the quality of care is more challenging than ever. Freed consultants expertly evaluate every aspect of your organization’s revenue cycle — from a provider, patient and health plan perspective. Our experts partner with you on increasing revenue and containing costs by implementing reimbursement models and applying a strategic approach to provider network management.
-            </p>
-            <a href="#" style="color: #00d1b2; text-decoration: none;">Learn More »</a>
-          </div>
-        </div>
-        <div style="flex: 1; background: url('https://www.freedassociates.com/wp-content/uploads/2021/07/photo_home_our-solutions-1000x967.webp') no-repeat center center; background-size: cover; position: relative;">
-          <div style="position: absolute; bottom: 20px; right: 20px; background: rgba(0, 0, 0, 0.5); color: white; padding: 10px; border-radius: 5px;">
-            Contact Freed
-          </div>
-        </div>
-      </div>
-      
 
     <!-- Blog End -->
  <!-- Footer Start -->
@@ -421,65 +360,31 @@ Care management Key Performance Indicator (KPI) development
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
-    <script>
-       function toggleSection(sectionId) {
-            // Hide all sections
-            document.getElementById('operations').style.display = 'none';
-            document.getElementById('strategy').style.display = 'none';
-            document.getElementById('analytics').style.display = 'none';
-            
-            // Show the clicked section
-            document.getElementById(sectionId).style.display = 'block';
-            
-            // Change the '+' to '-' for the clicked section and vice versa for others
-            var sections = ['operations', 'strategy', 'analytics'];
-            sections.forEach(function(id) {
-                var h2 = document.querySelector('h2[onclick="toggleSection(\'' + id + '\')"]');
-                if (id === sectionId) {
-                h2.textContent = id === 'operations' ? '- Healthcare Operations Consulting' : '+ ' + h2.textContent.slice(2);
-                } else {
-                h2.textContent = '+ ' + h2.textContent.slice(2);
-                }
-            });
+   
+<script>
+    function toggleSection(sectionId) {
+        // Sections
+        const sections = ['operations', 'strategy', 'analytics'];
+
+        // Iterate through all sections
+        sections.forEach(id => {
+            const section = document.getElementById(id);
+            const header = document.querySelector(`h2[onclick="toggleSection('${id}')"]`);
+
+            if (id === sectionId) {
+                // Toggle the active section
+                const isCurrentlyVisible = section.style.display === 'block';
+                section.style.display = isCurrentlyVisible ? 'none' : 'block';
+                header.textContent = (isCurrentlyVisible ? '+' : '-') + header.textContent.slice(1);
+            } else {
+                // Hide other sections
+                section.style.display = 'none';
+                header.textContent = '+' + header.textContent.slice(1);
             }
-        </script>
-       <script>
-        // Function to run when the page loads to hide all sections except the first one
-        window.onload = function () {
-          var sections = ['strategys', 'analyticss', 'compliances', 'revenues'];
-          sections.forEach(function (id) {
-            document.getElementById(id).style.display = 'none';
-          });
-          // Ensure 'operationss' is visible
-          document.getElementById('operationss').style.display = 'block';
-        };
-      
-        // Toggle function for sections
-        function toggleSection(sectionId) {
-          // Hide all sections
-          var allSections = ['operationss', 'strategys', 'analyticss', 'compliances', 'revenues'];
-          allSections.forEach(function (id) {
-            document.getElementById(id).style.display = 'none';
-            var h2 = document.querySelector('h2[onclick="toggleSection(\'' + id + '\')"]');
-            if (h2) {
-              h2.textContent = '+ ' + h2.textContent.slice(2);
-            }
-          });
-      
-          // Show the clicked section
-          var sectionToShow = document.getElementById(sectionId);
-          if (sectionToShow) {
-            sectionToShow.style.display = 'block';
-          }
-      
-          // Change the '+' to '-' for the clicked section
-          var activeH2 = document.querySelector('h2[onclick="toggleSection(\'' + sectionId + '\')"]');
-          if (activeH2) {
-            activeH2.textContent = '- ' + activeH2.textContent.slice(2);
-          }
-        }
-      </script>
-      
+        });
+    }
+</script>
+   
        
 </body>
 
