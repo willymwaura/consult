@@ -340,7 +340,7 @@
 <div style="font-family: Arial, sans-serif; padding: 20px; background-color: white; border: 1px solid #e0e0e0; position: relative; overflow: hidden;">
     <div style="display: flex; justify-content: space-between; align-items: center;">
         <h2 style="color: rgb(39, 39, 92); font-size: 24px; margin: 0;">Related insights.</h2>
-        <a href="#" style="color: #0078d4; font-size: 16px; text-decoration: none;">See All</a>
+       
     </div>
     <div id="insightsContainer" style="display: flex; overflow-x: hidden; scroll-behavior: smooth; margin-top: 20px; width: 100%; gap: 20px;">
         <!-- First Insight -->
@@ -384,10 +384,15 @@
             <h3 style="font-size: 16px; color: #1a1a1a; margin: 10px 0 5px;">Managing Change During Digital Transformation</h3>
         </div>
     </div>
-    <div style="position: absolute; top: 20px; right: 20px; display: flex; gap: 10px;">
-        <button onclick="scrollInsights('left')" style="border: 1px solid #ccc; background-color: transparent; padding: 5px; cursor: pointer;">&#60;</button>
-        <button onclick="scrollInsights('right')" style="border: 1px solid #ccc; background-color: #0078d4; color: white; padding: 5px; cursor: pointer;">&#62;</button>
+    <div style="position: absolute; top: 20px; right: 20px; display: flex; gap: 10px; align-items: center;">
+        <button onclick="scrollInsights('left')" style="border: 2px solid rgb(39, 39, 92); background-color: white; padding: 10px; cursor: pointer; display: flex; justify-content: center; align-items: center; width: 60px; height: 40px; box-sizing: border-box; border-radius: 5px;font-size: 24px;">
+            &#8592; <!-- Left arrow -->
+        </button>
+        <button onclick="scrollInsights('right')" style="border: 2px solid rgb(39, 39, 92); background-color: white; color: rgb(39, 39, 92); padding: 10px; cursor: pointer; display: flex; justify-content: center; align-items: center; width: 60px; height: 40px; box-sizing: border-box; border-radius: 5px;font-size: 24px;">
+            &#8594; <!-- Right arrow -->
+        </button>
     </div>
+    
 </div>
 
 <div style="font-family: Arial, sans-serif; padding: 20px; background-color: white; border: 1px solid #e0e0e0; position: relative; display: flex; justify-content: space-between;">
