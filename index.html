@@ -35,7 +35,7 @@
     <!-- Topbar End -->
     <div id="topBanner" style="background-color: aquamarine; color: black; padding: 10px; display: flex; justify-content: space-between; align-items: center; position: relative; z-index: 1000;">
         <div style="display: flex; align-items: center; margin: 0 auto;">
-            <button class="watch-now-btn" style="background-color: #451885; color: white; border: none; padding: 10px 20px; margin-right: 10px; cursor: pointer;">WATCH NOW</button>
+            <button class="watch-now-btn" style="background-color: #451885; color: white; border: none; padding: 10px 20px; margin-right: 10px; cursor: pointer;">READ MORE</button>
             <span>Learn how the power of social care and medical care partnerships are improving health equity.</span>
         </div>
         <button class="close-btn" onclick="document.getElementById('topBanner').style.display = 'none';" style="background: none; border: none; color: white; font-size: 20px; cursor: pointer;">✖</button>
@@ -66,8 +66,9 @@
     <!-- Navbar items collapse -->
     <div class="collapse navbar-collapse" id="navbarCollapse">
         <div class="navbar-nav mx-auto py-0 text-center" style="font-size: 20px; font-family: Arial, Helvetica, sans-serif;">
-            <a class="underlinepage pageam nav-item nav-link " href="why.html" style="color: white; font-weight: bold; padding: 5px;">Why Freed</a>
             <a class="underlinepage pageam nav-item nav-link" href="index.html#our-solutions" style="color: white; font-weight: bold; padding: 5px;">Solutions</a>
+            <a class="underlinepage pageam nav-item nav-link " href="why.html" style="color: white; font-weight: bold; padding: 5px;">Why Freed</a>
+            
             <a class="underlinepage pageam nav-item nav-link" href="company.html" style="color: white; font-weight: bold; padding: 5px;">Company</a>
             <a class="underlinepage pageam nav-item nav-link" href="equity.html" style="color: white; font-weight: bold; padding: 5px;">Recruitment</a>
         </div>
@@ -139,16 +140,14 @@
         <div class="row g-0" >
             <!-- Text Column -->
             <div class="col-lg-6 py-6 px-5" style="color: white; text-align: left;">
-                <h1 style="color: aquamarine; font-size: 20px; margin-bottom: 20px;">
-                    <!-- Optional Heading Content -->
-                </h1>
+                
                 <h2 style="font-size: 50px; color: white; margin-bottom: 10px;">
                     Better consulting.
                 </h2>
-                <h2 style="font-size: 50px; color: white; margin-bottom: 10px;">
+                <h2 style="font-size: 50px; color: white; margin-bottom: 30px;">
                     Better outcomes.
                 </h2>
-                <h5 style="color: white; font-size: 18px; line-height: 1.5;">
+                <h5 style="color: white; font-size: 18px; line-height: 1.5;margin-bottom: 30px;">
                     When it comes to advancing healthcare, Freed Associates is the healthcare consulting firm that delivers the fastest path to realizing maximum value from your improvement initiatives.
                 </h5>
                 <a href="#" style="
@@ -259,7 +258,7 @@
        <!-- Services End -->
 
         <!-- Testimonial Start -->
-        <div class="bg-secondary" style="padding: 20px;"> <!-- Added padding directly to this container -->
+        <div class="bg-secondary" style="padding: 80px;background-color: white !important;"> <!-- Added padding directly to this container -->
             <div class="row g-0">
                 <!-- Left Image Column -->
                 <div class="col-lg-6" style="min-height: 500px;">
@@ -271,11 +270,11 @@
                 </div>
                 
                 <!-- Right Content Column -->
-                <div class="col-lg-6 py-5 px-4"> <!-- Adjusted padding here -->
+                <div class="col-lg-6 py-5 px-4" style="padding: 50px !important;"> <!-- Adjusted padding here -->
                     <h1 style="font-size: 20px; font-weight: bold; color: #8a2be2;">Why Freed?</h1>
-                    <div class="owl-carousel testimonial-carousel">
+                    <div >
                         <div class="testimonial-item">
-                            <p style="font-size: 40px; color: rgb(22, 22, 68); font-weight: 800;">
+                            <p style="font-size: 40px; color: rgb(22, 22, 68); font-weight: 900 !important;">
                                 Some healthcare consultants are all talk. We’re all action
                             </p>
                             <p style="color: black; font-size: 20px;">
@@ -308,7 +307,7 @@
    
     
   </div>
-  <div class="mss" class="bg-secondary" style="padding: 30px;"> <!-- Added padding to the main container -->
+  <div class="mss" class="bg-secondary" style="padding: 80px;"> <!-- Added padding to the main container -->
     <div class="row g-0">
         <div class="col-12" style="height: 400px;"> <!-- Full screen height -->
             <div class="position-relative h-100">
@@ -341,33 +340,50 @@
     <p style="color: #8a2be2; font-size: 20px; margin-bottom: 20px;font-weight: bold;">OUR SOLUTIONS</p>
     <h1 style="color: #2c2c54; font-size: 36px; line-height: 1.2; margin: 0;">Strategic consulting and services for<br>healthcare organizations.</h1>
   </div>
-
-  <div style="display: flex; width: 100%; padding: 30px;">
+ 
+<div style="display: flex; width: 100%; padding: 80px; background-color: #e0e0e0;">
     <div id="left-panel" style="flex: 1; background-color: #2c2c54; color: white; padding: 20px;">
-        <h2 style="color: #00d1b2; cursor: pointer;" onclick="toggleSection('operations')">- Healthcare Operations Consulting</h2>
-        <div id="operations" style="display: block; padding: 10px;">
-            <p>The rapid evolution of healthcare is forcing all organizations to continuously adjust. Freed has the expert consultants you need to advance your operational improvements, from business practices to care delivery, to care management practices and facilities planning.</p>
-            <a href="operations.html" style="color: #00d1b2; text-decoration: none;">Learn More »</a>
+       
+        <h2 style="color: white; cursor: pointer;" onclick="toggleSection('operations')" onmouseover="this.style.color='aquamarine';" onmouseout="this.style.color='white';">- Healthcare Operations Consulting</h2>
+        <div id="operations" style="display: block; padding: 0 10px; margin: 0; transition: max-height 0.5s ease-out; overflow: hidden; max-height: 1000px;">
+            <p style="margin: 10px 0;">The rapid evolution of healthcare is forcing all organizations to continuously adjust. Freed has the expert consultants you need to advance your operational improvements, from business practices to care delivery, to care management practices and facilities planning.</p>
+            <a href="operations.html" style="color: #00d1b2; text-decoration: none; margin: 10px 0; display: block;">Learn More »</a>
         </div>
-        <h2 style="color: #00d1b2; cursor: pointer;" onclick="toggleSection('strategy')">+ Healthcare Strategy Consulting</h2>
-        <div id="strategy" style="display: none; padding: 10px;">
-            <p>Implementing sustainable, strategic change in healthcare has always been a challenge. That’s why so many organizations turn to Freed Associates. Our healthcare consultants not only guide senior leadership to help make transformation initiatives a reality, but we also roll up our sleeves and work side by side with your implementation teams to get initiatives across the finish line.</p>
-            <a href="stratergy.html" style="color: #00d1b2; text-decoration: none;">Learn More »</a>
+        <div style="border-bottom: 1px solid white; opacity: 0.2;">
+
         </div>
-        <h2 style="color: #00d1b2; cursor: pointer;" onclick="toggleSection('analytics')">+ Healthcare Analytics & Technology Consulting</h2>
-        <div id="analytics" style="display: none; padding: 10px;">
-            <p>Improving efficiencies and delivering better care depends on robust data analytics capabilities and well-designed systems. Freed has decades of experience helping to realize the value of these investments, from data strategy and analytics initiatives to digital transformation and complex system implementations.</p>
-            <a href="analytics.html" style="color: #00d1b2; text-decoration: none;">Learn More »</a>
+
+        <h2 style="color: white; cursor: pointer;" onclick="toggleSection('strategy')" onmouseover="this.style.color='aquamarine';" onmouseout="this.style.color='white';">+ Healthcare Strategy Consulting</h2>
+        <div id="strategy" style="display: none; padding: 0 10px; margin: 0; transition: max-height 0.5s ease-out; overflow: hidden; max-height: 0;">
+            <p style="margin: 10px 0;">Implementing sustainable, strategic change in healthcare has always been a challenge. That’s why so many organizations turn to Freed Associates. Our healthcare consultants not only guide senior leadership to help make transformation initiatives a reality, but we also roll up our sleeves and work side by side with your implementation teams to get initiatives across the finish line.</p>
+            <a href="stratergy.html" style="color: #00d1b2; text-decoration: none; margin: 10px 0; display: block;">Learn More »</a>
         </div>
-        <h2 style="color: #00d1b2; cursor: pointer;" onclick="toggleSection('compliance')">+ Healthcare Regulatory Compliance Consulting</h2>
-        <div id="compliance" style="display: none; padding: 10px;">
-            <p>Meeting state and federal-issued regulations is an intensely confusing, time-consuming and constant endeavor. Freed can help you accurately interpret regulations, evaluate appropriate actions, drive impact assessments, achieve regulatory preparedness and successfully complete health plan audits.</p>
-            <a href="compliance.html" style="color: #00d1b2; text-decoration: none;">Learn More »</a>
+        <div style="border-bottom: 1px solid white; opacity: 0.2;">
+
         </div>
-        <h2 style="color: #00d1b2; cursor: pointer;" onclick="toggleSection('revenue')">+ Healthcare Revenue Cycle Consulting</h2>
-        <div id="revenue" style="display: none; padding: 10px;">
-            <p>Maximizing revenue while improving the quality of care is more challenging than ever. Freed consultants expertly evaluate every aspect of your organization’s revenue cycle — from a provider, patient and health plan perspective. Our experts partner with you on increasing revenue and containing costs by implementing reimbursement models and applying a strategic approach to provider network management.</p>
-            <a href="consulting.html" style="color: #00d1b2; text-decoration: none;">Learn More »</a>
+
+        <h2 style="color: white; cursor: pointer;" onclick="toggleSection('analytics')" onmouseover="this.style.color='aquamarine';" onmouseout="this.style.color='white';">+ Healthcare Analytics & Technology Consulting</h2>
+        <div id="analytics" style="display: none; padding: 0 10px; margin: 0; transition: max-height 0.5s ease-out; overflow: hidden; max-height: 0;">
+            <p style="margin: 10px 0;">Improving efficiencies and delivering better care depends on robust data analytics capabilities and well-designed systems. Freed has decades of experience helping to realize the value of these investments, from data strategy and analytics initiatives to digital transformation and complex system implementations.</p>
+            <a href="analytics.html" style="color: #00d1b2; text-decoration: none; margin: 10px 0; display: block;">Learn More »</a>
+        </div>
+        <div style="border-bottom: 1px solid white; opacity: 0.2;">
+
+        </div>
+
+        <h2 style="color: white; cursor: pointer;" onclick="toggleSection('compliance')" onmouseover="this.style.color='aquamarine';" onmouseout="this.style.color='white';">+ Healthcare Regulatory Compliance Consulting</h2>
+        <div id="compliance" style="display: none; padding: 0 10px; margin: 0; transition: max-height 0.5s ease-out; overflow: hidden; max-height: 0;">
+            <p style="margin: 10px 0;">Meeting state and federal-issued regulations is an intensely confusing, time-consuming and constant endeavor. Freed can help you accurately interpret regulations, evaluate appropriate actions, drive impact assessments, achieve regulatory preparedness and successfully complete health plan audits.</p>
+            <a href="compliance.html" style="color: #00d1b2; text-decoration: none; margin: 10px 0; display: block;">Learn More »</a>
+        </div>
+        <div style="border-bottom: 1px solid white; opacity: 0.2;">
+
+        </div>
+
+        <h2 style="color: white; cursor: pointer;" onclick="toggleSection('revenue')" onmouseover="this.style.color='aquamarine';" onmouseout="this.style.color='white';">+ Healthcare Revenue Cycle Consulting</h2>
+        <div id="revenue" style="display: none; padding: 0 10px; margin: 0; transition: max-height 0.5s ease-out; overflow: hidden; max-height: 0;">
+            <p style="margin: 10px 0;">Maximizing revenue while improving the quality of care is more challenging than ever. Freed consultants expertly evaluate every aspect of your organization’s revenue cycle — from a provider, patient and health plan perspective. Our experts partner with you on increasing revenue and containing costs by implementing reimbursement models and applying a strategic approach to provider network management.</p>
+            <a href="consulting.html" style="color: #00d1b2; text-decoration: none; margin: 10px 0; display: block;">Learn More »</a>
         </div>
     </div>
     <div style="flex: 1; background: url('https://www.freedassociates.com/wp-content/uploads/2021/07/photo_home_our-solutions-1000x967.webp') no-repeat center center; background-size: cover; position: relative;">
@@ -379,7 +395,7 @@
 
 
 
-  <div style="text-align: center; padding: 50px; background-color: white;">
+  <div style="text-align: center; padding-bottom: 50px; background-color: #e0e0e0;" >
     <p style="color: #2c2c54; font-size: 40px; margin-bottom: 20px;font-weight: bold;">The latest</p>
     
   </div>
@@ -388,28 +404,24 @@
 
 
 
-  <div style="display: flex; width: 100%; margin-bottom: 20px; padding: 30px;">
+  <div style="display: flex; width: 100%; padding-left: 80px;background-color: #e0e0e0;padding-right: 80px; ">
     <!-- Left Section -->
-    <div style="flex: 1; background-color: #00aabb; padding: 30px; color: white; border-radius: 10px;">
-      <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; margin-bottom: 20px;">
-        <img src="https://www.freedassociates.com/wp-content/uploads/2024/12/flex-lp_healing-healthcare07_featured.jpg" alt="Team Member 1" style="width: 100%; height: auto; border-radius: 10px;">
+    <div style="flex: 1; background-color: #00aabb; color: white;">
+      <div >
+        <img src="https://www.freedassociates.com/wp-content/uploads/2024/12/flex-lp_healing-healthcare07_featured.jpg" alt="Team Member 1" style="width: 100%; height: 250px;">
       </div>
-      <h2 style="font-size: 30px; margin: 0 0 15px 0;">The Power of Partnership.</h2>
-      <p style="font-size: 20px; margin: 0 0 15px 0;color: #000;">How do we strengthen collaborations between healthcare providers and community-based organizations to improve health?</p>
-      <a href="https://www.freedassociates.com/knowledge-center/health-plan-improves-quality-scores-with-freed-guidance/" 
-         style="color: white; text-decoration: none; font-size: 14px; display: block; margin-bottom: 15px;color: #000;">
-        https://www.freedassociates.com/knowledge-center/health-plan-improves-quality-scores-with-freed-guidance/
-      </a>
-      <a href="#" 
-         style="display: inline-block; text-decoration: none; font-size: 16px; color: #6534ac; border: 2px solid #6534ac; padding: 10px 20px; font-weight: bold; border-radius: 0px;">
+      <h2 style="font-size: 30px; margin-left: 30px;">The Power of Partnership.</h2>
+      <p style="font-size: 20px;color: #000;margin-left: 30px;">How do we strengthen collaborations between healthcare providers and community-based organizations to improve health?</p>
+     
+      <a href="#" style="display: inline-block; text-decoration: none; font-size: 16px; color: #6534ac; border: 2px solid #6534ac; padding: 15px 25px; font-weight: bold; border-radius: 0px; margin-left: 20px;margin-bottom: 20px;">
         Watch Now
-      </a>
+    </a>
     </div>
   
     <!-- Right Section -->
-    <div style="flex: 1; padding: 30px; background-color: white; margin-left: 20px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">
+    <div style="flex: 1;  background-color: #e0e0e0; margin-left: 20px; border-radius: 10px; ">
       <!-- Case Study Section -->
-      <div style="background-color: #f0f0f0; padding: 20px; border-radius: 10px; margin-bottom: 20px; display: flex; align-items: center; gap: 20px;">
+      <div style="background-color: white !important; padding-left: 20px; margin-bottom: 20px; display: flex; align-items: center; gap: 20px;padding-right: 20px;">
         <div style="flex: 1;">
           <p style="color: #8a2be2; font-size: 18px; margin: 0 0 10px 0;font-weight: bolder;">CASE STUDY</p>
           <h3 style="font-size: 18px; margin: 0 0 10px 0;">Health Plan Improves Quality Scores with Freed Guidance</h3>
@@ -425,15 +437,15 @@
             </h1>
           </a>
         </div>
-        <img src="https://www.freedassociates.com/wp-content/uploads/2024/09/FREED-0049_Anthem-CA-Exchange_thumb-288x400.webp" alt="Case Study Image" style="width: 150px; height: auto; border-radius: 10px;">
+        <img src="https://www.freedassociates.com/wp-content/uploads/2024/09/FREED-0049_Anthem-CA-Exchange_thumb-288x400.webp" alt="Case Study Image" style="width: 150px; height: auto; ">
       </div>
   
       <!-- Point of View Section -->
-      <div style="background-color: #e0e0e0; padding: 20px; border-radius: 10px; display: flex; align-items: center; gap: 20px;">
+      <div style="background-color: white; padding-left: 20px; display: flex; align-items: center; gap: 20px;padding-right: 20px;">
         <div style="flex: 1;">
           <p style="color: #8a2be2; font-size: 18px; margin: 0 0 10px 0;font-weight: bolder;">POINT OF VIEW</p>
-          <h3 style="font-size: 18px; margin: 0 0 10px 0;">Improving Healthcare Access by Reducing Transportation Barriers</h3>
-          <p style="font-size: 14px; margin: 0 0 10px 0;color: #000;">Determinants of health, including transportation, play a critical role in healthcare access.</p>
+          <h3 style="font-size: 18px;">Improving Healthcare Access by Reducing Transportation Barriers</h3>
+          <p style="font-size: 14px;color: #000;">Determinants of health, including transportation, play a critical role in healthcare access.</p>
           <a href="why.html">
             <h1 style="color: #8a2be2; font-weight: bold; font-size: 15px; display: inline-flex; align-items: center;">
                 Read More
@@ -445,13 +457,19 @@
             </h1>
           </a>
         </div>
-        <img src="https://www.freedassociates.com/wp-content/uploads/2024/09/insights_medical-transportation_thumb-288x400.webp" alt="Point of View Image" style="width: 150px; height: auto; border-radius: 10px;">
+        <img src="https://www.freedassociates.com/wp-content/uploads/2024/09/insights_medical-transportation_thumb-288x400.webp" alt="Point of View Image" style="width: 150px; height: auto; ">
       </div>
     </div>
   </div>
+
   
-  <div style="padding: 20px; "> <!-- Outer div with padding -->
-    <div style="max-width: 1200px; margin: 0 auto; background-color: #65CFE9; padding: 30px; border-radius: 10px; box-sizing: border-box;">
+  <div style="text-align: center; padding-bottom: 40px; background-color: #e0e0e0;" >
+  
+    
+  </div>
+  
+  <div style="padding-left: 80px;background-color: #e0e0e0;padding-right: 80px;  "> <!-- Outer div with padding -->
+    <div style="max-width: 1200px; margin: 0 auto; background-color: #65CFE9; padding: 30px;  box-sizing: border-box;">
         <div style="display: flex; align-items: center; justify-content: space-between;">
             <!-- Left Section: Image -->
             <div style="flex: 1; text-align: center; padding-right: 20px;">
@@ -486,7 +504,7 @@
 
 
 
-<div style="text-align: center; padding: 50px; background-color: white;">
+<div style="text-align: center; padding: 50px; background-color: #e0e0e0;">
     
     
   </div>
@@ -507,7 +525,7 @@
 
         <!-- Right Section -->
         <div class="col-lg-6 text-center">
-            <h1 class="display-5 mb-4 text-white">Stay Updated!!!</h1>
+          
             <form class="mx-auto" style="max-width: 600px;">
                 <div class="input-group">
                     <input type="text" class="form-control border-white p-3" placeholder="Your Email">
@@ -599,76 +617,27 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+
     <script>
-       
-        
-        // Toggle function for sections
         function toggleSection(sectionId) {
-          // Hide all sections
-          var allSections = ['operations', 'strategy', 'analytics', 'compliance', 'revenue'];
-          allSections.forEach(function(id) {
-            document.getElementById(id).style.display = 'none';
-            var h2 = document.querySelector('h2[onclick="toggleSection(\'' + id + '\')"]');
-            if (h2) {
-              h2.textContent = '+ ' + h2.textContent.slice(2);
+            var section = document.getElementById(sectionId);
+            var h2 = section.previousElementSibling;
+            
+            if (section.style.maxHeight && section.style.maxHeight !== "0px") {
+                // If the section is currently open, close it
+                section.style.maxHeight = "0px";
+                h2.innerHTML = "+" + h2.textContent.slice(1);
+            } else {
+                // If the section is currently closed, open it
+                section.style.display = "block"; // Ensure it's visible before setting maxHeight
+                var height = section.scrollHeight;
+                section.style.maxHeight = height + "px";
+                h2.innerHTML = "-" + h2.textContent.slice(1);
             }
-          });
-          
-          // Show the clicked section
-          var sectionToShow = document.getElementById(sectionId);
-          if (sectionToShow) {
-            sectionToShow.style.display = 'block';
-          }
-          
-          // Change the '+' to '-' for the clicked section
-          var activeH2 = document.querySelector('h2[onclick="toggleSection(\'' + sectionId + '\')"]');
-          if (activeH2) {
-            activeH2.textContent = '- ' + activeH2.textContent.slice(2);
-          }
         }
         </script>
-       <script>
-        function toggleSection(sectionId) {
-            const section = document.getElementById(sectionId);
-            const header = document.querySelector(`[onclick="toggleSection('${sectionId}')"]`);
-            
-            if (section.style.maxHeight === "0px" || !section.style.maxHeight) {
-                // Expand the section smoothly
-                section.style.display = "block"; // Ensure visibility
-                section.style.transition = "max-height 0.5s ease-in-out, opacity 0.5s ease-in-out";
-                section.style.maxHeight = section.scrollHeight + "px";
-                section.style.opacity = 1;
-                header.innerHTML = header.innerHTML.replace("+", "-");
-            } else {
-                // Collapse the section smoothly
-                section.style.transition = "max-height 0.5s ease-in-out, opacity 0.5s ease-in-out";
-                section.style.maxHeight = "0px";
-                section.style.opacity = 0;
-                setTimeout(() => {
-                    section.style.display = "none"; // Ensure it's hidden after animation
-                }, 500); // Match the transition duration
-                header.innerHTML = header.innerHTML.replace("-", "+");
-            }
-        }
-    </script>
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const links = document.querySelectorAll('a[href^="#"]');
-            links.forEach(link => {
-                link.addEventListener("click", (e) => {
-                    e.preventDefault();
-                    const targetId = link.getAttribute("href").substring(1);
-                    const targetElement = document.getElementById(targetId);
-                    if (targetElement) {
-                        targetElement.scrollIntoView({
-                            behavior: "smooth",
-                            block: "start"
-                        });
-                    }
-                });
-            });
-        });
-    </script>
+        
+   
     
        
 </body>
