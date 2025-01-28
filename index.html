@@ -327,7 +327,7 @@
                 Let’s build a more equitable healthcare ecosystem.
             </h2>
             <p style="color: #000; font-size: 16px; line-height: 1.6; margin-bottom: 30px; text-align: left;">
-                Discover how you can address health inequities with confidence and achieve measurable results. Gain access to expert 
+                Discover how you can address health inequities with confidence and achieve measurable results.<br> Gain access to expert 
                 health equity insights, articles, case studies and more.
             </p>
             <a href="#" style="display: inline-block; text-decoration: none; font-size: 16px; color: #6534ac; border: 2px solid #6534ac; padding: 10px 20px; font-weight: bold; border-radius: 0px; text-align: left;">
@@ -489,8 +489,9 @@
                     How industry change makers are improving healthcare.
                 </h2>
                 <p style="color: #000; font-size: 16px; line-height: 1.8; margin-bottom: 30px;">
-                    Welcome to your home for news, insights, inspiration, and expert guidance from industry professionals making a difference. This new webisode series of valuable content from leading voices is just one of many ways we’re helping advocate for, and working toward, better healthcare.
+                    Welcome to your home for news, insights, inspiration, and expert guidance from industry professionals making a difference.
                 </p>
+                <p  style="color: #000;"> This new webisode series of valuable content from leading voices is just one of many ways we’re helping advocate for, and working toward, better healthcare.</p>
                 <a href="#" style="display: inline-block; text-decoration: none; font-size: 16px; color: #6534ac; border: 2px solid #6534ac; padding: 15px 25px; font-weight: bold; border-radius: 0px; margin-top: 20px;">
                     Watch Now
                 </a>
@@ -623,7 +624,6 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
-
     <script>
         function toggleSection(sectionId) {
             // Get all sections
@@ -650,15 +650,29 @@
                 currentH2.innerHTML = "+" + currentH2.textContent.slice(1);
             } else {
                 // If the section is closed, open it
-                currentSection.style.display = "block"; // Ensure it's visible before setting maxHeight
+                currentSection.style.display = "block";
+                
+                // Force a reflow before setting maxHeight to ensure correct height calculation
+                void currentSection.offsetHeight;
+                
                 var height = currentSection.scrollHeight;
                 currentSection.style.maxHeight = height + "px";
                 currentH2.innerHTML = "-" + currentH2.textContent.slice(1);
             }
         }
+    
+        // Ensure the first section is opened on page load with no transition
+        document.addEventListener('DOMContentLoaded', function() {
+            var firstSection = document.getElementById('operations');
+            var firstH2 = firstSection.previousElementSibling;
+            
+            // Force a reflow before setting maxHeight to ensure correct height calculation
+            void firstSection.offsetHeight;
+            
+            firstSection.style.maxHeight = firstSection.scrollHeight + "px";
+            firstH2.innerHTML = "-" + firstH2.textContent.slice(1);
+        });
     </script>
-        
-   
     
        
 </body>
