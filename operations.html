@@ -127,9 +127,14 @@
     }
    
     .content-section {
-        overflow: hidden;
-        transition: max-height 0.4s ease, opacity 0.4s ease;
-    }
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+
+    text-align: left;
+}
+
+
   
 </style>
  
@@ -141,7 +146,7 @@
 
 
     <div class="container-fluid p-0" style="background-color: #451885;">
-        <div class="row g-0" style="padding-bottom: 70px;">
+        <div class="row g-0" >
             <!-- Text Column -->
             <div class="col-lg-6 py-6 px-5">
                 <h1 style="color: white;font-size: 50px;padding-top: 50px;">
@@ -172,7 +177,7 @@
      <!-- Services End -->
 
 <!-- Testimonial Start -->
-<div class="container-fluid bg-secondary p-0" style="padding: 6%;background-color: white !important;">
+<div class="container-fluid bg-secondary p-0" style="padding-left: 6%;background-color: white !important;padding-right: 6%;padding-top: 70px;">
     <div class="row g-0">
         <div class="col-lg-6" style="min-height: 500px;padding-top: 80px;padding-left: 6%;">
             <div class="position-relative h-100">
@@ -196,17 +201,27 @@
 
 
 
-  <div style=" padding-top: 20px; background-color: white;padding-left: 6%;padding-right: 6%;">
+  <div style=" padding-top: 20px; background-color: white;padding-left: 6%;padding-right: 6%;padding-top: 70px;">
     
     <p style="font-size: 40px;left: 0%; color: rgb(22, 22, 68); font-weight: 900 !important; text-shadow: 1px 1px 0  rgb(22, 22, 68), -1px -1px 0  rgb(22, 22, 68), 1px -1px 0  rgb(22, 22, 68), -1px 1px 0  rgb(22, 22, 68);">
         Areas of Focus
     </p>
 </div>
-<div style="display: flex; justify-content: center; background-color: white; color: black; padding-left: 6%; padding-right: 6%;">
+<div style="display: flex; justify-content: center; background-color: white; color: black; padding-left: 6%;padding-right: 6%;">
     <div style="display: flex; width: 100%; max-width: 1200px; flex-wrap: wrap;">
         <div class="accordion-item" style="display: flex; width: 100%; border: none;">
-            <h2 style="color: #2c2c54; cursor: pointer; min-width: 250px; padding: 10px 0; font-size: 29px;" onclick="toggleSection('operations')" onmouseover="this.style.color='#451885';" onmouseout="this.style.color='black';">+ Business Operations and Care Delivery Improvement</h2>
-            <div id="operations" class="content-section" style="flex: 1; max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out;margin: 15px; font-size: 18px; border: none;padding-left: 10px;">
+            <!-- Left Section (Title) -->
+            <div class="accordion-title" style="width: 50%; min-width: 250px; display: flex; align-items: center;">
+                <h2 style="color: #2c2c54; cursor: pointer; font-size: 25px; text-align: left; width: 100%;" 
+                    onclick="toggleSection('operations')" 
+                    onmouseover="this.style.color='#451885';" 
+                    onmouseout="this.style.color='black';">
+                    + Business Operations and Care Delivery Improvement
+                </h2>
+            </div>
+            <!-- Right Section (Content) -->
+            <div id="operations" class="content-section" 
+                style="width: 50%; max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; font-size: 18px; padding-left: 5%;">
                 <p>Freed helps you tackle the most complex operational challenges, whether that's creating a better experience for patients and members, improving access to services, or addressing escalating costs.</p>
                 <ul>
                     <li>Operational assessment, design, and implementation</li>
@@ -216,13 +231,22 @@
                 </ul>
             </div>
         </div>
+        
         <div style="width: 100%; height: 1px; background-color: #2c2c54; margin: 10px 0;"></div> <!-- Horizontal line -->
 
-
-
         <div class="accordion-item" style="display: flex; width: 100%; border: none;">
-            <h2 style="color: #2c2c54; cursor: pointer; min-width: 250px; padding: 10px 0; font-size: 30px;" onclick="toggleSection('strategy')" onmouseover="this.style.color='#451885';" onmouseout="this.style.color='black';">+ Care Management &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h2>
-            <div id="strategy" class="content-section" style="flex: 1; max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; font-size: 18px; border: none;padding-left: 10px;margin: 20px;">
+            <!-- Left Section -->
+            <div class="accordion-title" style="width: 50%; min-width: 250px; display: flex; left: 0%;">
+                <h2 style="color: #2c2c54; cursor: pointer; font-size: 25px; width: 100%;" 
+                    onclick="toggleSection('strategy')" 
+                    onmouseover="this.style.color='#451885';" 
+                    onmouseout="this.style.color='black';">
+                    + Care Management
+                </h2>
+            </div>
+            <!-- Right Section -->
+            <div id="strategy" class="content-section" 
+                style="width: 50%; max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; font-size: 18px; padding-left: 5%;">
                 <p>Now, more than ever, integrated delivery systems and health plans are adjusting care management practices to address the needs of patients across the continuum of care and to achieve the best possible outcomes.</p>
                 <ul>
                     <li>Assessment of the end-to-end care continuum and associated recommendations</li>
@@ -233,12 +257,22 @@
                 </ul>
             </div>
         </div>
-        <div style="width: 100%; height: 1px; background-color: #2c2c54; margin: 10px 0;"></div> 
-      
+
+        <div style="width: 100%; height: 1px; background-color: #2c2c54; margin: 10px 0;"></div> <!-- Horizontal line -->
 
         <div class="accordion-item" style="display: flex; width: 100%; border: none;">
-            <h2 style="color: #2c2c54; cursor: pointer; min-width: 250px; padding: 10px 0; font-size: 30px;" onclick="toggleSection('analytics')" onmouseover="this.style.color='#451885';" onmouseout="this.style.color='black';">+ Healthcare Facility Planning and Execution</h2>
-            <div id="analytics" class="content-section" style="flex: 1; max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; margin-top: 20px; font-size: 18px; border: none;padding-left: 10px;">
+            <!-- Left Section -->
+            <div class="accordion-title" style="width: 50%; min-width: 250px; display: flex; align-items: center; justify-content: center;">
+                <h2 style="color: #2c2c54; cursor: pointer; font-size: 25px; width: 100%;" 
+                    onclick="toggleSection('analytics')" 
+                    onmouseover="this.style.color='#451885';" 
+                    onmouseout="this.style.color='black';">
+                    + Healthcare Facility Planning and Execution
+                </h2>
+            </div>
+            <!-- Right Section -->
+            <div id="analytics" class="content-section" 
+                style="width: 50%; max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; font-size: 18px; padding-left: 5%;">
                 <p>Making sure patients get the right care in the right place at the right time can mean consolidating, moving, or building facilities. Freed has the expertise you need to maximize efficiency and deliver the best possible patient experiences.</p>
                 <ul>
                     <li>Demand, capacity, and space planning</li>
@@ -258,14 +292,14 @@
 
 <div style="font-family: Arial, sans-serif; padding: 20px; background-color: white; position: relative; overflow: hidden;padding-left: 6%;padding-right: 6%;">
     <div style="display: flex; justify-content: space-between; align-items: center;padding-top: 30px;padding-top: 50px;">
-        <h2 style="font-size: 50px; color: rgb(22, 22, 68); font-weight: 900 !important;  rgb(22, 22, 68), -1px -1px 0  rgb(22, 22, 68), 1px -1px 0  rgb(22, 22, 68), -1px 1px 0  rgb(22, 22, 68);">Related insights. &nbsp; <span style="font-size: 20px;text-decoration: underline;">Explore Knowledge Center</span></h2>
+        <h2 style="font-size: 40px; color: rgb(22, 22, 68); font-weight: 900 !important;  rgb(22, 22, 68), -1px -1px 0  rgb(22, 22, 68), 1px -1px 0  rgb(22, 22, 68), -1px 1px 0  rgb(22, 22, 68);">Related insights. &nbsp; <span style="font-size: 20px;text-decoration: underline;">Explore Knowledge Center</span></h2>
        
     </div>
     <div id="insightsContainer" style="display: flex; overflow-x: hidden; scroll-behavior: smooth; margin-top: 20px; width: 100%; gap: 20px;height: 300px !important;">
         <!-- First Insight -->
         <div class="insight" style="min-width: 33.3%;">
             <div style="position: relative;">
-                <img src="https://www.freedassociates.com/wp-content/uploads/2016/04/cs_change_mindfulness_710_2493-600x210.webp" alt="Insight 1" style="width: 100%; height: 200px; display: block;">
+                <img src="https://www.freedassociates.com/wp-content/uploads/2016/04/cs_change_mindfulness_710_2493-600x210.webp" alt="Insight 1" style="width: 100%; height: 250px; display: block;">
                 <div style="position: absolute; top: 0px; left: 0px; background-color: #5c2d91; color: white; padding: 5px 10px; font-size: 12px;">POINT OF VIEW</div>
             </div>
             <h3 style="font-size: 16px; color: #1a1a1a; margin: 10px 0 5px;text-decoration: underline;">Adopt Mindfulness Principles to Help Facilitate Change</h3>
@@ -273,7 +307,7 @@
         <!-- Second Insight -->
         <div class="insight" style="min-width: 33.3%;height: 200px !important;">
             <div style="position: relative;">
-                <img src="https://www.freedassociates.com/wp-content/uploads/2017/08/five_vital980-800x296.webp" alt="Insight 2" style="width: 100%; height: auto; display: block;height: 200px;">
+                <img src="https://www.freedassociates.com/wp-content/uploads/2017/08/five_vital980-800x296.webp" alt="Insight 2" style="width: 100%; height: auto; display: block;height: 250px;">
                 <div style="position: absolute; top: 0px; left: 0px;background-color: #5c2d91; color: white; padding: 5px 10px; font-size: 12px;">POINT OF VIEW</div>
             </div>
             <h3 style="font-size: 16px; color: #1a1a1a; margin: 10px 0 5px;text-decoration: underline;">Five Vital Steps for Large-Scale Health Care Project Success</h3>
@@ -281,7 +315,7 @@
         <!-- Third Insight -->
         <div class="insight" style="min-width: 33.3%;">
             <div style="position: relative;">
-                <img src="https://www.freedassociates.com/wp-content/uploads/2017/08/five_vital980-800x296.webp" alt="Insight 3" style="width: 100%; height: auto; display: block;height: 200px;">
+                <img src="https://www.freedassociates.com/wp-content/uploads/2017/08/five_vital980-800x296.webp" alt="Insight 3" style="width: 100%; height: auto; display: block;height: 250px;">
                 <div style="position: absolute; top: 0px; left: 0px; background-color: #5c2d91; color: white; padding: 5px 10px; font-size: 12px;">POINT OF VIEW</div>
             </div>
             <h3 style="font-size: 16px; color: #1a1a1a; margin: 10px 0 5px;text-decoration: underline;">Four Vital Health Care Leadership Lessons</h3>
@@ -289,7 +323,7 @@
         <!-- Fourth Insight (Initially Hidden) -->
         <div class="insight" style="min-width: 33.3%;">
             <div style="position: relative;">
-                <img src="https://www.freedassociates.com/wp-content/uploads/2017/08/five_vital980-800x296.webp" alt="Insight 4" style="width: 100%; height: auto; display: block;height: 200px;">
+                <img src="https://www.freedassociates.com/wp-content/uploads/2017/08/five_vital980-800x296.webp" alt="Insight 4" style="width: 100%; height: auto; display: block;height: 250px;">
                 <div style="position: absolute; top: 0px; left: 0px; background-color: #5c2d91; color: white; padding: 5px 10px; font-size: 12px;">POINT OF VIEW</div>
             </div>
             <h3 style="font-size: 16px; color: #1a1a1a; margin: 10px 0 5px;text-decoration: underline;">Why Technology is Driving Change in the Health Sector</h3>
@@ -297,7 +331,7 @@
         <!-- Fifth Insight (Initially Hidden) -->
         <div class="insight" style="min-width: 33.3%;">
             <div style="position: relative;">
-                <img src="https://www.freedassociates.com/wp-content/uploads/2017/08/five_vital980-800x296.webp" alt="Insight 5" style="width: 100%; height: auto; display: block;height: 200px;">
+                <img src="https://www.freedassociates.com/wp-content/uploads/2017/08/five_vital980-800x296.webp" alt="Insight 5" style="width: 100%; height: auto; display: block;height: 250px;">
                 <div style="position: absolute;top: 0px; left: 0px; background-color: #5c2d91; color: white; padding: 5px 10px; font-size: 12px;">POINT OF VIEW</div>
             </div>
             <h3 style="font-size: 16px; color: #1a1a1a; margin: 10px 0 5px;text-decoration: underline;">Managing Change During Digital Transformation</h3>
@@ -439,35 +473,41 @@
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
 
     <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+    <script src="js/main.js"> </script>
     <script>
-        function toggleSection(sectionId) {
-            // Get the clicked section and its heading
-            var currentSection = document.getElementById(sectionId);
-            var currentH2 = currentSection.previousElementSibling;
-    
-            // Check if the section is already open
-            if (currentSection.style.maxHeight && currentSection.style.maxHeight !== "0px") {
-                // Close the section
-                currentSection.style.maxHeight = "0px";
-                currentH2.innerHTML = "+" + currentH2.textContent.slice(1);
-            } else {
-                // Close all other sections
-                document.querySelectorAll(".content-section").forEach(function (section) {
-                    section.style.maxHeight = "0px";
-                    var h2 = section.previousElementSibling;
-                    if (h2 && h2.tagName === 'H2') {
-                        h2.innerHTML = "+" + h2.textContent.slice(1);
-                    }
-                });
-    
-                // Open the clicked section
-                currentSection.style.maxHeight = currentSection.scrollHeight + "px";
-                currentH2.innerHTML = "-" + currentH2.textContent.slice(1);
-            }
-        }
-    </script>
 
+function toggleSection(sectionId) {
+        // Get the clicked section
+        var currentSection = document.getElementById(sectionId);
+        var currentH2 = currentSection.parentElement.querySelector("h2"); // Correct way to target the <h2>
+    
+        // Check if the section is already open
+        if (currentSection.style.maxHeight && currentSection.style.maxHeight !== "0px") {
+            // Close the section
+            currentSection.style.maxHeight = "0px";
+            currentH2.innerHTML = "+" + currentH2.textContent.trim().slice(1);
+        } else {
+            // Close all other sections
+            document.querySelectorAll(".content-section").forEach(function (section) {
+                section.style.maxHeight = "0px";
+                var h2 = section.parentElement.querySelector("h2");
+                if (h2) {
+                    h2.innerHTML = "+" + h2.textContent.trim().slice(1);
+                }
+            });
+    
+            // Open the clicked section
+            currentSection.style.maxHeight = currentSection.scrollHeight + "px";
+            currentH2.innerHTML = "-" + currentH2.textContent.trim().slice(1);
+        }
+    
+        // Ensure font size does not change
+        currentH2.style.fontSize = "30px"; // Set it explicitly to prevent changes
+    }
+    
+
+    </script>
+    
     <script>
     function scrollInsights(direction) {
         const container = document.getElementById('insightsContainer');
