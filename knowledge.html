@@ -35,7 +35,7 @@
     <!-- Topbar End -->
     <div id="topBanner" style="background-color: aquamarine; color: black; padding: 10px; display: flex; justify-content: space-between; align-items: center; position: relative; z-index: 1000;">
         <div style="display: flex; align-items: center; margin: 0 auto;">
-            <button class="watch-now-btn" style="background-color: #451885; color: white; border: none; padding: 10px 20px; margin-right: 10px; cursor: pointer;">WATCH NOW</button>
+            <button class="watch-now-btn" style="background-color: #451885; color: white; border: none; padding: 10px 20px; margin-right: 10px; cursor: pointer;">READ MORE </button>
             <span>Learn how the power of social care and medical care partnerships are improving health equity.</span>
         </div>
         <button class="close-btn" onclick="document.getElementById('topBanner').style.display = 'none';" style="background: none; border: none; color: white; font-size: 20px; cursor: pointer;">✖</button>
@@ -65,19 +65,21 @@
 
     <!-- Navbar items collapse -->
     <div class="collapse navbar-collapse" id="navbarCollapse">
-        <div class="navbar-nav mx-auto py-0 text-center" style="font-size: 20px; font-family: Arial, Helvetica, sans-serif;">
-            <a class="underlinepage pageam nav-item nav-link " href="why.html" style="color: white; font-weight: bold; padding: 5px;">Why Freed</a>
+        <div class="navbar-nav mx-auto py-0 text-center" style="font-size: 20px; font-family: Arial, Helvetica, sans-serif;padding-left: 14%;">
             <a class="underlinepage pageam nav-item nav-link" href="index.html#our-solutions" style="color: white; font-weight: bold; padding: 5px;">Solutions</a>
-            <a class="underlinepage pageam nav-item nav-link" href="company.html" style="color: white; font-weight: bold; padding: 5px;">Company</a>
-            <a class="underlinepage pageam nav-item nav-link" href="equity.html" style="color: white; font-weight: bold; padding: 5px;">Recruitment</a>
+            <a class="underlinepage pageam nav-item nav-link " href="why.html" style="color: white; font-weight: bold; padding: 5px;">Why Freed</a>
+            
+            <a class="underlinepage pageam nav-item nav-link " href="company.html" style="color: white; font-weight: bold; padding: 5px;">Company</a>
+           
         </div>
         <div class="navbar-nav ms-auto py-0 text-center" style="display: flex; align-items: center;">
-            <a class="underlinepage pageam nav-item nav-link active d-flex align-items-center" href="knowledge.html" style="color: #65CFE9; font-weight: bold; font-family: Arial, Helvetica, sans-serif; padding: 5px;">
+            <a class="underlinepage pageam nav-item nav-link d-flex align-items-center active" href="knowledge.html" style="color: #65CFE9; font-weight: bold; font-family: Arial, Helvetica, sans-serif; padding: 5px;">
                 <img src="https://img.icons8.com/emoji/48/null/light-bulb-emoji.png" alt="Knowledge Center Icon" width="20" height="20" style="margin-right: 8px;">
-                Knowledge Center
+                Recruitment
             </a>
         </div>
     </div>
+    
     
 </nav>
 
@@ -124,82 +126,74 @@
         text-decoration-color: aquamarine;
         text-underline-offset: 8px;
     }
+    .career-card {
+            position: relative;
+            width: 30%;
+            margin: 10px;
+            overflow: hidden;
+        }
+        .career-card img {
+            width: 100%;
+            height: auto;
+            transition: .5s ease;
+        }
+        .overlay {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #6a0dad; /* Changed to #6a0dad with 80% opacity */
+            color: white;
+            padding: 10px;
+            opacity: 0;
+            transition: .5s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+        .career-card:hover img {
+            opacity: 0.2;
+        }
+        .career-card:hover .overlay {
+            opacity: 1;
+            top: 0;
+        }
  
+
+</style>
   
 
 </style>
-
-    <!-- Navbar End -->
-
-    <div class="container-fluid p-0" style="background-color: #451885;">
-        <div class="row g-0">
-            <!-- Text Column -->
-            <div class="col-lg-6 d-flex justify-content-center align-items-center py-6 px-5">
-                <div class="text-center position-relative">
-                    <h2 class="title-text" style="font-size: 50px; color: white;">Knowledge Center.</h2>
-                    
-                    <!-- T-shaped icons -->
-                    <div class="t-icon left-icon"></div>
-                    <div class="t-icon right-icon"></div>
-            
-                    <h5 style="color: white;">
-                        Our top consultants share their insights about the challenges and opportunities facing healthcare organizations, and we share stories about the problems we have solved with our clients.
-                    </h5>
-                </div>
+<div style="font-family: 'Poppins', sans-serif; background: #451885; display: flex; justify-content: center; align-items: center;  margin: 0;padding-top: 30px;padding-left: 6%;padding-right: 6%;padding-bottom: 30px;">
+    <div style="background: white; padding: 30px; border-radius: 15px; box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); width: 100%; max-width: 500px; overflow-y: auto;">
+        <h2 style="text-align: center; color: #451885;">Talent Portal</h2>
+        <form>
+            <div style="margin-bottom: 15px;"><label style="font-weight: 600; display: block; margin-bottom: 5px; color: #451885;">Full Name</label><input type="text" placeholder="Enter your full name" required style="width: 100%; padding: 12px; border: 2px solid #451885; border-radius: 8px; font-size: 14px;"></div>
+            <div style="margin-bottom: 15px;"><label style="font-weight: 600; display: block; margin-bottom: 5px; color: #451885;">Email Address</label><input type="email" placeholder="Enter your email" required style="width: 100%; padding: 12px; border: 2px solid #451885; border-radius: 8px; font-size: 14px;"></div>
+            <div style="margin-bottom: 15px;"><label style="font-weight: 600; display: block; margin-bottom: 5px; color: #451885;">Phone Number</label><input type="text" placeholder="Enter your phone number" required style="width: 100%; padding: 12px; border: 2px solid #451885; border-radius: 8px; font-size: 14px;"></div>
+            <div style="margin-bottom: 15px;"><label style="font-weight: 600; display: block; margin-bottom: 5px; color: #451885;">Nationality</label><input type="text" placeholder="Your nationality" required style="width: 100%; padding: 12px; border: 2px solid #451885; border-radius: 8px; font-size: 14px;"></div>
+            <div style="margin-bottom: 15px;"><label style="font-weight: 600; display: block; margin-bottom: 5px; color: #451885;">Gender</label><select required style="width: 100%; padding: 12px; border: 2px solid #451885; border-radius: 8px; font-size: 14px;"><option>Male</option><option>Female</option></select></div>
+            <div style="margin-bottom: 15px;"><label style="font-weight: 600; display: block; margin-bottom: 5px; color: #451885;">Location</label><input type="text" placeholder="Your location" required style="width: 100%; padding: 12px; border: 2px solid #451885; border-radius: 8px; font-size: 14px;"></div>
+            <div style="margin-bottom: 15px;"><label style="font-weight: 600; display: block; margin-bottom: 5px; color: #451885;">Years of Experience</label><select required style="width: 100%; padding: 12px; border: 2px solid #451885; border-radius: 8px; font-size: 14px;"><option>0-2</option><option>3-5</option><option>5-10</option><option>Above 10</option></select></div>
+            <div style="margin-bottom: 15px;"><label style="font-weight: 600; display: block; margin-bottom: 5px; color: #451885;">Highest Level of Education</label><select required style="width: 100%; padding: 12px; border: 2px solid #451885; border-radius: 8px; font-size: 14px;"><option>Certificate</option><option>Diploma</option><option>Degree</option><option>Masters</option><option>Doctorate</option></select></div>
+            <div style="margin-bottom: 15px;"><label style="font-weight: 600; display: block; margin-bottom: 5px; color: #451885;">Expected Salary</label><select required style="width: 100%; padding: 12px; border: 2px solid #451885; border-radius: 8px; font-size: 14px;"><option>0-50k</option><option>51k-100k</option><option>101k-150k</option><option>151k-200k</option><option>201k-250k</option><option>251k-300k</option><option>Above 300k</option></select></div>
+            <div style="margin-bottom: 15px;"><label style="font-weight: 600; display: block; margin-bottom: 5px; color: #451885;">Availability</label><select required style="width: 100%; padding: 12px; border: 2px solid #451885; border-radius: 8px; font-size: 14px;"><option>Immediate</option><option>1 Week</option><option>1 Month</option><option>More</option></select></div>
+            <div style="margin-bottom: 15px;"><label style="font-weight: 600; display: block; margin-bottom: 5px; color: #451885;">Work Location Preference</label><select required style="width: 100%; padding: 12px; border: 2px solid #451885; border-radius: 8px; font-size: 14px;"><option>Remote</option><option>On-site</option><option>Hybrid</option></select></div>
+            <div style="margin-bottom: 15px;"><label style="font-weight: 600; display: block; margin-bottom: 5px; color: #451885;">Employment Type</label><select required style="width: 100%; padding: 12px; border: 2px solid #451885; border-radius: 8px; font-size: 14px;"><option>Full-time</option><option>Part-time</option><option>Contract</option><option>Freelance</option><option>Internship</option></select></div>
+            <div style="margin-bottom: 15px;"><label style="font-weight: 600; display: block; margin-bottom: 5px; color: #451885;">LinkedIn Profile (Optional)</label><input type="url" placeholder="LinkedIn Profile URL" style="width: 100%; padding: 12px; border: 2px solid #451885; border-radius: 8px; font-size: 14px;"></div>
+            <div style="margin-bottom: 15px; text-align: center; border: 2px dashed #451885; padding: 20px; border-radius: 8px; color: #451885; background: rgba(69, 24, 133, 0.1);">
+                <input type="file" accept=".pdf,.doc,.docx" hidden>
+                <p>Upload Resume (PDF/DOC)</p>
             </div>
-            
-            <!-- Image Column -->
-            <div class="col-lg-6 d-flex justify-content-center align-items-center" style="min-height: 500px;background-color: #451885;">
-                <div class="text-center">
-                   
-                </div>
-            </div>
-        </div>
+            <button type="submit" style="width: 100%; background: #451885; color: white; padding: 12px; border: none; border-radius: 8px; font-size: 16px; cursor: pointer;">Submit Application</button>
+        </form>
     </div>
-    
-    
-
-
-    
-  <div style="display: flex; width: 100%; margin-bottom: 20px;">
-    <div style="flex: 1; background-color: #00aabb; padding: 20px; color: white;">
-      <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-bottom: 20px;">
-        <img src="https://www.freedassociates.com/wp-content/uploads/2024/12/flex-lp_healing-healthcare07_featured.jpg" alt="Team Member 1" style="width: 100%; height: auto;">
-       
-      </div>
-      <h2 style="font-size: 30px; margin: 0 0 10px 0;">The Power of Partnership.</h2>
-      <p style="font-size: 20px; margin: 0;">How do we strengthen collaborations between healthcare providers and community-based organizations to improve health?</p>
-      <a href="https://www.freedassociates.com/knowledge-center/health-plan-improves-quality-scores-with-freed-guidance/" style="color: white; text-decoration: none; font-size: 14px;">https://www.freedassociates.com/knowledge-center/health-plan-improves-quality-scores-with-freed-guidance/</a> <br>
-      <a href="#" style="display: inline-block; text-decoration: none; font-size: 16px; color: #6534ac; border: 2px solid #6534ac; padding: 10px 20px; font-weight: bold; border-radius: 5px;">
-        Watch Now
-    </a>
-    </div>
-    <div style="flex: 1; padding: 20px; background-color: white; margin-left: 20px; position: relative;">
-        <div style="background-color: #f0f0f0; padding: 20px; border-radius: 5px; margin-bottom: 20px; display: flex; align-items: center;">
-            <div style="flex: 1;">
-              <p style="color: #8a2be2; font-size: 18px; margin: 0 0 10px 0;">CASE STUDY</p>
-              <h3 style="font-size: 18px; margin: 0 0 10px 0;">Health Plan Improves Quality Scores with Freed Guidance</h3>
-              <p style="font-size: 14px; margin: 0 0 10px 0;">Freed Associates helped a national health plan improve its CMS Quality Star Ratings by two stars in just two years. Learn how breaking down silos within the...</p>
-              <a href="#" style="color: #8a2be2; text-decoration: none; font-size: 14px;">Read More »</a>
-            </div>
-            <img src="https://www.freedassociates.com/wp-content/uploads/2024/09/FREED-0049_Anthem-CA-Exchange_thumb-288x400.webp" alt="Case Study Image" style="width: 150px; height: auto; margin-left: 20px; border-radius: 5px;">
-          </div>
-          <div style="background-color: #e0e0e0; padding: 20px; border-radius: 5px; display: flex; align-items: center;">
-            <div style="flex: 1;">
-              <p style="color: #8a2be2; font-size: 18px; margin: 0 0 10px 0;">POINT OF VIEW</p>
-              <h3 style="font-size: 18px; margin: 0 0 10px 0;">Improving Healthcare Access by Reducing Transportation Barriers</h3>
-              <p style="font-size: 14px; margin: 0 0 10px 0;">Determinants of health, including transportation, play a critical role in healthcare access.</p>
-            </div>
-            <img src="https://www.freedassociates.com/wp-content/uploads/2024/09/insights_medical-transportation_thumb-288x400.webp" alt="Point of View Image" style="width: 150px; height: auto; margin-left: 20px; border-radius: 5px;">
-          </div>
-    </div>
-  </div>
- <!-- Footer Start -->
-<!-- Footer Start -->
-<div class="container-fluid text-secondary p-5" style="background-color: #000;">
+</div>
+<!-- Footer Start --><div class="container-fluid text-secondary p-5" style="background-color: #000;">
     <div class="row g-5">
         <!-- Left Section -->
-        <div class="col-lg-6 text-white">
+        <div class="col-lg-6 text-white"  style="padding-right: 2%;">
             <h3 class="mb-3" style="color: #65CFE9;">Stay Connected</h3>
             <p>
                 Subscribe to our newsletter to get the latest updates, insights, and expert advice delivered straight to your inbox.
@@ -209,20 +203,22 @@
 
         <!-- Right Section -->
         <div class="col-lg-6 text-center">
-            <h1 class="display-5 mb-4 text-white">Stay Updated!!!</h1>
-            <form class="mx-auto" style="max-width: 600px;">
+          
+            <form class="mx-auto">
                 <div class="input-group">
-                    <input type="text" class="form-control border-white p-3" placeholder="Your Email">
-                    <button class="btn btn-dark px-4 " style="color: #65CFE9;" >Sign Up</button>
+                    <input type="text" class="form-control border-white p-3" placeholder="Your Email" style="border-radius: 0px;">
+                    <button class="btn btn-dark px-4 " style="color: #65CFE9;border-radius: 0px !important;" >Sign Up</button>
+                    
                 </div>
+                <a href="https://www.linkedin.com" target="_blank" style="text-decoration: none; display: flex; align-items: center; gap: 5px;border-radius: 0px;padding-top: 10px;">
+                    <i class="fab fa-linkedin fa-2x text-white"></i>
+                    <span class="text-white">Follow us on LinkedIn</span>
+                </a>
             </form>
             <!-- LinkedIn Section -->
             <div class="mt-4">
                
-                <a href="https://www.linkedin.com" target="_blank" style="text-decoration: none; display: flex; align-items: center; gap: 5px;">
-                    <i class="fab fa-linkedin fa-2x text-white"></i>
-                    <span class="text-white">Follow us on LinkedIn</span>
-                </a>
+               
             </div>
         </div>
     </div>
@@ -282,8 +278,6 @@
 <div class="container-fluid text-secondary text-center border-top py-4 px-5" style="background-color: #000; border-color: rgba(256, 256, 256, .1) !important;">
     
 </div>
-<!-- Footer End -->
-
 <!-- Footer End -->
 
 
