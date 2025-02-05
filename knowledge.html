@@ -126,71 +126,282 @@
         text-decoration-color: aquamarine;
         text-underline-offset: 8px;
     }
-    .career-card {
-            position: relative;
-            width: 30%;
-            margin: 10px;
-            overflow: hidden;
+   
+        .form-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            max-width: 800px;
+            margin: auto;
         }
-        .career-card img {
-            width: 100%;
-            height: auto;
-            transition: .5s ease;
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
         }
-        .overlay {
-            position: absolute;
-            top: 100%;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: #6a0dad; /* Changed to #6a0dad with 80% opacity */
-            color: white;
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group select {
+            width: calc(100% - 22px);
             padding: 10px;
-            opacity: 0;
-            transition: .5s ease;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .form-group select {
+            appearance: none;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>') no-repeat;
+            background-position: right 10px top 50%, 0 0;
+            background-size: 14px 14px, 100%;
+        }
+        .form-group-inline {
             display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
+            justify-content: space-between;
         }
-        .career-card:hover img {
-            opacity: 0.2;
+        .form-group-inline .form-group {
+            flex: 1;
+            margin-right: 10px;
         }
-        .career-card:hover .overlay {
-            opacity: 1;
-            top: 0;
+        .form-group-inline .form-group:last-child {
+            margin-right: 0;
         }
- 
+        .radio-group {
+            display: flex;
+            align-items: center;
+        }
+        .radio-group label {
+            margin-right: 15px;
+        }
+        .radio-group input[type="radio"] {
+            margin-right: 5px;
+        }
+        .radio-group input[type="radio"]:checked + label {
+            color: #6a0dad;
+        }
+        .upload-section {
+            background-color: #e6e6fa;
+            padding: 20px;
+            text-align: center;
+            border-radius: 4px;
+            margin-top: 20px;
+        }
+        .upload-section p {
+            margin: 0;
+        }
+        .submit-btn {
+            background-color: #6a0dad;
+            color: white;
+            padding: 15px;
+            border: none;
+            border-radius: 4px;
+            width: 100%;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .submit-btn:hover {
+            background-color: #4b0082;
+        }
+        input:required:invalid {
+            border: 1px solid red;
+        }
+        select:required:invalid {
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
 
-</style>
-  
-
-</style>
-<div style="font-family: 'Poppins', sans-serif; background: #451885; display: flex; justify-content: center; align-items: center;  margin: 0;padding-top: 30px;padding-left: 6%;padding-right: 6%;padding-bottom: 30px;">
-    <div style="background: white; padding: 30px; border-radius: 15px; box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); width: 100%; max-width: 500px; overflow-y: auto;">
-        <h2 style="text-align: center; color: #451885;">Talent Portal</h2>
-        <form>
-            <div style="margin-bottom: 15px;"><label style="font-weight: 600; display: block; margin-bottom: 5px; color: #451885;">Full Name</label><input type="text" placeholder="Enter your full name" required style="width: 100%; padding: 12px; border: 2px solid #451885; border-radius: 8px; font-size: 14px;"></div>
-            <div style="margin-bottom: 15px;"><label style="font-weight: 600; display: block; margin-bottom: 5px; color: #451885;">Email Address</label><input type="email" placeholder="Enter your email" required style="width: 100%; padding: 12px; border: 2px solid #451885; border-radius: 8px; font-size: 14px;"></div>
-            <div style="margin-bottom: 15px;"><label style="font-weight: 600; display: block; margin-bottom: 5px; color: #451885;">Phone Number</label><input type="text" placeholder="Enter your phone number" required style="width: 100%; padding: 12px; border: 2px solid #451885; border-radius: 8px; font-size: 14px;"></div>
-            <div style="margin-bottom: 15px;"><label style="font-weight: 600; display: block; margin-bottom: 5px; color: #451885;">Nationality</label><input type="text" placeholder="Your nationality" required style="width: 100%; padding: 12px; border: 2px solid #451885; border-radius: 8px; font-size: 14px;"></div>
-            <div style="margin-bottom: 15px;"><label style="font-weight: 600; display: block; margin-bottom: 5px; color: #451885;">Gender</label><select required style="width: 100%; padding: 12px; border: 2px solid #451885; border-radius: 8px; font-size: 14px;"><option>Male</option><option>Female</option></select></div>
-            <div style="margin-bottom: 15px;"><label style="font-weight: 600; display: block; margin-bottom: 5px; color: #451885;">Location</label><input type="text" placeholder="Your location" required style="width: 100%; padding: 12px; border: 2px solid #451885; border-radius: 8px; font-size: 14px;"></div>
-            <div style="margin-bottom: 15px;"><label style="font-weight: 600; display: block; margin-bottom: 5px; color: #451885;">Years of Experience</label><select required style="width: 100%; padding: 12px; border: 2px solid #451885; border-radius: 8px; font-size: 14px;"><option>0-2</option><option>3-5</option><option>5-10</option><option>Above 10</option></select></div>
-            <div style="margin-bottom: 15px;"><label style="font-weight: 600; display: block; margin-bottom: 5px; color: #451885;">Highest Level of Education</label><select required style="width: 100%; padding: 12px; border: 2px solid #451885; border-radius: 8px; font-size: 14px;"><option>Certificate</option><option>Diploma</option><option>Degree</option><option>Masters</option><option>Doctorate</option></select></div>
-            <div style="margin-bottom: 15px;"><label style="font-weight: 600; display: block; margin-bottom: 5px; color: #451885;">Expected Salary</label><select required style="width: 100%; padding: 12px; border: 2px solid #451885; border-radius: 8px; font-size: 14px;"><option>0-50k</option><option>51k-100k</option><option>101k-150k</option><option>151k-200k</option><option>201k-250k</option><option>251k-300k</option><option>Above 300k</option></select></div>
-            <div style="margin-bottom: 15px;"><label style="font-weight: 600; display: block; margin-bottom: 5px; color: #451885;">Availability</label><select required style="width: 100%; padding: 12px; border: 2px solid #451885; border-radius: 8px; font-size: 14px;"><option>Immediate</option><option>1 Week</option><option>1 Month</option><option>More</option></select></div>
-            <div style="margin-bottom: 15px;"><label style="font-weight: 600; display: block; margin-bottom: 5px; color: #451885;">Work Location Preference</label><select required style="width: 100%; padding: 12px; border: 2px solid #451885; border-radius: 8px; font-size: 14px;"><option>Remote</option><option>On-site</option><option>Hybrid</option></select></div>
-            <div style="margin-bottom: 15px;"><label style="font-weight: 600; display: block; margin-bottom: 5px; color: #451885;">Employment Type</label><select required style="width: 100%; padding: 12px; border: 2px solid #451885; border-radius: 8px; font-size: 14px;"><option>Full-time</option><option>Part-time</option><option>Contract</option><option>Freelance</option><option>Internship</option></select></div>
-            <div style="margin-bottom: 15px;"><label style="font-weight: 600; display: block; margin-bottom: 5px; color: #451885;">LinkedIn Profile (Optional)</label><input type="url" placeholder="LinkedIn Profile URL" style="width: 100%; padding: 12px; border: 2px solid #451885; border-radius: 8px; font-size: 14px;"></div>
-            <div style="margin-bottom: 15px; text-align: center; border: 2px dashed #451885; padding: 20px; border-radius: 8px; color: #451885; background: rgba(69, 24, 133, 0.1);">
-                <input type="file" accept=".pdf,.doc,.docx" hidden>
-                <p>Upload Resume (PDF/DOC)</p>
+    <div style="background-color: #451885;padding: 60px;">
+    <div class="form-container" style="padding-top: 50px !important;background-color: white;">
+        <h2>Personal Details</h2>
+        <div class="form-group-inline">
+            <div class="form-group">
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" placeholder="John" required >
             </div>
-            <button type="submit" style="width: 100%; background: #451885; color: white; padding: 12px; border: none; border-radius: 8px; font-size: 16px; cursor: pointer;">Submit Application</button>
-        </form>
+            <div class="form-group">
+                <label for="middleName">Middle Name</label>
+                <input type="text" id="middleName" placeholder="Smith" required>
+            </div>
+            <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" placeholder="Doe" required >
+            </div>
+        </div>
+        <div class="form-group-inline">
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" placeholder="@gmail.com" required>
+            </div>
+            <div class="form-group">
+                <label for="mobileNumber">Mobile Number</label>
+                <input type="text" id="mobileNumber" placeholder="+254 700 000 000" required>
+            </div>
+        </div>
+        <div class="form-group-inline">
+            <div class="form-group">
+                <label for="nationality">Nationality</label>
+                <input type="text" id="nationality" required>
+            </div>
+            <div class="form-group">
+                <label for="location">Location</label>
+                <input type="text" id="location" required>
+            </div>
+            <div class="form-group">
+                <label>Gender</label>
+                <div class="radio-group">
+                    <input type="radio" id="male" name="gender" required>
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" checked>
+                    <label for="female">Female</label>
+                </div>
+            </div>
+        </div>
+
+        <h2>Professional Experience</h2>
+        <div class="form-group-inline">
+            <div class="form-group">
+                <label for="experience">Experience</label>
+                <select id="experience" required>
+                    <option value="">0-2 Years</option>
+                    <option value="">3-5 Years</option>
+                    <option value="">5-10 Years</option>
+                    <option value="">above 10 Years</option>
+                    <!-- Add options as needed -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="highestEducation">Highest Education</label>
+                <select id="highestEducation" required>
+                    <option value="">Certificate</option>
+                    <option value="">Diploma</option>
+                    <option value="">Degree</option>
+                    <option value="">Masters</option>
+                    <option value="">Doctorate</option>
+                    <!-- Add options as needed -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="currentJobLevel">Current Job Level</label>
+                <input type="text" id="currentJobLevel">
+            </div>
+        </div>
+
+        <h2>Job Preferences</h2>
+        <div class="form-group-inline">
+            <div class="form-group">
+                <label for="salaryExpectation">Salary Expectation</label>
+                <select id="salaryExpectation" required>
+                    <option value=""> 0-50k</option>
+                    <option value="">51k - 100k</option>
+                    <option value="">101k - 150k</option>
+                    <option value="">151k - 200k</option>
+                    <option value="">201k- 250k</option>
+                    <option value="">251k-300k</option>
+                    <option value="">above 300k</option>
+                    <!-- Add options as needed -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="availability">Availability</label>
+                <select id="availability" required>
+                    <option value=""> Immediate</option>
+                    <option value="">1 week</option>
+                    <option value="">1 month</option>
+                    <option value=""> More</option>
+                    <!-- Add options as needed -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="preferredWorkStation">Preferred Work Station</label>
+                <select id="preferredWorkStation" required>
+                    <option value="">Remote</option>
+                    <option value="">On-site</option>
+                    <option value="">Hybrid</option>
+                    <!-- Add options as needed -->
+                </select>
+            </div>
+        </div>
+        <div class="form-group-inline">
+            <div class="form-group">
+                <label for="employmentType">Employment Type</label>
+                <select id="employmentType"required>
+                    <option value="">Full-time</option>
+                    <option value="">Part-time</option>
+                    <option value="">Contract</option>
+                    <option value="">Freelance</option>
+                    <option value="">Internship</option>
+                    <!-- Add options as needed -->
+                </select>
+            </div>
+            
+        </div>
+
+        <h3 style="color: black;">Other Details</h3>
+        <div style="margin-bottom: 10px;">
+            <label>Do you have experience managing a team?</label>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            <input type="radio" name="team" id="teamYes"> <label for="teamYes">Yes</label>
+            <input type="radio" name="team" id="teamNo" checked> <label for="teamNo">No</label>
+        </div>
+        <div style="margin-bottom: 10px;">
+            <label>Would you be interested in relocation opportunities?</label>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            <input type="radio" name="relocation" id="relocationYes"> <label for="relocationYes">Yes</label>
+            <input type="radio" name="relocation" id="relocationNo" checked> <label for="relocationNo">No</label>
+        </div>
+        <div style="margin-bottom: 10px;">
+            <label>Are you open to upskilling opportunities?</label>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            <input type="radio" name="upskilling" id="upskillingYes"> <label for="upskillingYes">Yes</label>
+            <input type="radio" name="upskilling" id="upskillingNo" checked> <label for="upskillingNo">No</label>
+        </div>
+        <div style="margin-bottom: 10px;">
+            <label>Are you open to working outside your current industry?</label>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            <input type="radio" name="industry" id="industryYes"> <label for="industryYes">Yes</label>
+            <input type="radio" name="industry" id="industryNo" checked> <label for="industryNo">No</label>
+        </div>
+        <div style="margin-bottom: 10px;">
+            <label>Are you willing to work night shifts or weekends if required?</label>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            <input type="radio" name="nightShifts" id="nightShiftsYes"> <label for="nightShiftsYes">Yes</label>
+            <input type="radio" name="nightShifts" id="nightShiftsNo" checked> <label for="nightShiftsNo">No</label>
+        </div>
+        <div style="margin-bottom: 10px;">
+            <label>Do you have experience working in a startup environment?</label>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            <input type="radio" name="startup" id="startupYes"> <label for="startupYes">Yes</label>
+            <input type="radio" name="startup" id="startupNo" checked> <label for="startupNo">No</label>
+        </div>
+        <div style="margin-bottom: 10px;">
+            <label>Have you worked in a multinational company before?</label>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            <input type="radio" name="multinational" id="multinationalYes"> <label for="multinationalYes">Yes</label>
+            <input type="radio" name="multinational" id="multinationalNo" checked> <label for="multinationalNo">No</label>
+        </div>
+        <div style="margin-bottom: 10px;">
+            <label>Do you have experience with remote work?</label>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            <input type="radio" name="remoteWork" id="remoteWorkYes"> <label for="remoteWorkYes">Yes</label>
+            <input type="radio" name="remoteWork" id="remoteWorkNo" checked> <label for="remoteWorkNo">No</label>
+        </div>
+        <!-- Repeat similar blocks for other questions -->
+        <div class="upload-section">
+            <p>Upload Your CV (PDF Only)</p>
+        </div>
+        <button class="submit-btn">SUBMIT</button>
     </div>
 </div>
-<!-- Footer Start --><div class="container-fluid text-secondary p-5" style="background-color: #000;">
+<div class="container-fluid text-secondary p-5" style="background-color: #000;">
     <div class="row g-5">
         <!-- Left Section -->
         <div class="col-lg-6 text-white"  style="padding-right: 2%;">

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Replica</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .form-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            max-width: 800px;
+            margin: auto;
+        }
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group select {
+            width: calc(100% - 22px);
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .form-group select {
+            appearance: none;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>') no-repeat;
+            background-position: right 10px top 50%, 0 0;
+            background-size: 14px 14px, 100%;
+        }
+        .form-group-inline {
+            display: flex;
+            justify-content: space-between;
+        }
+        .form-group-inline .form-group {
+            flex: 1;
+            margin-right: 10px;
+        }
+        .form-group-inline .form-group:last-child {
+            margin-right: 0;
+        }
+        .radio-group {
+            display: flex;
+            align-items: center;
+        }
+        .radio-group label {
+            margin-right: 15px;
+        }
+        .radio-group input[type="radio"] {
+            margin-right: 5px;
+        }
+        .radio-group input[type="radio"]:checked + label {
+            color: #6a0dad;
+        }
+        .upload-section {
+            background-color: #e6e6fa;
+            padding: 20px;
+            text-align: center;
+            border-radius: 4px;
+            margin-top: 20px;
+        }
+        .upload-section p {
+            margin: 0;
+        }
+        .submit-btn {
+            background-color: #6a0dad;
+            color: white;
+            padding: 15px;
+            border: none;
+            border-radius: 4px;
+            width: 100%;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .submit-btn:hover {
+            background-color: #4b0082;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Personal Details</h2>
+        <div class="form-group-inline">
+            <div class="form-group">
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" value="John">
+            </div>
+            <div class="form-group">
+                <label for="middleName">Middle Name</label>
+                <input type="text" id="middleName" value="Smith">
+            </div>
+            <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" value="Doe">
+            </div>
+        </div>
+        <div class="form-group-inline">
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" value="HL">
+            </div>
+            <div class="form-group">
+                <label for="mobileNumber">Mobile Number</label>
+                <input type="text" id="mobileNumber" value="+254 700 000 000">
+            </div>
+        </div>
+        <div class="form-group-inline">
+            <div class="form-group">
+                <label for="nationality">Nationality</label>
+                <input type="text" id="nationality">
+            </div>
+            <div class="form-group">
+                <label for="location">Location</label>
+                <input type="text" id="location">
+            </div>
+            <div class="form-group">
+                <label>Gender</label>
+                <div class="radio-group">
+                    <input type="radio" id="male" name="gender">
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" checked>
+                    <label for="female">Female</label>
+                </div>
+            </div>
+        </div>
+
+        <h2>Professional Experience</h2>
+        <div class="form-group-inline">
+            <div class="form-group">
+                <label for="experience">Experience</label>
+                <select id="experience">
+                    <option value="">Select Experience</option>
+                    <!-- Add options as needed -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="highestEducation">Highest Education</label>
+                <select id="highestEducation">
+                    <option value="">Select Education</option>
+                    <!-- Add options as needed -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="currentJobLevel">Current Job Level</label>
+                <input type="text" id="currentJobLevel">
+            </div>
+        </div>
+
+        <h2>Job Preferences</h2>
+        <div class="form-group-inline">
+            <div class="form-group">
+                <label for="salaryExpectation">Salary Expectation</label>
+                <select id="salaryExpectation">
+                    <option value="">Select Salary</option>
+                    <!-- Add options as needed -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="availability">Availability</label>
+                <select id="availability">
+                    <option value="">Select Availability</option>
+                    <!-- Add options as needed -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="preferredWorkStation">Preferred Work Station</label>
+                <select id="preferredWorkStation">
+                    <option value="">Select Work Station</option>
+                    <!-- Add options as needed -->
+                </select>
+            </div>
+        </div>
+        <div class="form-group-inline">
+            <div class="form-group">
+                <label for="employmentType">Employment Type</label>
+                <select id="employmentType">
+                    <option value="">Select Type</option>
+                    <!-- Add options as needed -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="availability2">Availability</label>
+                <select id="availability2">
+                    <option value="">Select Availability</option>
+                    <!-- Add options as needed -->
+                </select>
+            </div>
+        </div>
+
+        <h2>Other Details</h2>
+        <div class="form-group">
+            <label>Do you have experience managing a team?</label>
+            <div class="radio-group">
+                <input type="radio" id="teamYes" name="team">
+                <label for="teamYes">Yes</label>
+                <input type="radio" id="teamNo" name="team" checked>
+                <label for="teamNo">No</label>
+            </div>
+        </div>
+        <!-- Repeat similar blocks for other questions -->
+        <div class="upload-section">
+            <p>Upload Your CV (PDF Only)</p>
+        </div>
+        <button class="submit-btn">SUBMIT</button>
+    </div>
+</body>
+</html>

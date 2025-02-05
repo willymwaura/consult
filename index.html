@@ -467,37 +467,59 @@
   </div>
 
   
-  <div style="text-align: center; padding-bottom: 40px; background-color: #e0e0e0;" >
-  
+  <div style="text-align: center; padding-bottom: 50px; background-color: #e0e0e0;padding-top: 5%;" >
+   
+    <p style="font-size: 40px; color: rgb(22, 22, 68); font-weight: 900 !important; text-shadow: 1px 1px 0  rgb(22, 22, 68), -1px -1px 0  rgb(22, 22, 68), 1px -1px 0  rgb(22, 22, 68), -1px 1px 0  rgb(22, 22, 68);">
+        Calculating Quotation
+    </p>
     
   </div>
-  
-  <div style="padding-left: 6%;background-color: #e0e0e0;padding-right: 6%;  "> <!-- Outer div with padding -->
-    <div style="max-width: 1200px; margin: 0 auto; background-color: #65CFE9; padding: 30px;  box-sizing: border-box;">
-        <div style="display: flex; align-items: center; justify-content: space-between;">
-            <!-- Left Section: Image -->
-            <div style="flex: 1; text-align: center; padding-right: 20px;">
-                <img src="https://www.freedassociates.com/wp-content/uploads/2023/07/logo_healing-healthcare_purple-logo.svg" alt="Healthcare Image" style="max-width: 100%; height: auto; border-radius: 10px;">
-            </div>
 
-            <!-- Right Section: Text -->
-            <div style="flex: 1; padding-left: 20px;">
-                <p style="color: #6534ac; font-size: 14px; font-weight: bold; text-transform: uppercase; margin-bottom: 20px;">
-                    Healing Healthcare
-                </p>
-                <h2 style="font-size: 32px; font-weight: bold; color: #000; margin-bottom: 20px;">
-                    How industry change makers are improving healthcare.
-                </h2>
-                <p style="color: #000; font-size: 16px; line-height: 1.8; margin-bottom: 30px;">
-                    Welcome to your home for news, insights, inspiration, and expert guidance from industry professionals making a difference.
-                </p>
-                <p  style="color: #000;"> This new webisode series of valuable content from leading voices is just one of many ways we’re helping advocate for, and working toward, better healthcare.</p>
-                <a href="#" style="display: inline-block; text-decoration: none; font-size: 16px; color: #6534ac; border: 2px solid #6534ac; padding: 15px 25px; font-weight: bold; border-radius: 0px; margin-top: 20px;">
-                    Watch Now
-                </a>
-            </div>
+  <div style="background-color:#e0e0e0 ;">
+  <div class="quotation-calculator" style="background-color: #e0e0e0; padding: 10px; border-radius: 8px; max-width: 600px; margin: auto;">
+    
+    <form id="quotationForm">
+        <div class="form-group" style="margin-bottom: 15px;">
+            <label for="service" style="display: block; margin-bottom: 5px;">Service</label>
+            <select id="service" name="service" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px;" required>
+                <option value="">Select Service</option>
+                <option value="Operations Management">Operations Management</option>
+                <option value="Human Resources Consulting">Human Resources Consulting</option>
+                <option value="Analytics and Reporting">Analytics and Reporting</option>
+                <option value="Revenue Cycle Management">Revenue Cycle Management</option>
+                <option value="Staff Development and Training">Staff Development and Training</option>
+            </select>
         </div>
-    </div>
+        <div class="form-group" style="margin-bottom: 15px;">
+            <label for="facilitySize" style="display: block; margin-bottom: 5px;">Facility Size</label>
+            <select id="facilitySize" name="facilitySize" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px;" required>
+                <option value="">Select Size</option>
+                <option value="1.0">Small (1-10 beds)</option>
+                <option value="1.5">Medium (11-30 beds)</option>
+                <option value="2.0">Large (31+ beds)</option>
+            </select>
+        </div>
+        <div class="form-group" style="margin-bottom: 15px;">
+            <label for="employeeCount" style="display: block; margin-bottom: 5px;">Number of Employees</label>
+            <input type="number" id="employeeCount" name="employeeCount" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px;" min="1" required>
+        </div>
+        <div class="form-group" style="margin-bottom: 15px;">
+            <label for="yearsInOperation" style="display: block; margin-bottom: 5px;">Years in Operation</label>
+            <input type="number" id="yearsInOperation" name="yearsInOperation" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px;" min="0" required>
+        </div>
+        <div class="form-group" style="margin-bottom: 15px;">
+            <label for="scope" style="display: block; margin-bottom: 5px;">Scope of Work</label>
+            <select id="scope" name="scope" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px;" required>
+                <option value="">Select Scope</option>
+                <option value="1.0">Basic</option>
+                <option value="1.5">Standard</option>
+                <option value="2.0">Comprehensive</option>
+            </select>
+        </div>
+        <button type="submit" style="background-color: rgb(22, 22, 68); color: white; padding: 10px; border: none; border-radius: 4px; width: 100%;">Calculate Quotation</button>
+    </form>
+    
+</div>
 </div>
 
 
