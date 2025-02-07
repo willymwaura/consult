@@ -207,19 +207,62 @@
             margin-top: 20px;
         }
         .submit-btn:hover {
-            background-color: #4b0082;
+            background-color: #00d4b5;
         }
-        input:required:invalid {
-            border: 1px solid red;
-        }
-        select:required:invalid {
-            border: 1px solid red;
-        }
+/* Initially, no border */
+input:required,
+select:required {
+    border: 2px solid transparent;
+    outline: none;
+}
+
+/* On hover, change the border to yellow */
+input:required:hover,
+select:required:hover {
+    border: 2px solid yellow;
+}
+
+/* When clicked (focused), keep border yellow */
+input:required:focus,
+select:required:focus {
+    border: 2px solid yellow;
+}
+
+/* If clicked and left empty, the border turns red and stays red */
+input:required.user-interacted:invalid,
+select:required.user-interacted:invalid {
+    border: 2px solid red;
+}
+
     </style>
 </head>
 <body>
 
-    <div style="background-color: #451885;padding: 60px;">
+
+    <div class="container-fluid p-0" style="background-color: #451885;">
+        <div class="row g-0">
+            <!-- Text Column -->
+            <div class="col-lg-6 py-6 px-5">
+                <h1 style="color: aquamarine;font-size: 30px;">
+                    We Are Freed
+                </h1>
+                <h2 style="font-size: 50px;color: white;padding-top: 30px;">
+                    We are looking for great candidates
+                </h2>
+                <h5 style="color: white;padding-top: 20px;font-size: 20px;">
+                    fill the form below and upload your cv
+                </h5>
+            </div>
+            <!-- Image Column -->
+            <div class="col-lg-6" style="min-height: 500px;">
+                <div class="position-relative h-100">
+                    <img class="position-absolute w-100 h-100" src="https://www.freedassociates.com/wp-content/uploads/2021/07/hero_why-freed-1400x1000.webp" style="object-fit: cover;">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div style="background-color: white;padding: 60px;">
     <div class="form-container" style="padding-top: 50px !important;background-color: white;">
         <h2>Personal Details</h2>
         <div class="form-group-inline">
@@ -346,172 +389,192 @@
         </div>
 
         <h3 style="color: black;">Other Details</h3>
-        <div style="margin-bottom: 10px;">
-            <label>Do you have experience managing a team?</label>
-            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-            <input type="radio" name="team" id="teamYes"> <label for="teamYes">Yes</label>
-            <input type="radio" name="team" id="teamNo" checked> <label for="teamNo">No</label>
-        </div>
-        <div style="margin-bottom: 10px;">
-            <label>Would you be interested in relocation opportunities?</label>
-            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-            <input type="radio" name="relocation" id="relocationYes"> <label for="relocationYes">Yes</label>
-            <input type="radio" name="relocation" id="relocationNo" checked> <label for="relocationNo">No</label>
-        </div>
-        <div style="margin-bottom: 10px;">
-            <label>Are you open to upskilling opportunities?</label>
-            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-            <input type="radio" name="upskilling" id="upskillingYes"> <label for="upskillingYes">Yes</label>
-            <input type="radio" name="upskilling" id="upskillingNo" checked> <label for="upskillingNo">No</label>
-        </div>
-        <div style="margin-bottom: 10px;">
-            <label>Are you open to working outside your current industry?</label>
-            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-            <input type="radio" name="industry" id="industryYes"> <label for="industryYes">Yes</label>
-            <input type="radio" name="industry" id="industryNo" checked> <label for="industryNo">No</label>
-        </div>
-        <div style="margin-bottom: 10px;">
-            <label>Are you willing to work night shifts or weekends if required?</label>
-            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-            <input type="radio" name="nightShifts" id="nightShiftsYes"> <label for="nightShiftsYes">Yes</label>
-            <input type="radio" name="nightShifts" id="nightShiftsNo" checked> <label for="nightShiftsNo">No</label>
-        </div>
-        <div style="margin-bottom: 10px;">
-            <label>Do you have experience working in a startup environment?</label>
-            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-            <input type="radio" name="startup" id="startupYes"> <label for="startupYes">Yes</label>
-            <input type="radio" name="startup" id="startupNo" checked> <label for="startupNo">No</label>
-        </div>
-        <div style="margin-bottom: 10px;">
-            <label>Have you worked in a multinational company before?</label>
-            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-            <input type="radio" name="multinational" id="multinationalYes"> <label for="multinationalYes">Yes</label>
-            <input type="radio" name="multinational" id="multinationalNo" checked> <label for="multinationalNo">No</label>
-        </div>
-        <div style="margin-bottom: 10px;">
-            <label>Do you have experience with remote work?</label>
-            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-            <input type="radio" name="remoteWork" id="remoteWorkYes"> <label for="remoteWorkYes">Yes</label>
-            <input type="radio" name="remoteWork" id="remoteWorkNo" checked> <label for="remoteWorkNo">No</label>
-        </div>
+<div style="margin-bottom: 10px; display: flex; justify-content: space-between;">
+    <label>Do you have experience managing a team?</label>
+    <div>
+        <input type="radio" name="team" id="teamYes"> <label for="teamYes">Yes</label>
+        <input type="radio" name="team" id="teamNo" checked> <label for="teamNo">No</label>
+    </div>
+</div>
+<div style="margin-bottom: 10px; display: flex; justify-content: space-between;">
+    <label>Would you be interested in relocation opportunities?</label>
+    <div>
+        <input type="radio" name="relocation" id="relocationYes"> <label for="relocationYes">Yes</label>
+        <input type="radio" name="relocation" id="relocationNo" checked> <label for="relocationNo">No</label>
+    </div>
+</div>
+<div style="margin-bottom: 10px; display: flex; justify-content: space-between;">
+    <label>Are you open to upskilling opportunities?</label>
+    <div>
+        <input type="radio" name="upskilling" id="upskillingYes"> <label for="upskillingYes">Yes</label>
+        <input type="radio" name="upskilling" id="upskillingNo" checked> <label for="upskillingNo">No</label>
+    </div>
+</div>
+<div style="margin-bottom: 10px; display: flex; justify-content: space-between;">
+    <label>Are you open to working outside your current industry?</label>
+    <div>
+        <input type="radio" name="industry" id="industryYes"> <label for="industryYes">Yes</label>
+        <input type="radio" name="industry" id="industryNo" checked> <label for="industryNo">No</label>
+    </div>
+</div>
+<div style="margin-bottom: 10px; display: flex; justify-content: space-between;">
+    <label>Are you willing to work night shifts or weekends if required?</label>
+    <div>
+        <input type="radio" name="nightShifts" id="nightShiftsYes"> <label for="nightShiftsYes">Yes</label>
+        <input type="radio" name="nightShifts" id="nightShiftsNo" checked> <label for="nightShiftsNo">No</label>
+    </div>
+</div>
+<div style="margin-bottom: 10px; display: flex; justify-content: space-between;">
+    <label>Do you have experience working in a startup environment?</label>
+    <div>
+        <input type="radio" name="startup" id="startupYes"> <label for="startupYes">Yes</label>
+        <input type="radio" name="startup" id="startupNo" checked> <label for="startupNo">No</label>
+    </div>
+</div>
+<div style="margin-bottom: 10px; display: flex; justify-content: space-between;">
+    <label>Have you worked in a multinational company before?</label>
+    <div>
+        <input type="radio" name="multinational" id="multinationalYes"> <label for="multinationalYes">Yes</label>
+        <input type="radio" name="multinational" id="multinationalNo" checked> <label for="multinationalNo">No</label>
+    </div>
+</div>
+<div style="margin-bottom: 10px; display: flex; justify-content: space-between;">
+    <label>Do you have experience with remote work?</label>
+    <div>
+        <input type="radio" name="remoteWork" id="remoteWorkYes"> <label for="remoteWorkYes">Yes</label>
+        <input type="radio" name="remoteWork" id="remoteWorkNo" checked> <label for="remoteWorkNo">No</label>
+    </div>
+</div>
         <!-- Repeat similar blocks for other questions -->
-        <div class="upload-section">
+        <div class="upload-section" style="border: 2px dotted black; padding: 10px;height: 90px;">
             <p>Upload Your CV (PDF Only)</p>
         </div>
-        <button class="submit-btn">SUBMIT</button>
-    </div>
-</div>
-<div class="container-fluid text-secondary p-5" style="background-color: #000;">
-    <div class="row g-5">
-        <!-- Left Section -->
-        <div class="col-lg-6 text-white"  style="padding-right: 2%;">
-            <h3 class="mb-3" style="color: #65CFE9;">Stay Connected</h3>
-            <p>
-                Subscribe to our newsletter to get the latest updates, insights, and expert advice delivered straight to your inbox.
-                Join a community of like-minded professionals shaping the future!
-            </p>
+        <button class="submit-btn" style=" padding: 10px;">SUBMIT</button>
         </div>
-
-        <!-- Right Section -->
-        <div class="col-lg-6 text-center">
-          
-            <form class="mx-auto">
-                <div class="input-group">
-                    <input type="text" class="form-control border-white p-3" placeholder="Your Email" style="border-radius: 0px;">
-                    <button class="btn btn-dark px-4 " style="color: #65CFE9;border-radius: 0px !important;" >Sign Up</button>
-                    
+        </div>
+        <div class="container-fluid text-secondary p-5" style="background-color: #000;">
+            <div class="row g-5">
+                <!-- Left Section -->
+                <div class="col-lg-6 text-white"  style="padding-right: 2%;">
+                    <h3 class="mb-3" style="color: #65CFE9;">Stay Connected</h3>
+                    <p>
+                        Subscribe to our newsletter to get the latest updates, insights, and expert advice delivered straight to your inbox.
+                        Join a community of like-minded professionals shaping the future!
+                    </p>
                 </div>
-                <a href="https://www.linkedin.com" target="_blank" style="text-decoration: none; display: flex; align-items: center; gap: 5px;border-radius: 0px;padding-top: 10px;">
-                    <i class="fab fa-linkedin fa-2x text-white"></i>
-                    <span class="text-white">Follow us on LinkedIn</span>
-                </a>
-            </form>
-            <!-- LinkedIn Section -->
-            <div class="mt-4">
-               
-               
+        
+                <!-- Right Section -->
+                <div class="col-lg-6 text-center">
+                  
+                    <form class="mx-auto">
+                        <div class="input-group">
+                            <input type="text" class="form-control border-white p-3" placeholder="Your Email" style="border-radius: 0px;">
+                            <button class="btn btn-dark px-4 " style="color: #65CFE9;border-radius: 0px !important;" >Sign Up</button>
+                            
+                        </div>
+                        <a href="https://www.linkedin.com" target="_blank" style="text-decoration: none; display: flex; align-items: center; gap: 5px;border-radius: 0px;padding-top: 10px;">
+                            <i class="fab fa-linkedin fa-2x text-white"></i>
+                            <span class="text-white">Follow us on LinkedIn</span>
+                        </a>
+                    </form>
+                    <!-- LinkedIn Section -->
+                    <div class="mt-4">
+                       
+                       
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</div>
-
-
-<div class="container-fluid text-secondary p-5" style="background-color: #000;">
-    <div class="row g-5">
-        <div class="col-lg-3 col-md-6">
-            <h3 style="color: #65CFE9;">How We Can Help</h3>
-            <div class="d-flex flex-column justify-content-start">
-                <a class="text-secondary mb-2" href="operations.html"><i class="bi bi-arrow-right text-primary me-2"></i>Healthcare Operations Consulting</a>
-                <a class="text-secondary mb-2" href="stratergy.html"><i class="bi bi-arrow-right text-primary me-2"></i>Healthcare Strategy Consulting</a>
-                <a class="text-secondary mb-2" href="analytics.html"><i class="bi bi-arrow-right text-primary me-2"></i>Healthcare Analytics & Technology Consulting</a>
-                <a class="text-secondary mb-2" href="compliance.html"><i class="bi bi-arrow-right text-primary me-2"></i>Healthcare Regulatory Compliance Consulting</a>
-                <a class="text-secondary" href="consulting.html"><i class="bi bi-arrow-right text-primary me-2"></i>Healthcare Revenue Cycle Consulting</a>
+        
+        
+        <div class="container-fluid text-secondary p-5" style="background-color: #000;">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h3 style="color: #65CFE9;">How We Can Help</h3>
+                    <div class="d-flex flex-column justify-content-start">
+                        <a class="text-secondary mb-2" href="operations.html"><i class="bi bi-arrow-right text-primary me-2"></i>Healthcare Operations Consulting</a>
+                        <a class="text-secondary mb-2" href="stratergy.html"><i class="bi bi-arrow-right text-primary me-2"></i>Healthcare Strategy Consulting</a>
+                        <a class="text-secondary mb-2" href="analytics.html"><i class="bi bi-arrow-right text-primary me-2"></i>Healthcare Analytics & Technology Consulting</a>
+                        <a class="text-secondary mb-2" href="compliance.html"><i class="bi bi-arrow-right text-primary me-2"></i>Healthcare Regulatory Compliance Consulting</a>
+                        <a class="text-secondary" href="consulting.html"><i class="bi bi-arrow-right text-primary me-2"></i>Healthcare Revenue Cycle Consulting</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h3  style="color: #65CFE9;">Explore</h3>
+                    <div class="d-flex flex-column justify-content-start">
+                        <a class="text-secondary mb-2" href="why.html"><i class="bi bi-arrow-right text-primary me-2"></i>Why Freed</a>
+                        <a class="text-secondary mb-2" href="knowledge.html"><i class="bi bi-arrow-right text-primary me-2"></i>Knowledge Center</a>
+                        <a class="text-secondary mb-2" href="company.html"><i class="bi bi-arrow-right text-primary me-2"></i>company</a>
+                        <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Careers</a>
+                        <a class="text-secondary" href="contact.html"><i class="bi bi-arrow-right text-primary me-2"></i>Contact</a>
+                        <a class="text-secondary" href="index.html#our-solutions"><i class="bi bi-arrow-right text-primary me-2"></i>Solutions</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" >
+                    <h3 style="color: #65CFE9;">Get In Touch</h3>
+                    <p class="mb-2"><i class="bi bi-geo-alt text-primary me-2"></i>123 Street, New York, USA</p>
+                    <p class="mb-2"><i class="bi bi-envelope-open text-primary me-2"></i>info@example.com</p>
+                    <p class="mb-0"><i class="bi bi-telephone text-primary me-2"></i>+012 345 67890</p>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h3  style="color: #65CFE9;">Follow Us</h3>
+                    <div class="d-flex">
+                        <a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-2" href="#" style="background-color: transparent; border: none;">
+                            <i class="fab fa-twitter fw-normal" style="color: white;"></i>
+                        </a>
+                        <a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-2" href="#" style="background-color: transparent; border: none;">
+                            <i class="fab fa-facebook-f fw-normal" style="color: white;"></i>
+                        </a>
+                        <a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-2" href="#" style="background-color: transparent; border: none;">
+                            <i class="fab fa-linkedin-in fw-normal" style="color: white;"></i>
+                        </a>
+                        <a class="btn btn-lg btn-primary btn-lg-square rounded-circle" href="#" style="background-color: transparent; border: none;">
+                            <i class="fab fa-instagram fw-normal" style="color: white;"></i>
+                        </a>
+                    </div>
+                   
+                </div>
             </div>
         </div>
-        <div class="col-lg-3 col-md-6">
-            <h3  style="color: #65CFE9;">Explore</h3>
-            <div class="d-flex flex-column justify-content-start">
-                <a class="text-secondary mb-2" href="why.html"><i class="bi bi-arrow-right text-primary me-2"></i>Why Freed</a>
-                <a class="text-secondary mb-2" href="knowledge.html"><i class="bi bi-arrow-right text-primary me-2"></i>Knowledge Center</a>
-                <a class="text-secondary mb-2" href="company.html"><i class="bi bi-arrow-right text-primary me-2"></i>company</a>
-                <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Careers</a>
-                <a class="text-secondary" href="contact.html"><i class="bi bi-arrow-right text-primary me-2"></i>Contact</a>
-                <a class="text-secondary" href="index.html#our-solutions"><i class="bi bi-arrow-right text-primary me-2"></i>Solutions</a>
-            </div>
         </div>
-        <div class="col-lg-3 col-md-6" >
-            <h3 style="color: #65CFE9;">Get In Touch</h3>
-            <p class="mb-2"><i class="bi bi-geo-alt text-primary me-2"></i>123 Street, New York, USA</p>
-            <p class="mb-2"><i class="bi bi-envelope-open text-primary me-2"></i>info@example.com</p>
-            <p class="mb-0"><i class="bi bi-telephone text-primary me-2"></i>+012 345 67890</p>
+        <div class="container-fluid text-secondary text-center border-top py-4 px-5" style="background-color: #000; border-color: rgba(256, 256, 256, .1) !important;">
+            
         </div>
-        <div class="col-lg-3 col-md-6">
-            <h3  style="color: #65CFE9;">Follow Us</h3>
-            <div class="d-flex">
-                <a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-2" href="#" style="background-color: transparent; border: none;">
-                    <i class="fab fa-twitter fw-normal" style="color: white;"></i>
-                </a>
-                <a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-2" href="#" style="background-color: transparent; border: none;">
-                    <i class="fab fa-facebook-f fw-normal" style="color: white;"></i>
-                </a>
-                <a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-2" href="#" style="background-color: transparent; border: none;">
-                    <i class="fab fa-linkedin-in fw-normal" style="color: white;"></i>
-                </a>
-                <a class="btn btn-lg btn-primary btn-lg-square rounded-circle" href="#" style="background-color: transparent; border: none;">
-                    <i class="fab fa-instagram fw-normal" style="color: white;"></i>
-                </a>
-            </div>
-           
-        </div>
-    </div>
-</div>
-</div>
-<div class="container-fluid text-secondary text-center border-top py-4 px-5" style="background-color: #000; border-color: rgba(256, 256, 256, .1) !important;">
-    
-</div>
-<!-- Footer End -->
-
-
-
-
-
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
-
-
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+        <!-- Footer End -->
+        
+        
+        
+        
+        
+            <!-- Back to Top -->
+            <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
+        
+        
+            <!-- JavaScript Libraries -->
+            <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+            <script src="lib/easing/easing.min.js"></script>
+            <script src="lib/waypoints/waypoints.min.js"></script>
+            <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        
+            <!-- Template Javascript -->
+            <script src="js/main.js"></script>
     <script>
         // Add the 'loaded' class to the body when the page has finished loading
 window.addEventListener('load', function() {
     document.body.classList.add('loaded');
+});
+
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    const inputs = document.querySelectorAll("input:required, select:required");
+
+    inputs.forEach((input) => {
+        input.addEventListener("blur", function () {
+            input.classList.add("user-interacted");
+        });
+    });
 });
 
     </script>
