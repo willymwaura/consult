@@ -176,30 +176,48 @@
       opacity: 0;
     }
     .testimonials-container {
-            position: relative;
-            max-width: 100%;
-            margin: auto;
-            padding-left: 6%;
-            padding-right: 6%;
-            padding-top: 60px;
-        }
-        .testimonial-slide {
-            display: none;
-        }
-        .active-slide {
-            display: flex;
-            justify-content: space-between;
-            gap: 20px;
-            align-items: flex-start;
-        }
-        .testimonial-box {
-            background-color: #1a1a66;
-            color: white;
-            padding: 30px;
-            border-radius: 5px;
-            width: 48%;
-            
-        }
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    padding-left: 6%;
+    padding-right: 6%;
+    padding-top: 60px;
+    overflow: hidden;
+}
+
+.testimonials-wrapper {
+    display: flex;
+   
+    width: 100%;
+}
+
+.testimonial-slide {
+    display: flex;
+    justify-content: space-between;
+    flex: 0 0 100%;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+   
+}
+
+.testimonial-slide.active {
+    opacity: 1;
+    visibility: visible;
+    position: relative;  /* Ensure the active slide is positioned properly */
+}
+
+.testimonial-box {
+    background-color: #1a1a66;
+    color: white;
+    padding: 30px;
+    border-radius: 5px;
+    width: 48%; /* Keep testimonials side by side */
+}
+
         .nav-buttons {
             position: absolute;
             top: 0px;
@@ -365,72 +383,112 @@
 
     <div style="display: flex; justify-content: space-around; background-color: white; padding-top: 20px; padding-left: 6%; padding-right: 6%; align-items: center;">
         <div style="width: 20%; border: 1px solid #e0e0e0; height: 300px; 
-        display: flex; flex-direction: column; align-items: center; justify-content: flex-start; 
-        padding-top: 10px; "
-        onmouseover="this.style.backgroundColor='#2c2c54'; this.querySelector('.info').style.display='block';" 
-        onmouseout="this.style.backgroundColor='white'; this.querySelector('.info').style.display='none';">
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANkAAACUCAMAAAAppnz2AAAAZlBMVEX///8WFhYAAAAQEBATExMNDQ36+voICAj39/fy8vLg4OAYGBghISHp6enZ2dnu7u6ysrLPz88sLCylpaVgYGA3NzeLi4t8fHyUlJRDQ0O5ublLS0t2dnaDg4PGxsZnZ2dVVVWdnZ1XMNP+AAAPt0lEQVR4nO1d15arvA7eyBjTe0goobz/Sx5cSCiCQIbkn7PWfBf7YjLjWJasLu9///7whz/84Q9/+MMffjEM3zf+6z18ZhNRWYbe6asegxeWZXT6ohUArWrz7HUPwKwrCnA9+3hDl2oELjf/5HX3w79dgGjUDU9eNgWtB4M0DM5deSeCMAXGtwDpqYdrJKBrAuBc6zNX3on66oDcgA7JmVfCb9W6mkahvNknLr0H9q0EOmwAyhOZZnUDy8TS0CTfNABG0gA8v16Hm3Xa2tGFadp4bfeLIllf3fG59pc9Pk3zB3fQpqCQJ2et/gJJ/hTEQWjuZ2mx2pmv3a8ef8dse/H8VDWNOCdJjNcsF9eodp6wbyHQyfLLIT3lWI1iKuZq8eqMtXegQo5Vh+IMFeaVyNoEvmWwA8CYlp/AtN5IL1fWIPv5yjuRod9/grm2XbZcmMEJW94LwDag/dhbMLEjc+C4W2oGdl0kt+xeVU3TVNX1nnVhbXuvzz4EB2Ha/adMs1H1ER9aok6uaR5rhFIGYzBGiR7nza3eZgCi+Hsl8kOmmSnKsp2emxElTazIoDrHdHc9iKK2TNbXjFCmtT9jWoRe31QQ/eJPvT6e4oxBeL4E4b/aJvZcmScF/7dFd/Ejc21cUEHgRtqCTf8q6L1YbD8b0AV1WW1LH8C0C74GP0APvRKXn9g0/PIKjZ/1Lv+6UcGcoj2gUnTd2BVcpBrc5Jctf9XZPtptmAtntAdz+DEGwMOZzMPPzcIcst3QKeuVyxDqcpfA1BDNT+H9m4YbSaHxhWYhQO+RtVwft+7vQV7q8Fx3IUCXyzklg2bpZebS34zAmvAuwjyit0njStPM0b286+JhIqVLlfT8InHv82vSG10vkHc/cM9jGT9KvmaNKpH0PcJ89Jgavvti+hGRhjdPRRbBwNzzn5DGNT9+c/ca1hkwK0J0vpaB+ZI9fY4I49E78QOwmJ+XjwZq7TuErVxazrIbuncCgmUew8j+CYTmtzbU2TGYmEViF84yD1cQcOW6xUAdhh+BADec/gXz+ePjmh/ji8pi4vcISuGjdqcTpgJ4M0GVyO0oYZ6LGGlo+eZrDWMZISKC99cUPiHvWwIiLrCNSQN1j0bXV7o8ICLSD0aD3iN5Ay1UFvXen3dc7agj+QRr+BeHyKnp9HqMsAhlmXAUQwc7fCWL2DXvfcFLdUvCMGvfpY04XFPgSTT3UF7VaBDCqMuNdNBiLKOukMV6STUBt+lq4V8aUVe+SRtruUTU2HnT5ojPH7qY8RCp2Q5nmZBFb0k16FU4irqiLn+LNuJ2/7BktfjogOa3ML5AzllmlxjLoBXOQDYLmntlWiazqJ7T9obBY0Laa8x9lPzchw5l2Y1r/MxBVC91QiGL8UxYdEhrxS+7CNV9MKM+2Eakahu6wx17E7NFxN0dqNlY7lSyJcpRlgk59dIFYY3066zi3uRxOxRwrPpOMNu0CZbzk/Ex3cvavdkejC/SdTKuBLOWsuCfabPPVOHVDJsLT1TxkEDxLagrOEibTq6GiPwQze/sDNQiTJih4ecSxgjLdOi4yBVz7wdKwSP7Hg9pHgblVXnnXtEevG7swn1+G9P8bF8vhYEZaRpzBRTgoYRgjTc34DQW4u8340if0TKTomPYSXwsQIWGy3yIaH6d3vdQtjh7sWrFV03mKoKDUEHBbWYNCLsLb6uhk5/rTCtvMhQ2/Ts7IpLyqDzMa5X8fIFg/S9tLK2qWFbPVAuBSli46yLfqDOnVfUGqz4kkpDa6yf/WvMnqF8lzr/Dgj/pbc/PQ5ext9lR5E962lJ1xlbi7mcb0bi5NjBzLW/LJtAbKnUBqnFVU81MtRBoBFcSghsuQt1GXTfe9rSXNGl5UHMNzSvN3zFEq8r0Fx5JQxuJz8YnDypqKuiqrBGqZ0qAot2aRB/yqohVIi/MdYTxRR0VlgnnEu79m/r4BFRbQ7GZNyBwCZWDku1lm/TwUOFRDt4qUO9FE3kITLy14Qo+KSMAnVwrfKUd2GM39t5kOdxFHgaLfbeja1zvpFxLF2i+akjU3oH1QbPIzimpMLsdziHAIJLdPrYxl6ueAFPScNkozqB8kWbEXksiiryOEbaXfpvusyXLQy3EAjoMbQLWsqMF/bqKfwOuwLN1zV8gLS291pGitXLLH115lvfMSJgF3avw6EOrJXvsNmFCvaM+lrtqrlG+UGGk/VUWIErJ9NMDBtiBoVHAa9d16QPyJIsLxoNqLduDZlCYaGnZKK4ox3eAYfnNwbCZQqnC7s5FjM78+8RJVmgGasVco8qU5jIs29hrr709y+hhWoHnd5fj6YCebZ28I37qvGIbyEAtR7OGqOZHi166zlWfhRvpx4KQ35MiTLpr6x6u4Q5rlL4QSfMWv7ptsr/xPs9MiI/QxkuUL1S0AdVYWDZZ8dEIsZ+WxRKJvCV1+4JtLObi76FMy5FAzcLS1joRKaPrBzLaC5BelgTbvOwF2+AqkmhoeN8tNT8aotBWZG5eX+tTAI5kmxm2K5602pWoThotxrR06RgH96Wl1CnX+DuN7gmgUMnpEL/aLJvKZHWxVI8UMqTAa18vc60vqqXG2ZW+DeiQF2JrXq9iNyQShC89P/HeFb+isYwVNtMwkFBRAtnS+KcDXJknMep0QyIh578UTW6JDm4TrvlXdlKOtRvwMof5iYLYBnpvS2Zf/fuGREI3L+SxZTp6DCMa6SVVanyl8c8G6bcoJDJI1iWSxdPiqw5xFm1XLqyiIeokRMBjfkXjT9HvcpDIVT9cNm8MHgSQpnid4rG7XKwHogT8sz6jNzGSSDy0gViyVRbTCeTdrvy3GV15DKLcywhL8n8aXCItKZEMCzLzIc/A9TbQa7S3Du8VOUCq/rg+tSNnLyC+e1IiF+mXUYXnn5H2TmtxpFTtd9nAX7Q8/Hkwlkof0J/dB27Onxu1s+5gH4/5tOXm7XBJ6AyQQea82/iyMcgmLAp+0nT7SKXLvsrDVb130UukIM0qnqFRrzvOHFuRuYKepra6V6UzD8GwSGk39I2kJNOVg+sPflB/qc4dfeuvsQ6XzveCPmy2i3TEt6FR/b27qAPE7vrfElBFFpmi0aF9YY6PIwS4PloEDKsG1WBMwL1Ftu3zZuY3pLSP/3zPSzbi8H598Z39ZQP6Onl/HGY3TeYFcqCUsbvsJDZM70aPKxrZB2rY5XowTok0P2bobCUU34chGeZFQ3aR74WNq/qG3R4nTTYscMuyyrbeJZScsqyzJfEJP9UIiWXaPgKNztsVqsOkEaISaeYdsA56Sb5z8nT4AkUfmuo6kw7lvwxUddgKM5WcwYchtkmDVImYH6/eVAq76tBv41GRA+BiYdJS/DgRqlHOJ5orZY0tPGocXE2t8FyXHecfwrNTzQFOk1Fw78dUDgKA7CHeNwYz27a6SP+s9fonXD42MWuMin+jYabHECjIvnqs++AVetN/VcohKtdEEspPzV+GzjyPIHaiPf0e0a7xZkc7gKqjGJ3LUNr0T83MTsu8cjpglqQU8li/GfL0N0k91+JVGirSLP/I3P2spxwu8qeTfL+wTeiM4S4ADFa/aB2ENv0zCnKW2VcTAMXE4xPdJub7wRyBWCUzrNsFScl9RBzndRqpqP1p3Vz20fygaNGzLVVxv1/Fix6Zj1DmTQvYIOY55g3LMgfoOj+I4PTeAbaVm5jORFInn5jhnl4oIv3YWYqVMmHRklvVbsQlwzYpIEVLTdQ/1RNN3i2faMkPaZBw8vSJOLx6tn3ZqiH2lDTOtorU9Ty94EVpHVhVy5Xq66i7R6fXjzjE47IhiNKTPcspqYZ9Ceu2XQxgZWEXywqJRK9JbtICGGE6tOVSdu7LQqOtPpgGYurHnF0yFteTIy0205RCgVtFtdIox6BVImnfWhmyO9XpT3gp+EMimjnCW5gpSyLVh+kXhRpoL/A2LUWZHOv1khYPV3X+RJPUktHt2rTNPfncQytRw4ARqjzzaKb/ZCuG17V8UkSct5FsjPgQV70S5N9WWnfo89WwwPftjz6zYndpTJxSdEMH+fyScVnpnWbQ+dynqM+hza0D2CWTV8ms76simZ6cp1qF6ddhIXNHswINdUXOc2he1mXX8WZ5m0KrBCwo1jpj4LxHkvYinJ6yLlMvz1ZiovOEE952/PwjtynkVbLDlQyPypJ8D/NioUyW2enT9rI8eF0tJXC5K6b4HVoWgezLlM14IRtFzftoxIKIhuXiVUTDHi+5mdEVEUm8JedziKad+dQRSmXSy69r3E153UfSa/dW7R4buoAv37Nq9hTbVV6y8ZHrhAfd6ODhDL3D0Sh/0E5m/iZzvvzIZzsL1bjZsZuJYy4H4WruPLwMRHvLpbo4DP8+EcnP5IQ3MBmAkdMXZjYdUmAXvlcrKrhz9DIUZSy/qZbbetTzOfFEv4JsFH/IvvDekk0lVFehlGEG/v11421/3XKVBvZ6kQQmHuepvk3YP3+kQeSQyLzLX0YDCmZdvhZJAq7y5Q27Kx3mtp3/H7w2+9T68v1Lb+6SaNOAYzTiDaudnbxpSl4rwwq8wPxPHj+2ht0xOWczm+PTVTrbCkOVaHuMV0ITJfEabb0q+XRl4iU8qfIYE5esng1IyPdIel+/vzCO9OlDaewYT+aZhbtCm87gMxmBI6hEa6044vmoG6OinnETb3dR9V5rI45CZQyNcI1vOtou+12YdaJCw4V7LEh5vC6jZnpFfz0bXm3jtKE+8I45sq9hPrAmB2/s0Su7QiBT+Uzy45EBI4mx58vYmU/y/hDRNCsgM/7jyJQJajo5ydyH3EO+xEwuS9og/S9fFp9iShkVL7OZk8SraI2NYqU/AUoVlvW0lfosEwwH38T4JCaTGbosFk3DFyGO3nOQRdAmGWeErUtHLg3bmrT6NibpY6n8Zu/0iH5sezSio/P+tmBoxWsuWu9OEcKfdzz6jMlnMRJHWU02574WH1V6SOPAtzwc3qTzszaPOS7lt537bZjJUA1lrlBsybT9gYo8TeLOHzWAMrTVhTP8IgzDIvpvHrhfR3CLgZLeKMcig2XPfS0xHNAsCxQ93xL796hCDGaYXjTqtrIdsZz7/aK1HpuEE7T5v0oAF/DCW6a65b0ZYVLboa9vCNou4e9m2xNTjU9dMemIDi/KXzj3vzj4JCbNBTqIPmc/X6kD9lHZ/XdL4wgTaVTjiWFTxujYHV0fOv2FGHlbQ0epZUdhd03jWe+qDtr9/4iw0euY1O1Gdyjwi+RW5WJOnsnnpNvkt1mwbWSKL2QpaqYdFUlWlRfXjcsq+QX/09MhWJmQOTq8CbX43I7qHtH/kyAqWOLx5zj7er7wC7Dr+vd5gX/4wx/+8Ic//OEPX8D/ADmT3Q7Q2I9IAAAAAElFTkSuQmCC" alt="Teamwork" style="width: 50px; height: 50px;">
-        <div style="color: #2c2c54; font-size: 1.4em; margin-top: 10px;">Client Commitment</div>
-        <div class="info" style="display: none; background-color: #2c2c54; color: white; 
-                           margin-top: 10px; border-radius: 5px; width: 80%;">
-                            <p style="color:white; font-size: 1.4em; margin-top: 10px;">Client Commitment</p>
-        <p style="margin: 0;">We deliver a high degree of quality and satisfaction .</p>
-        </div>
-        </div>
-        <div style="width: 20%; border: 1px solid #e0e0e0; height: 300px; 
-        display: flex; flex-direction: column; align-items: center; justify-content: flex-start; 
-        padding-top: 10px; "
-        onmouseover="this.style.backgroundColor='#2c2c54'; this.querySelector('.info').style.display='block';" 
-        onmouseout="this.style.backgroundColor='white'; this.querySelector('.info').style.display='none';">
-        <img src="data:image/png;base64,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" alt="Teamwork" style="width: 50px; height: 50px;">
-        <div style="color: #2c2c54; font-size: 1.4em; margin-top: 10px;">Intergrity</div>
-        <p style="color:white; font-size: 1.4em; margin-top: 10px;">Intergrity</p>
-        <div class="info" style="display: none; background-color: #2c2c54; color: white; 
-                           margin-top: 10px; border-radius: 5px; width: 80%; text-align: center;">
-        <p style="margin: 0;">We adhere to a standard of conduct that upholds honesty, reliability and promotes trust both .</p>
+        display: flex; flex-direction: column; align-items: center; justify-content: center; 
+        padding-top: 10px;"
+        onmouseover="this.style.backgroundColor='#2c2c54'; 
+                     this.querySelector('.info').style.display='block'; 
+                     this.querySelector('h3').style.display='none';
+                     this.querySelector('.handshake-img').src='img/handshake1.svg';" 
+        onmouseout="this.style.backgroundColor='white'; 
+                    this.querySelector('.info').style.display='none'; 
+                    this.querySelector('h3').style.display='block';
+                    this.querySelector('.handshake-img').src='img/handshake.svg';">
+
+    <img class="handshake-img" src="img/handshake.svg" alt="Teamwork" style="width: 50px; height: 50px; transition: 0.3s;">
+    
+    <h3 style="color: #6438E0; font-size: 1.4em; margin-top: 10px;">Client Commitment</h3>
+
+    <div class="info" style="display: none; background-color: #2c2c54; color: white; 
+                           margin-top: 10px; border-radius: 5px; width: 80%;text-align: center;justify-content: center;">
+        <p style="color:white; font-size: 1.4em; margin-top: 10px;;">Client Commitment</p>
+        <p style="margin: 0;">We deliver a high degree of quality and satisfaction.</p>
+    </div>
+</div>
+
+<div style="width: 20%; border: 1px solid #e0e0e0; height: 300px; 
+display: flex; flex-direction: column; align-items: center; justify-content: center; 
+padding-top: 60px;"
+onmouseover="this.style.backgroundColor='#2c2c54'; 
+             this.querySelector('.info').style.display='block'; 
+             this.querySelector('h3').style.display='none';
+             this.querySelector('.handshake-img').src='img/approve1.svg';" 
+onmouseout="this.style.backgroundColor='white'; 
+            this.querySelector('.info').style.display='none'; 
+            this.querySelector('h3').style.display='block';
+            this.querySelector('.handshake-img').src='img/approve.svg';">
+
+<img class="handshake-img" src="img/approve.svg" alt="Teamwork" style="width: 50px; height: 60px; transition: 0.3s;">
+        <h3 style="color: #6438E0; font-size: 1.4em; margin-top: 10px;">Intergrity</h3>
+        <p style="color:white; font-size: 1.4em; ">Intergrity</p>
+        <div class="info" style="display: none; color: white; 
+                           border-radius: 5px; width: 80%; text-align: center;">
+        <p style="margin: 0;">We adhere to a standard of conduct that upholds honesty and reliability  .</p>
         </div>
         </div>
    <!-- Teamwork Section -->
-<div style="width: 20%; border: 1px solid #e0e0e0; height: 300px; 
-display: flex; flex-direction: column; align-items: center; justify-content: flex-start; 
-padding-top: 10px; "
-onmouseover="this.style.backgroundColor='#2c2c54'; this.querySelector('.info').style.display='block';" 
-onmouseout="this.style.backgroundColor='white'; this.querySelector('.info').style.display='none';">
-<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACUCAMAAAA9M+IXAAAAZlBMVEX///8AAAAuLi7v7+/29vbd3d0bGxv7+/skJCTZ2dmioqKXl5eUlJTg4OBAQEDz8/OEhISpqanm5ua0tLQ0NDTT09PDw8OKiopRUVHMzMy7u7s5OTlkZGQODg55eXlFRUVbW1txcXHfa+nlAAAHoklEQVR4nO2c64KqIBCA81KaecsyL2Xm+7/kWUuYQcCgcpfd4/w6Rx35goG5gLtavSeZ7PplfMV7s6WPiF1LbnC/o3BnRlEQ178oUmTWaV4UJTmrUuTWfl4SJTlYV7UHK+swL4mahJbaHKr8aGYSNQnUeu0UzsyhKo7aUwYsDIuYLN5hzvmXqJmpslSWJXPin5Ay/ajjzyx/Tk+XWd1Hp3c6s19uPoqbx/kH3yaQvWo8oyT53DGPe1rW+kUWWeRvSXbY17orW1Yf9vt6zkhB2nJsWdZFL+qpWquX+PuzYu/esHVJNHTWjTXIt/dv+mj3vNbQ2RHab8/ik3JouNJQSiluOhuYWCp/aFijfODcKO5HgyUFOZCGC3WdrU1x22+uOlAzLNV1KkprNTo29L64HW15fMvL6yDcHXJ+idsDrsiGsioIw331ekKYh0VRhKJF0oFxHb1+ex1WqxtH1CFcvqhTtDI9NamOm8fAtXwRN4OG2Zu4B6+jX9Kge7fRXHMucI8rZSuIm6KXp+OJXMM9Zq5h2i+7ZtQS5h7rXpwS33th3bgwLx/zFqif0OVTw2ixP6VibrF+jW3NCnRpC1Z/bGsx3GnhquOPtBhLYV/JWOh+rLfVo825htkXoBtHWEKDsRIzrMx4M2Vs9zLW6/RwQ67hG74doRsbWDmOnBZeN1rmRoxeV204PS3aLOb0bTzNmcGjhpY0nBYac+TTevFRv594PZ3Iiem9QRq8/OJVA8w6EuDuqM6BvbFBNZya19OKiCten5kbHb5BS1FbAS6sDWPDRjGkAFe2X6eMi14fMWYYkzUpE+BSLfc6XLEHQ0UxpABXq362FeCi3q1YLrpoCHBps9mwMGzC4bei+qDAdnWSFFE/Tdgaja5unFZDJyjpgWM+PNWCo1ifudZ0aGHkQPDCM/IhdDrlnBZ4F9KDLfVgufSFWkF/L4exPjZdd9SLNCTxupESciEFfZj8C03+bKTX6kaR43E9o2WSxCoNGQNolvVcOJEj4x3QeYz9Ots9jXZi77Aeysc+mJhhQwYftiwyvGZscL5LLq5Jyo+DDZwkW9qm0EvO8DLrCvFpRyfm7mbg/je4j+hwe0CO3+nB6nB8qWjiXMjy0JRstEdGvFh1Q98H6IG8jG3fPpe4a5OahEx9atcRLqb65O7Ko+8f25d35uu0tG2/vdZ4fyrb0/47oRldnOAhd5vnDEgNJt0bLBhqEzL7BxGrpy1OFEUZhq2uyDgz7FgbaY51wvOvH2i83jXlbqaSg7tlw8oyWW3ZyO+aCoSZA3YfaWVsKGndiruEX7J7SBAEh3qttJo5h6CXXitkpGMbuY+rbenJvQLopc8fvP8MBTMu+FBXIv3LeLc7LY8Ajc86JJI+CR14NyqVc++xBLHUlDSPJW/LpVYyKSd5TxqDe+sVXOWxuAtJ0BStodeY2DUfu+5JeaQnUfn8SSod6SuPD6FkIq8EO4LUUCYl9WTqLQeop2rVYdlIszY+/ZXKDi0ytZol+mw+k3FBo0RkObwohRDLbfSLO0EawbXKraLr9rlWL5JSsKoVCpbDqnuicxaWkWquHCIS8TlAxXnW1CJn49aTdt9JQoGk5tIeXmKhcqcCW8odzU6uNZWFC9LKsYgWh0hhqm6mKoNrqdr0qc7nBnET+Ao+O+OlmzrpJMed3kRT6F7eGhKViTYZcggKVQ+xp2PY9XNPyg+PvG9Qu5NVV+lUtacDQSkuXG84JRUvfvxW3E0C1W1urtKn0pUn81Lf27sb1IdjzwYF24OgZP9TuNRCY9aNQvnF9wzCdanvYa0BtiI60YaIEm4i0XoDF1zPhVlCwRZyo3Bh4wu/w6MezU6MwoUjBdifwgrf1z4NwoW6C67XwqJ7MgyX7jqgzy48qnAPJkzChf0DKK9C9n0vAxiFS60BjlRB1rQ2DpdmZA1pPKIRvb8yDhdODpAwFALOwDxc8BSk2A6FgugdXHce3BMtcj4Kqx59YNiYMwvXHVkDbKgO1mEWLjiFx35YR/57XBuJS6PIc/8eqCGSGNgwXOopmj6KBFMmiaNpuLR01wc0UM0gt03DpZ7iy7HB6UCaHZuGS0/ENdEqow/T/VvTcMEacujpkr7UOFyamgWQ9kCAZhwuPdJ1pR4Y7Tebh0usoaXHDNCpYfNwSfRk021HlLqZh7vqHpdC2s9oH9lA3PXd9Z6zIfxlDoMYiLtyrm187ePbrNhYF4bDRNwvTpIKJwlbFP8AbuOjrSsN3A1qWvUoGcb1z+jEgjpu6KAtRXXcc4VK8K/gphmqU6vjBvjIrDpunKFzzK/g7vD+kw4uOrKggRtBJvYSbrjgLrgL7oL73+K+5iYW3AV3Htzj5Ic4C+6C++dwj9OHcBfcBXfB/S9xf9lCtuCagdtmC+6Cu+AuuDPjTv6poL+C+yxmgA9Efg4XfdfwU7hnZdz9D+HufgEu2uhicSe/15DjTn8IHP0yXPioqnwfFxVqfxmu+MOx57jTf8IZfcpVOm/iBq/hHjR6F31C/hou+rDvRdwa456nm3sXN0Ef2u2xe4onvSnGPengwqdnN9eDHXP+MyoJLug3Nf76bRrXQ2pr/PX5kz8OmMDngB1+yU3w7D+T0YSq10TUXwAAAABJRU5ErkJggg==" alt="Teamwork" style="width: 50px; height: 50px;">
-<div style="color: #2c2c54; font-size: 1.4em; margin-top: 10px;">Teamwork</div>
+   <div style="width: 20%; border: 1px solid #e0e0e0; height: 300px; 
+   display: flex; flex-direction: column; align-items: center; justify-content: center; 
+   padding-top: 10px;"
+   onmouseover="this.style.backgroundColor='#2c2c54'; 
+                this.querySelector('.info').style.display='block'; 
+                this.querySelector('h3').style.display='none';
+                this.querySelector('.handshake-img').src='img/teamwork3.svg';" 
+   onmouseout="this.style.backgroundColor='white'; 
+               this.querySelector('.info').style.display='none'; 
+               this.querySelector('h3').style.display='block';
+               this.querySelector('.handshake-img').src='img/teamwork2.svg';">
+
+<img class="handshake-img" src="img/teamwork1.svg" alt="Teamwork" style="width: 50px; height: 50px; transition: 0.3s;">
+<h3 style="color: #6438E0; font-size: 1.4em; margin-top: 10px;">Teamwork</h3>
 <div class="info" style="display: none; background-color: #2c2c54; color: white; 
                    margin-top: 10px; border-radius: 5px; width: 80%; text-align: center;">
                     <p style="color:white; font-size: 1.4em; margin-top: 10px;">Teamwork</p>
 <p style="margin: 0;">We are a positive, collaborative group working together to meet client needs.</p>
 </div>
 </div>
-
 <div style="width: 20%; border: 1px solid #e0e0e0; height: 300px; 
-display: flex; flex-direction: column; align-items: center; justify-content: flex-start; 
-padding-top: 10px; "
-onmouseover="this.style.backgroundColor='#2c2c54'; this.querySelector('.info').style.display='block';" 
-onmouseout="this.style.backgroundColor='white'; this.querySelector('.info').style.display='none';">
-<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAM4AAACUCAMAAADs1OZnAAAAbFBMVEX///8AAAD29vaqqqrw8PD8/PySkpLr6+u5ubmXl5d0dHTX19cHBwfQ0ND5+fmEhITl5eXBwcHd3d2wsLAwMDCenp5tbW0gICBoaGhfX1/KyspNTU2kpKQrKys/Pz9TU1M3NzcWFhZGRkZ8fHzuneYoAAAUgUlEQVR4nMVd54KqOhBeKYL0oiAqTd7/Ha8wkzApFPXc3fmz5yBCvkzJtMSfnzfIPYx0MnSfxQegQfNpdMEP++DA6JzMn1sevxywO7p3BvYZrcHheGLNx/7zIBOF41yVjw/+/4SB0CqcnwEHconUz/JegePMnzqVgib+fxAItA4nQpEJclv5zLiUa3DuMhpPfcS/p3U4PwZOcp1qPsvZkMtnKcNJmumT4oy3PE8aBv972oDzkyCeRif4/qO4N88qds1p8GeLfK+evpalJ+/+vHuX8H8Yu4a24Pz4yIK77hY78UM/M37SCU5HGJBN5qy3xlt83/kNQRtpE87PrQM81dpTJpl6kivZQebXr5AExzq1lawmLq4bx+Wn5JNoteQKwHn+LRzjOJkx6Z4HwOnl6zPlpcw/gHNd4fr/QiKcG9jem3hPdERDvLgOmv00eHIlBMP2p3AMHPdBkjfmsbRLsnOaPh7IlRSu/CkcH7X+0Ev88Vu4HustlA3TcCJXclC3X1lsCFE4ESrJaHOldSKFZaTWq08Ezp1LrgC/NM7E/0sUDq7kYJMy8b4LmLe7Vn0s8O3IFBixTmiRImuRvhXOG8i4NUNDqhLhvgi9Uc/RPCQD14HMADpHGl8gCs1TvEjHR6p7wW4Cg1qPcpIBcypcZgbxuQ7oVfDQqEMIngOZWguepfIyOSq+qUi1l34hoRYoRTOYR/TObqDFh+Aoch5M7+GsmXF0HOhj+2loiXwnsylr1F0+x2Of8CElMuVq8WXTFBlx4TfIBBNQkyvJdOUpw0k2WMNe/DGcn0yKWkbtRT0JREYYOLOqdQM4HrkCKllJemDEh30k2aF3KBUeNDE6Yl60yIgM75HND3KYzilYFUlckWc7aM3d3cRD+HMCsTXQZEtyhaavlR6QFNNlapWBDZK04mp7KG7hEp1q/YzpyDAsQ6dlWVH34zPKli+E2fTYRoLD8hl6n4GOHcyKK94XNXTK9OQ3um9qKEnj6u49Qp3flV2uVRWnZECjsTorJjOEySvF67dpMqhhsyGmloxgBJOxmtBBwT2t3fMiy2VR+7Avzg3j+KZMI8uuiaGPq4igNV3ppIEDnGZdz03NCxRyiE2ptzm5SJg66OmQjIsyAn+6cpXsNHJH7/kw2gMnGQ6U1h+4ShCoCbGAUygKBSuXbNgi0DEl3BVoB5xkCAQ4nbJa7yYDQp+aDD4DMaZrDABUVkP0N5p4BdA2HBnNewlJyUdDh8abL8PC1VFWwFsUoU6Y/nZevmSKN+E4DE178y9gmvanJAyvvYp2GeT2zMcawQBoZIc6r9gcDOom9rYP/Ri24DhMb9pxQt1pcs+7tWecz0bAg463x5M/laKPwC/ZEvyQ6P1FwaAV+Q04vDJxh/9PYl3udfLAjRZjBTCSJWMPuj6OcocusrZNIvLa0HYdjlUw3uAF7y04N82LLdAAViUBVghZEbB++nckQ800+fE2HI6GOXXJZCx3Lz24VNyFpQ8kBrPwEbyBRnVOf1BElFDKDMLb3OForkxRzWnmNlZmQhj7CDFoBLMfTwwBB0DwXCBtqlGdkWxW5wpibRi9AsdheuMxUTAGgVfbZEOsUAv+CrAH4lKQNSFQgznUJ7HsFNH0sR7uMpyEo+HzEE4P699wc1B7Ysoe5MiU/6nmfyIZ8A6tZkR5s8qbFTgcDTFMIDv98WHm6S30E23AIA4AzFQgsAeujSLrwKfUTN+mte2pUx3jxPTmuLTyLcFJPDUlkzBdOvRl1zzbyhvik5mHyUq45MPKSxPQLKzMbZyfiuriEVRHW+7u8fWPxRcuwOFoCsLVlD2OUFDWzQtXbPr6CcOE5oGKug2Mf1nnsyJrEYifzo9KmIleyY7q4XArIMzS7GSoVHbPdsg1+okBomA+IAI4ZPC3pLIWQmFR53ewZMNaxKWFw9FUwjxgqnmZ+rIucklJbYzZ6GX0bE7wGiE1Cmav1UmTM72+Xg1HdXAc2RdgdDrsoXrwqSEL0UujDxISwBfygVGoN3MarXqrCEAy3E9c0DVwLO51Kg/M8sfpGBfVs2m67lyXvRw7MLqmDptgjN97yoOMpOfvVHjSycctJVljMuLkasTuj0PgGq6Bw/plNlZLw/FT8+hd23sHqRyJihQt3m1aSQL6DoPwWdB6kDVa9X2BuLn+YqUHFzaGX4VjseHsLC8YSZhfhqLtFEz18ZZEfO1p6JDmbGNHOYHFBAF5Ol4zF4wZew7LFatw0H4N75WNoyx9xMVTFr72EhpYaC+pz5jxppuConTBnyPanp1glrQ+jT3rYLgEB16krcRskRPmx6I7CHSO3QzyhXQpZfZOrMhZsSRrlslg66yzMdf7DoW9AGeajXLJP9+i6CV6R7G7q/TAEX1SE8uMvmCS0QhyhOnc1qbhjnOkspAswJku6Mt+O8nIbidiuliLXUCTkwlwTKhesOoq6kkYz4zWFG2klMxkUTRZ0Ik7wafcYYiS27E/SFRQdcQojg4zu88D+0nieUaaVLVsGavz1SiPIwNCmADq8sOncnHlfYqsVGqyE4wYRJVCrJHOYpPE9Tz3utgmZGDrDJNd9dGMNRUE5LimTPY+JWKFSUiFj8ZAWP2xxbAi6aOJNTorwE1an6hlLGH5t9nFf9Pgk3fzNBcCyx1XnHVcEf2M1gxrXRw3A2imLwqKKpsN5jjr8NgjvQkorZjrel9zhrH6XlI/t9aufhar+AYFXDCpUQikHFDEsFfys4wwz13XTdObn2VZ4hjb4SgAwsVoIZ8BFB5kOhc6+FHI6n01N8iP8/ylhzwmg4mu9HqDh4NTPNoWx5P5CrITZ7t35ja8AHWrSQa5ObfztMlWh6+dDVmBUw8mrPE0JtmKWV1dwHM7HzTUVcMlT/0tS5geT6sdDBJzmlhjnMfEFA/wK2HgRvpy9Y+Xm3ZmOZ6C4lmJRsvWO5m3zyslPz9Cz8Dk6unGZTKHIxiUZJ+97DOzmCfwyBD13OHUN9f48XFPLXmQ52Z6PmYDU5vy8t66yPEUmXJthcrnNf7MoWBPOJ/CpZGanIPn27vNUQbPfsz8AYPYX4vq/lzOG3Tt8QOPb1oYey9dzHIlFe9guH7islyVL0MLQH/5iQzDcJIsNOOrTgCD8m6+3SkYeoNrLX+LWNUPm4iY6Zz9N5C2u/g4Kz3pOpmKbwyDTCTFV37ccsP40zI8EFfKvZEjOenwrKV+o7vebL5Ndjbvf+kXGkp3kSfhgQTZUrkqcb1WjEWf7vcN91E2hxpB+0UXwNz0yPFA9U2b3p/IuMVXAdEzT74CZGfEgemOX4YtBltPobnTLjbgjF9Jj1cqdXf3845T2zdnb7nXOTBv0uzvjBoIlevNYmLixvdZd+uP8w7hhbj+Vf4vIhaL+9dmjhmAZttm2S5Jf+g2i+14sRuTZ5wfX/QQCo9leAImQvoMMqXweK2/g+OYdEULjuE/axE3JN+m32KOWzQ0nvogyRXGd6p+g94hBfJPXnWN3f1wbU+As2Er86e4/DTvdjZbl3tNp6PwV8A41ylBHpTNGyac4lnehzNSLjk9xzd9A9tte+EB1arO3Midb3Q+uaz0odZXCBkmHUrQF++qry+FpEJ8oiGxT3hbpznZ+dA+q+NaOGO5dAGtq8UurUW6CWJadkvldkaOyMilHTWfkHUj8WTwjD+I42hHVP+szM3pYDaK9djLOwU+JuNG1Ku8nj7ypmm28Llj8w5usenix4lN5b/B45NqWu/J1d69RPu7zp65Zp0ncqe17TzaJqZ0/4I/jknk7BWDff6gI1WeZ2yuR7WP6e7rtEhnGHL13+Kx02LWSO8LMD+jAsZClaONzRXjCLvQ0Z4xPMF39sA5zvas+m5z00hWKBShpozXbWGKoB2N5WoTFhJ/cxRA+uSsqT/VGZGM5HIQqO/u15MudQPVHN4my7f3DOqtOyme5exfGcmX+FqpVGB9OTHnrnhIfmj0FLnB8byxnlJKZjAr3oLtn96PIrOhP+io8U6ub1mAC7I7LVcvLm8f8We2q8sbqo0MGPh+tGKnV237BVDZ3NsCbBCpgLDzET7AM5+WUi9V7Y0kZxFYrb9jnQy3etZLfTIzkSIQ71eI34uxIl6cDO4LsbYTEqfloL9nk6w0vt43OrU6uqWB5bB057+wsSum3DBZIFDHWjmyM1c4HOb+IZzpUflxqJp+GY+un2RhPY3C/HG65KKhdGK2fD/1eRr/Irn6ax6pHeb5hm7Z2S2/xEWr5VMnhLv+Gp5XmDt92NDCgM8n3tO6IZmS5V3rvrLdl9xWl21jESV+6uaX4wtWV87M6i/iuBl/AkXe7HxOpsy1u5S7aA+dDXCOasp6jTn4+uq0r+5gG1aS+WF4e0EzzcfDTGWngdvro6QkLnUJWcvTnJbU5qAfdyHvAUNdW2LZ6SavIOnNQopt25Gq12Q9FY1UIhrJ5zTHPGOsXTlvNNQvXal7DsgJhWkIObOD8/X7RKeAR8AqH1w1bkLhq42u5G95ZAKeaYTxYivI5BD0QtpF6NoImu0gdA+eVp1H1v9RXLA5qQvncrmuZkTOITtUIystDXOmQrrQkSUfn6VtJ/gMDzVB0PgypZixTM6VXHdqFGtMHaUMq+Swjoo7SsDW0qx9ppiO+pLt7MBYJEjy9OQKNodNzxUzoQvdKLi3pq+YCiIjqapgUVAworhRQXjF8+HvaL9YJjwOilyBuQUHL6Ovui5YIGgnb/kWAZgh4cgFA5VU6IOCY4z6eyVKXXtJPz9fCrZmUO5QODZZ5b3FFS8c2pY4PbifgNqMnJl+WsHDnqE4e3hSPbIbHtsNJTrCQgHtBaNwSPpUDV4s94EG1vIJ4yCrJwQPBjeWwgY/CKhf9sFx1dM82uGU39by1MtohEkT4FiMPep5X/5QHhpNRU6znYVvRT/UVNoysCFj+57h57HimQVNO8SmGzo7QfGmL3V7AwOIDX5qsSaF/X2qPoEI0bZZmywxQudBQZFbvqs5qvHQn+/V1YtP5s1PNlSKLRhC974IByK9XEYTPfAUAiXqgZ1IZ3o9JPU0wamAQwvmuNLJ0uKgp2kr1L2tqhHb8eXsq5rMvip2N4pwfrIiUGs1BssjqUUp3CdFHynkaIQvAE7acGZYt3i9p2nsaO77vpRXdL49VPTCJDjzTg3yTj6HhfKZuk8K9wUV8CXhgC8sbcg5hyS/9huQlDV9AY0KRyGHV5bV3XMQfYvNxjC0EH0M4XWldggjveLrpiTxjUrCJPDNrvKjNuHwtVVXmoe9EDQ0wILHmR3RJIQjuBAs5B1eAXZctU1Xl5pMSEC+tNT4uQMO73fUtviDYFFZQ9/swUsFgqYCo+WzwyhFTuY+jsP1Wt2bcTNUoI6cl9k1hb91OHbKikTail+mbs9OOYhM9UMZe7a7u2zb8cdQ9HHBHOy822wNzTqciLn1ZazNiEPxpSEMQFlr53+W1BhEsNa8098FRw7NW2ZX0azCMR7oXZ0v+vw+fJnGG8lz1o6bZhf/DbitmshFwq1G/CgHhkbfr70Ch6PpFgq6EMkFVJxCojD45rPwTBzN7gYBKCbODU/MCujM4zoclq5YPIkB+ywJ0/HQHyiW/bi9qj0hrJrlXjggzzzjrmle3QuHZduDZqE4ADkgGm5gFIDdJtj1K+zvs7GBfW+9CcpVTDgX15sdcMg+1rN2qXioqgO3s7mEwEfYccUKAHv3QglwmNO6IGnrcIQdNpoDC3HyVTPNkzrY2Cw2k2Fe77wvDgBhA7+DhS8rPcmrlu1EcuAqf3DFJGPF2GCOLzD0ESSLncEmnAewSA6YyrPp8EMP19qD15dRy+T7cjplSvAQOnIlAuMxmy08tUTcPIXTsHAgqkxK1/1qs/OWk2PnbJOowh7YfUGrIHBwREncIdxrOQiiirmE565UWyYFEOstTdse9Y+L2TnJM4nUU8pg1REUVT6gaSQbGwv29eXnb6DZA4f5YZIxsNRTZCFpJ9Rc8NhK0bI6qAb7CuEPkvnRH9M00x44mLSQ4KAK0BmGK6JOAETpKFd0Hsp9BwTzGPxlEDZuhbetu7h+r4MDaYKeXj0o/HrJJMi+dOwfShCtqUW34zDoG1qc9FTc29j1N9HDWrkWgbCt4J0EB5x9agkgfS/vAUVR9UQvFid8XpLS67Rbs3yqW6p+xoMTEmdPJxDm/5+mv0QhNjNIbT320kGsigNS6ZhmoMFqYZJsstel+6b+wzeaLRLeIE0aniFHtS7X6zc760GcXXY+K8wHPcVsvSy5QUKefYXkmioaNjqTgwIQCJ2/SpRWlkGOf8Rm3BeVX2wLknqXFkhp4sfd01TDwQCqiz07ZUwEyg9Sf8zHkPX494sDmqPj1tE4B90Kjk2a1HLCzGoiMzy1SZJXHli6aLefwwl30nzz2xV2XkklCoU1mq4PWB9r+t4F4KOeYaFSUh9kSgCO//QjCugAfbW3IsmPg7dIsb5vbnotPcAZlLvVJbDYkUmSdRQrjJOUYun1y+K2bTiLpC/34Yn1BCj+7IRWjTEPL+9kD8neHfghKDxd54tTcD8jWB3pTwDBFX0Xkw21ROWcLLKJGKKkP4KDMT/daf/QyRMjVlySd0/w3ZX48yN/BAd/BIX6kHjW54KNZecpSL82wDMSeFjeH8HBtDeVHbBTl6VvMGstHwUOeNhhgX8FBwZPzdi0rq4c6Z8HxIIRmoSUZY3/Co7yKxoQ7ZQrGQBUn0BeaN1m3vbyR3CspwJnqq6vbtBk7RMrPWC/DcdKksSy2bG5FA47sdBIsizTho3s1wba5UX/d+H4Y4GsHcwQusUDmp+e3K3OvJ2u9/FIR92Q2a8RLSc9fhOObTKvpIN2MeEXKuGENr5nsXI17oSL5s1b6iz6TTjKD3w0ChxCtaYJz2YbAZe2rPwiHPVQSnrur6M0CKhdFfORqEslhN+Do4lbacekCker8jzK0R8o/XtwNL+MU63D0Z6+yLovA+3PZvwaHNz5UoV2wrev0Qqwwboq77nBaqDaQgyLcjpdRfETOP8B/2YZ8BUr898AAAAASUVORK5CYII=" alt="Teamwork" style="width: 50px; height: 50px;">
-<div style="color: #2c2c54; font-size: 1.4em; margin-top: 10px;">Versatility</div>
+display: flex; flex-direction: column; align-items: center; justify-content: center; 
+padding-top: 10px;"
+onmouseover="this.style.backgroundColor='#2c2c54'; 
+             this.querySelector('.info').style.display='block'; 
+             this.querySelector('h3').style.display='none';
+             this.querySelector('.handshake-img').src='img/infinite1.svg';" 
+onmouseout="this.style.backgroundColor='white'; 
+            this.querySelector('.info').style.display='none'; 
+            this.querySelector('h3').style.display='block';
+            this.querySelector('.handshake-img').src='img/infinite.svg';">
+
+<img class="handshake-img" src="img/infinite.svg" alt="Teamwork" style="width: 50px; height: 50px; transition: 0.3s;">
+<h3 style="color: #6438E0; font-size: 1.4em; margin-top: 10px;">Versatility</h3>
 <div class="info" style="display: none; background-color: #2c2c54; color: white; 
                    margin-top: 10px; border-radius: 5px; width: 80%; text-align: center;">
                    <p style="color:white; font-size: 1.4em; margin-top: 10px;">Versatility</p>
 <p style="margin: 0;">Our consultants are responsive and adaptive to change.</p>
 </div>
 </div>
+
 <div style="width: 20%; border: 1px solid #e0e0e0; height: 300px; 
-display: flex; flex-direction: column; align-items: center; justify-content: flex-start; 
+display: flex; flex-direction: column; align-items: center; justify-content: center; 
 padding-top: 10px;"
-onmouseover="this.style.backgroundColor='#2c2c54'; this.querySelector('.info').style.display='block';" 
-onmouseout="this.style.backgroundColor='white'; this.querySelector('.info').style.display='none';">
-<img src="data:image/png;base64,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" alt="Teamwork" style="width: 50px; height: 50px;">
-<div style="color: #2c2c54; font-size: 1.4em; margin-top: 10px;">Wellbeing</div>
-<div class="info" style="display: none; background-color: #2c2c54; color: white; 
-                   margin-top: 10px; border-radius: 5px; width: 80%; text-align: center;">
-                     <p style="color:white; font-size: 1.4em; margin-top: 10px;">Wellbeing</p>
-<p style="margin: 0;">We provide an environment where people can attain fulfillment at work .</p>
+onmouseover="this.style.backgroundColor='#2c2c54'; 
+             this.querySelector('.info').style.display='block'; 
+             this.querySelector('h3').style.display='none';
+             this.querySelector('.handshake-img').src='img/health2.svg';" 
+onmouseout="this.style.backgroundColor='white'; 
+            this.querySelector('.info').style.display='none'; 
+            this.querySelector('h3').style.display='block';
+            this.querySelector('.handshake-img').src='img/health1.svg';">
+
+<img class="handshake-img" src="img/health1.svg" alt="Teamwork" style="width: 50px; height: 50px; transition: 0.3s;">
+<h3 style="color: #6438E0; font-size: 1.4em; margin-top: 10px;">Wellbeing</h3>
+
+  <div class="info" style="display: none; background-color: #2c2c54; color: white; 
+  margin-top: 10px; border-radius: 5px; width: 80%; text-align: center;">
+    <p style="color:white; font-size: 1.4em; margin-top: 10px;">Wellbeing</p>
+    <p style="margin: 0;">We provide an environment where people can attain fulfillment at work.</p>
+  </div>
 </div>
-</div>
+
     </div>
     
     <div style=" background-color: white;padding-left: 6%;padding-right: 6%;padding-top: 70px;">
@@ -525,36 +583,40 @@ onmouseout="this.style.backgroundColor='white'; this.querySelector('.info').styl
         </div>
     </div>
     <div class="testimonials-container">
-        
-        
-        <div class="testimonial-slide active-slide">
-            <div class="testimonial-box">
-                <h3 style="color: #00d4b5;">Vice President, Ethics and Compliance</h3>
-                <p>“Freed Associates has demonstrated outstanding subject matter expertise, flexibility, integrity, and, most importantly, objectivity as they push back on executives when it is in the best interest of the organization. Freed is the best consulting firm I have worked with in many years.”</p>
-                <p style="font-weight: bold;">One of the Largest National Health Plans</p>
+        <div class="testimonials-wrapper" style="padding-right: 20px;">
+            
+            <!-- Slide 1 (Two Testimonials) -->
+            <div class="testimonial-slide">
+                <div class="testimonial-box">
+                    <h3 style="color: #00d4b5;">Vice President, Ethics and Compliance</h3>
+                    <p>“Freed Associates has demonstrated outstanding subject matter expertise...”</p>
+                    <p style="font-weight: bold;">One of the Largest National Health Plans</p>
+                </div>
+                <div class="testimonial-box" >
+                    <h3 style="color: #00d4b5;">Vice President, Digital Health</h3>
+                    <p>“Freed knows us so well. Better than most any other firm...”</p>
+                    <p style="font-weight: bold;">Internationally Renowned Academic Health System</p>
+                </div>
             </div>
-            <div class="testimonial-box">
-                <h3 style="color: #00d4b5;">Vice President, Digital Health</h3>
-                <p>“Freed knows us so well. Better than most any other firm, they have been available to jump into any type of project...”</p>
-                <p style="font-weight: bold;">Internationally Renowned Academic Health System</p>
+            
+            <!-- Slide 2 (Two Testimonials) -->
+            <div class="testimonial-slide">
+                <div class="testimonial-box">
+                    <h3 style="color: #00d4b5;">Director, Decision Support</h3>
+                    <p>“Freed consultants were a pleasure to work with...”</p>
+                    <p style="font-weight: bold;">Leading Healthcare Provider</p>
+                </div>
+                <div class="testimonial-box">
+                    <h3 style="color: #00d4b5;">Chief Technology Officer</h3>
+                    <p>“Freed is synonymous with excellence...”</p>
+                    <p style="font-weight: bold;">Nonprofit Healthcare Organization</p>
+                </div>
             </div>
-        </div>
-        
-        <div class="testimonial-slide">
-            <div class="testimonial-box">
-                <h3 style="color: #00d4b5;">Director, Decision Support</h3>
-                <p>Freed consultants were a pleasure to work with and acted as trusted thought partners to help guide the direction and priorities to successfully deliver on the project scope, despite considerable uncertainty. In fact, senior leadership commented that this effort was a model for how projects should be run”</p>
-                <p style="font-weight: bold;">Leading Healthcare Provider and Not-For-Profit Health Plan</p>
-            </div>
-            <div class="testimonial-box">
-                <h3 style="color: #00d4b5;">Chief Technology Officer</h3>
-                <p>“Freed is synonymous with excellence. They are truly an extension of our team, creating the feeling of ‘we’ instead of ‘them’ and ‘us.’”</p>
-                <p style="font-weight: bold;">Nonprofit Healthcare Organization</p>
-            </div>
+            
         </div>
     </div>
-
-
+    
+    
 
     <div style="font-family: Arial, sans-serif; padding: 20px; background-color: white; position: relative; overflow: hidden;padding-left: 6%;padding-right: 6%;">
         <div style="display: flex; justify-content: space-between; align-items: center;padding-top: 30px;padding-top: 50px;">
@@ -787,23 +849,34 @@ onmouseout="this.style.backgroundColor='white'; this.querySelector('.info').styl
             
                     </script>
                      <script>
-                        let currentIndex = 0;
-                        const slides = document.querySelectorAll('.testimonial-slide');
-                        
-                        function showSlide(index) {
-                            slides.forEach(slide => slide.classList.remove('active-slide'));
-                            slides[index].classList.add('active-slide');
-                        }
-                        
-                        function nextSlide() {
-                            currentIndex = (currentIndex + 1) % slides.length;
-                            showSlide(currentIndex);
-                        }
-                        
-                        function prevSlide() {
-                            currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-                            showSlide(currentIndex);
-                        }
+              let slideIndex = 0;
+const slides = document.querySelectorAll(".testimonial-slide");
+
+function showSlide(index) {
+    slides.forEach((slide, i) => {
+        if (i === index) {
+            slide.classList.add("active");
+        } else {
+            slide.classList.remove("active");
+        }
+    });
+}
+
+function nextSlide() {
+    slideIndex = (slideIndex + 1) % slides.length;
+    showSlide(slideIndex);
+}
+
+function prevSlide() {
+    slideIndex = (slideIndex - 1 + slides.length) % slides.length;
+    showSlide(slideIndex);
+}
+
+// Initialize first slide
+showSlide(slideIndex);
+
+
+
                     </script>
                
 </body>
