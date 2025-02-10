@@ -75,7 +75,7 @@
         <div class="navbar-nav ms-auto py-0 text-center" style="display: flex; align-items: center;">
             <a class="underlinepage pageam nav-item nav-link d-flex align-items-center active" href="knowledge.html" style="color: #65CFE9; font-weight: bold; font-family: Arial, Helvetica, sans-serif; padding: 5px;">
                 <img src="https://img.icons8.com/emoji/48/null/light-bulb-emoji.png" alt="Knowledge Center Icon" width="20" height="20" style="margin-right: 8px;">
-                Talent Portal
+                Talents Portal
             </a>
         </div>
     </div>
@@ -132,7 +132,7 @@
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            max-width: 800px;
+            
             margin: auto;
         }
         h2 {
@@ -181,10 +181,23 @@
         }
         .radio-group input[type="radio"] {
             margin-right: 5px;
+            accent-color: #451885;
+            
+            
         }
+        input[type="radio"] {
+    accent-color: #451885; /* Purple */
+  
+}
+input[type="radio"]:checked + label {
+    color: #451885; /* Purple */
+   
+}
+      
         .radio-group input[type="radio"]:checked + label {
-            color: #6a0dad;
+            color: #451885;
         }
+        
         .upload-section {
             background-color: #e6e6fa;
             padding: 20px;
@@ -241,7 +254,7 @@ select:required.user-interacted:invalid {
 
     </style>
 </head>
-<body>
+
 
 
     <div class="container-fluid p-0" style="background-color: #451885;">
@@ -267,7 +280,7 @@ select:required.user-interacted:invalid {
         </div>
     </div>
 
-    <div style="background-color: white;padding: 60px;">
+    <div style="background-color: white;padding-right: 6% !important;padding-left: 6% !important;padding-top: 30px;">
     <div class="form-container" style="padding-top: 50px !important;background-color: white;">
         <h2 >Personal Details</h2>
         <div class="form-group-inline">
@@ -308,7 +321,7 @@ select:required.user-interacted:invalid {
                 <div class="radio-group" style="padding-top: 6px;">
                     <input type="radio" id="male" name="gender" required>
                     <label for="male">Male</label>
-                    <input type="radio" id="female" name="gender" checked>
+                    <input type="radio" id="female" name="gender" >
                     <label for="female">Female</label>
                 </div>
             </div>
@@ -408,60 +421,61 @@ select:required.user-interacted:invalid {
         </div>
 
         <h2 style="padding-top: 20px;">Other Details</h2>
+        <div>
 <div style="margin-bottom: 10px; display: flex; justify-content: space-between;">
     <label>1.Do you have experience managing a team?</label>
     <div>
         <input type="radio" name="team" id="teamYes"> <label for="teamYes">Yes</label>
-        <input type="radio" name="team" id="teamNo" checked> <label for="teamNo">No</label>
+        <input type="radio" name="team" id="teamNo" > <label for="teamNo">No</label>
     </div>
 </div>
 <div style="margin-bottom: 10px; display: flex; justify-content: space-between;">
     <label>2.Would you be interested in relocation opportunities?</label>
     <div>
         <input type="radio" name="relocation" id="relocationYes"> <label for="relocationYes">Yes</label>
-        <input type="radio" name="relocation" id="relocationNo" checked> <label for="relocationNo">No</label>
+        <input type="radio" name="relocation" id="relocationNo" > <label for="relocationNo">No</label>
     </div>
 </div>
 <div style="margin-bottom: 10px; display: flex; justify-content: space-between;">
     <label>3.Are you open to upskilling opportunities?</label>
     <div>
         <input type="radio" name="upskilling" id="upskillingYes"> <label for="upskillingYes">Yes</label>
-        <input type="radio" name="upskilling" id="upskillingNo" checked> <label for="upskillingNo">No</label>
+        <input type="radio" name="upskilling" id="upskillingNo" > <label for="upskillingNo">No</label>
     </div>
 </div>
 <div style="margin-bottom: 10px; display: flex; justify-content: space-between;">
     <label>4.Are you open to working outside your current industry?</label>
     <div>
         <input type="radio" name="industry" id="industryYes"> <label for="industryYes">Yes</label>
-        <input type="radio" name="industry" id="industryNo" checked> <label for="industryNo">No</label>
+        <input type="radio" name="industry" id="industryNo" > <label for="industryNo">No</label>
     </div>
 </div>
 <div style="margin-bottom: 10px; display: flex; justify-content: space-between;">
     <label>5.Are you willing to work night shifts or weekends if required?</label>
     <div>
         <input type="radio" name="nightShifts" id="nightShiftsYes"> <label for="nightShiftsYes">Yes</label>
-        <input type="radio" name="nightShifts" id="nightShiftsNo" checked> <label for="nightShiftsNo">No</label>
+        <input type="radio" name="nightShifts" id="nightShiftsNo" > <label for="nightShiftsNo">No</label>
     </div>
 </div>
 <div style="margin-bottom: 10px; display: flex; justify-content: space-between;">
     <label>6.Do you have experience working in a startup environment?</label>
     <div>
         <input type="radio" name="startup" id="startupYes"> <label for="startupYes">Yes</label>
-        <input type="radio" name="startup" id="startupNo" checked> <label for="startupNo">No</label>
+        <input type="radio" name="startup" id="startupNo" > <label for="startupNo">No</label>
     </div>
 </div>
 <div style="margin-bottom: 10px; display: flex; justify-content: space-between;">
     <label>7.Have you worked in a multinational company before?</label>
     <div>
         <input type="radio" name="multinational" id="multinationalYes"> <label for="multinationalYes">Yes</label>
-        <input type="radio" name="multinational" id="multinationalNo" checked> <label for="multinationalNo">No</label>
+        <input type="radio" name="multinational" id="multinationalNo" > <label for="multinationalNo">No</label>
     </div>
 </div>
 <div style="margin-bottom: 10px; display: flex; justify-content: space-between;">
     <label>8.Do you have experience with remote work?</label>
     <div>
         <input type="radio" name="remoteWork" id="remoteWorkYes"> <label for="remoteWorkYes">Yes</label>
-        <input type="radio" name="remoteWork" id="remoteWorkNo" checked> <label for="remoteWorkNo">No</label>
+        <input type="radio" name="remoteWork" id="remoteWorkNo" > <label for="remoteWorkNo">No</label>
     </div>
 </div>
         <!-- Repeat similar blocks for other questions -->
@@ -473,6 +487,9 @@ select:required.user-interacted:invalid {
 
         </div>
         </div>
+    </div>
+
+        
         <div class="container-fluid text-secondary p-5" style="background-color: #000;">
             <div class="row g-5">
                 <!-- Left Section -->
