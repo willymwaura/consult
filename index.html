@@ -75,7 +75,7 @@
         <div class="navbar-nav ms-auto py-0 text-center" style="display: flex; align-items: center;">
             <a class="underlinepage pageam nav-item nav-link d-flex align-items-center" href="knowledge.html" style="color: #65CFE9; font-weight: bold; font-family: Arial, Helvetica, sans-serif; padding: 5px;">
                 <img src="https://img.icons8.com/emoji/48/null/light-bulb-emoji.png" alt="Knowledge Center Icon" width="20" height="20" style="margin-right: 8px;">
-                Recruitment
+                Talent Portal
             </a>
         </div>
     </div>
@@ -479,47 +479,135 @@
     <div style="max-width: 1200px; margin: 0 auto; background-color: #65CFE9; padding: 30px; box-sizing: border-box; ">
         <form id="quotationForm">
             <div style="display: flex; flex-wrap: wrap; gap: 15px;">
-                <div style="flex: 1; min-width: 30%;">
-                    <label for="service" style="display: block; font-weight: bold; margin-bottom: 5px;color: #8a2be2;">Service</label>
-                    <select id="service" name="service" style="width: 100%; padding: 12px; border: 1px solid #444; ">
+                <div style="flex: 1; min-width: 30%; position: relative;">
+                    <label for="service" style="display: block; margin-bottom: 5px; font-size: 18px;color:rgb(22, 22, 68) ;font-weight: bolder;">
+                        Service
+                    </label>
+                    <select id="service" name="service" 
+                        style="width: 100%; padding: 12px; border: 1px solid #444; 
+                               color: rgba(0, 0, 0, 0.4); /* Default faint color */
+                               appearance: none; /* Hides default arrow */
+                               background: white; /* Ensures background matches */
+                               padding-right: 40px; /* Creates space for custom arrow */
+                               " 
+                        onchange="this.style.color = (this.value === '') ? 'rgba(0, 0, 0, 0.4)' : 'black';">
                         <option value="">Select Service</option>
-                        <option value="Operations Management">All services</option>
-                        <option value="Operations Management">Operations Management</option>
-                        <option value="Human Resources Consulting">Human Resources Consulting</option>
-                        <option value="Analytics and Reporting">Analytics and Reporting</option>
-                        <option value="Revenue Cycle Management">Revenue Cycle Management</option>
-                        <option value="Staff Development and Training">Staff Development and Training</option>
+                        <option value="Operations Management" style="color: #000;">All services</option>
+                        <option value="Operations Management" style="color: #000;">Operations Management</option>
+                        <option value="Human Resources Consulting" style="color: #000;">Human Resources Consulting</option>
+                        <option value="Analytics and Reporting" style="color: #000;">Analytics and Reporting</option>
+                        <option value="Revenue Cycle Management" style="color: #000;">Revenue Cycle Management</option>
+                        <option value="Staff Development and Training" style="color: #000;">Staff Development and Training</option>
                     </select>
+                    <div style="position: absolute; top: 65%; right: 15px; transform: translateY(-50%);
+                                pointer-events: none;">
+                        ▼
+                    </div>
                 </div>
-                <div style="flex: 1; min-width: 30%;">
-                    <label for="facilitySize" style="display: block; font-weight: bold; margin-bottom: 5px;color: #8a2be2;">Facility Size</label>
-                    <select id="facilitySize" name="facilitySize" style="width: 100%; padding: 12px; border: 1px solid #444; ">
+                
+                
+                <div style="flex: 1; min-width: 30%; position: relative;">
+                    <label for="facilitySize" style="display: block; font-weight: bolder; margin-bottom: 5px; color: rgb(18, 18, 63);font-size: 18px;">
+                        Facility Size
+                    </label>
+                    <select id="facilitySize" name="facilitySize" 
+                        style="width: 100%; padding: 12px; border: 1px solid #444; 
+                               color: rgba(0, 0, 0, 0.4); /* Default faint color */
+                               appearance: none; /* Hides default arrow */
+                               background: white; /* Ensures background matches */
+                               padding-right: 40px; /* Creates space for custom arrow */
+                               " 
+                        onchange="this.style.color = (this.value === '') ? 'rgba(0, 0, 0, 0.4)' : 'black';">
                         <option value="">Select Size</option>
-                        <option value="1.0">Small (1-10 beds)</option>
-                        <option value="1.5">Medium (11-30 beds)</option>
-                        <option value="2.0">Large (31+ beds)</option>
+                        <option value="1.0" style="color: #000;">Small (1-10 beds)</option>
+                        <option value="1.5" style="color: #000;">Medium (11-30 beds)</option>
+                        <option value="2.0" style="color: #000;">Large (31+ beds)</option>
                     </select>
+                    <div style="position: absolute; top: 65%; right: 15px; transform: translateY(-50%);
+                                pointer-events: none;">
+                        ▼
+                    </div>
                 </div>
-                <div style="flex: 1; min-width: 30%;">
-                    <label for="employeeCount" style="display: block; font-weight: bold; margin-bottom: 5px;color: #8a2be2;">Number of Employees</label>
-                    <input type="number" id="employeeCount" name="employeeCount" style="width: 100%; padding: 12px; border: 1px solid #444; " min="1">
+                
+                
+                
+                <div style="flex: 1; min-width: 30%; position: relative;">
+                    <label for="employeeCount" style="display: block; font-weight: bolder; margin-bottom: 5px; color: rgb(22, 22, 68);font-size: 18px;">
+                        Number of Employees
+                    </label>
+                    <select id="employeeCount" name="employeeCount" 
+                        style="width: 100%; padding: 12px; border: 1px solid #444; 
+                               color: rgba(0, 0, 0, 0.4); /* Default faint color */
+                               appearance: none; /* Hides default arrow */
+                               background: white; /* Ensures background matches */
+                               padding-right: 40px; /* Creates space for custom arrow */
+                               " 
+                        onchange="this.style.color = (this.value === '') ? 'rgba(0, 0, 0, 0.4)' : 'black';">
+                        <option value="">Select Number of Employees</option>
+                        <option value="1.0" style="color: #000;">1-10 employees</option>
+                        <option value="1.2" style="color: #000;">11-20 employees</option>
+                        <option value="1.5" style="color: #000;">21-30 employees</option>
+                        <option value="2.0" style="color: #000;">31+ employees</option>
+                    </select>
+                    <div style="position: absolute; top: 65%; right: 15px; transform: translateY(-50%);
+                                pointer-events: none;">
+                        ▼
+                    </div>
                 </div>
-                <div style="flex: 1; min-width: 30%;">
-                    <label for="yearsInOperation" style="display: block; font-weight: bold; margin-bottom: 5px;color: #8a2be2;">Years in Operation</label>
-                    <input type="number" id="yearsInOperation" name="yearsInOperation" style="width: 100%; padding: 12px; border: 1px solid #444; " min="0">
+                
+                <div style="flex: 1; min-width: 30%; position: relative;">
+                    <label for="yearsInOperation" style="display: block; font-weight: bolder; margin-bottom: 5px; color: rgb(22, 22, 68);font-size: 18px;">
+                        Years in Operation
+                    </label>
+                    <select id="yearsInOperation" name="yearsInOperation" 
+                        style="width: 100%; padding: 12px; border: 1px solid #444; 
+                               color: rgba(0, 0, 0, 0.4); /* Default faint color */
+                               appearance: none; /* Hides default arrow */
+                               background: white; /* Ensures background matches */
+                               padding-right: 40px; /* Creates space for custom arrow */
+                               " 
+                        onchange="this.style.color = (this.value === '') ? 'rgba(0, 0, 0, 0.4)' : 'black';">
+                        <option value="">Select Years in Operation</option>
+                        <option value="1.2" style="color: #000;">New facility (less 2 years) </option>
+                        <option value="1.0" style="color: #000;">Established facility (2-5 years)</option>
+                        <option value="0.8" style="color: #000;">Mature facility (>5 years)</option>
+                    </select>
+                    <div style="position: absolute; top: 65%; right: 15px; transform: translateY(-50%);
+                                pointer-events: none;">
+                        ▼
+                    </div>
                 </div>
-                <div style="flex: 1; min-width: 30%;">
-                    <label for="scope" style="display: block; font-weight: bold; margin-bottom: 5px;color: #8a2be2;">Scope of Work</label>
-                    <select id="scope" name="scope" style="width: 100%; padding: 12px; border: 1px solid #444; ">
+                
+                <div style="flex: 1; min-width: 30%; position: relative;">
+                    <label for="scope" style="display: block; font-weight: bolder; margin-bottom: 5px; color: rgb(22, 22, 68);font-size: 18px;">
+                        Scope of Work
+                    </label>
+                    <select id="scope" name="scope" 
+                        style="width: 100%; padding: 12px; border: 1px solid #444; 
+                               color: rgba(0, 0, 0, 0.4); /* Default faint color */
+                               appearance: none; /* Hides default arrow */
+                               background: white; /* Ensures background matches */
+                               padding-right: 40px; /* Creates space for custom arrow */
+                               " 
+                        onchange="this.style.color = (this.value === '') ? 'rgba(0, 0, 0, 0.4)' : 'black';">
                         <option value="">Select Scope</option>
-                        <option value="1.0">Basic</option>
-                        <option value="1.5">Standard</option>
-                        <option value="2.0">Comprehensive</option>
+                        <option value="1.0" style="color: #000;">Basic</option>
+                        <option value="1.5" style="color: #000;">Standard</option>
+                        <option value="2.0" style="color: #000;">Comprehensive</option>
                     </select>
+                    <div style="position: absolute; top: 65%; right: 15px; transform: translateY(-50%);
+                                pointer-events: none;">
+                        ▼
+                    </div>
                 </div>
+                
+                
+                
+                
+                
             </div>
         </form>
-        <div style="text-align: center; margin-top: 30px; font-size: 50px; font-weight: bold; color: #222;">
+        <div style="text-align: center; margin-top: 30px; font-size: 40px; font-weight: bold; color: rgb(22, 22, 68); font-weight: 900 !important; text-shadow: 1px 1px 0  rgb(22, 22, 68), -1px -1px 0  rgb(22, 22, 68), 1px -1px 0  rgb(22, 22, 68), -1px 1px 0  rgb(22, 22, 68);">
             Quotation: <span id="quotationValue">0</span>
         </div>
     </div>

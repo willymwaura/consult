@@ -75,7 +75,7 @@
         <div class="navbar-nav ms-auto py-0 text-center" style="display: flex; align-items: center;">
             <a class="underlinepage pageam nav-item nav-link d-flex align-items-center active" href="knowledge.html" style="color: #65CFE9; font-weight: bold; font-family: Arial, Helvetica, sans-serif; padding: 5px;">
                 <img src="https://img.icons8.com/emoji/48/null/light-bulb-emoji.png" alt="Knowledge Center Icon" width="20" height="20" style="margin-right: 8px;">
-                Recruitment
+                Talent Portal
             </a>
         </div>
     </div>
@@ -329,6 +329,7 @@ select:required.user-interacted:invalid {
             <div class="form-group">
                 <label for="highestEducation">Highest Education</label>
                 <select id="highestEducation" required>
+                    <option value="">Select education</option>
                     <option value="">Certificate</option>
                     <option value="">Diploma</option>
                     <option value="">Degree</option>
@@ -339,8 +340,17 @@ select:required.user-interacted:invalid {
             </div>
             <div class="form-group">
                 <label for="currentJobLevel">Current Job Level</label>
-                <input type="text" id="currentJobLevel" required>
+                <select id="currentJobLevel" required>
+                    <option value="">Select your job level</option>
+                    <option value="entry-level">Entry-Level Professional</option>
+                    <option value="mid-level">Experienced Professional (Mid-Level)</option>
+                    <option value="mid-manager">Mid-Level Manager</option>
+                    <option value="senior-manager">Senior Manager / Department Head</option>
+                    <option value="executive">Executive Leadership (C-Level / Director)</option>
+                    <option value="consultant">Consultant / Freelancer</option>
+                </select>
             </div>
+            
         </div>
 
         <h2 style="padding-top: 20px;">Job Preferences</h2>
@@ -348,6 +358,7 @@ select:required.user-interacted:invalid {
             <div class="form-group">
                 <label for="salaryExpectation">Salary Expectation</label>
                 <select id="salaryExpectation" required>
+                    <option value=""> Salary Expectation</option>
                     <option value=""> 0-50k</option>
                     <option value="">51k - 100k</option>
                     <option value="">101k - 150k</option>
@@ -361,6 +372,7 @@ select:required.user-interacted:invalid {
             <div class="form-group">
                 <label for="availability">Availability</label>
                 <select id="availability" required>
+                    <option value=""> Availability</option>
                     <option value=""> Immediate</option>
                     <option value="">1 week</option>
                     <option value="">1 month</option>
@@ -371,6 +383,7 @@ select:required.user-interacted:invalid {
             <div class="form-group">
                 <label for="preferredWorkStation">Preferred Work Station</label>
                 <select id="preferredWorkStation" required>
+                    <option value="">Preferred Work Station</option>
                     <option value="">Remote</option>
                     <option value="">On-site</option>
                     <option value="">Hybrid</option>
@@ -382,6 +395,7 @@ select:required.user-interacted:invalid {
             <div class="form-group">
                 <label for="employmentType">Employment Type</label>
                 <select id="employmentType"required>
+                    <option value="">Employment Type</option>
                     <option value="">Full-time</option>
                     <option value="">Part-time</option>
                     <option value="">Contract</option>
@@ -393,7 +407,7 @@ select:required.user-interacted:invalid {
             
         </div>
 
-        <h3 style="color: black;padding-top: 20px;font-size: 35px;">Other Details</h3>
+        <h2 style="padding-top: 20px;">Other Details</h2>
 <div style="margin-bottom: 10px; display: flex; justify-content: space-between;">
     <label>1.Do you have experience managing a team?</label>
     <div>
