@@ -256,7 +256,7 @@ select:required  {
 /* On hover, change the border to yellow */
 input:required:hover,
 select:required:hover {
-    border: 2px solid yellow !important;
+    border: 2px solid #451885 !important;
 }
 
 /* When clicked (focused), keep border yellow */
@@ -273,6 +273,9 @@ input:required.user-interacted:invalid,
 select:required.user-interacted:invalid {
     border: 2px solid red !important;
 }
+body {
+        cursor: default !important;
+    }
 
     </style>
 </head>
@@ -365,7 +368,7 @@ select:required.user-interacted:invalid {
                     <option value="5-10" style="color: #000;">5-10 Years</option>
                     <option value="10+" style="color: #000;">Above 10 Years</option>
                 </select>
-                <div style="position: absolute; top: 60%; right: 40px; transform: translateY(-50%); pointer-events: none;">
+                <div style="position: absolute; top: 64%; right: 40px; transform: translateY(-50%); pointer-events: none;">
                     ▼
                 </div>
             </div>
@@ -380,14 +383,14 @@ select:required.user-interacted:invalid {
                     <option value="masters" style="color: #000;">Masters</option>
                     <option value="doctorate" style="color: #000;">Doctorate</option>
                 </select>
-                <div style="position: absolute; top: 60%; right: 40px; transform: translateY(-50%); pointer-events: none;">
+                <div style="position: absolute; top: 64%; right: 40px; transform: translateY(-50%); pointer-events: none;">
                     ▼
                 </div>
             </div>
             <div class="form-group">
                 <label for="currentJobLevel">Current Job Level</label>
                 <select id="currentJobLevel" required onchange="updateColor(this)"
-                    style="width: 100%; border: 1px solid #444; color: rgba(0, 0, 0, 0.4); background: white; appearance: none;right: 40px !important;">
+                    style="width: 100%;padding: 12px; border: 1px solid #444; color: rgba(0, 0, 0, 0.4); background: white; appearance: none;right: 40px !important;">
                     <option value="">Select your job level</option>
                     <option value="entry-level" style="color: #000;">Entry-Level Professional</option>
                     <option value="mid-level" style="color: #000;">Experienced Professional (Mid-Level)</option>
@@ -396,7 +399,7 @@ select:required.user-interacted:invalid {
                     <option value="executive" style="color: #000;">Executive Leadership (C-Level / Director)</option>
                     <option value="consultant" style="color: #000;">Consultant / Freelancer</option>
                 </select>
-                <div style="position: absolute; top: 60%; right: 40px; transform: translateY(-50%); pointer-events: none;">
+                <div style="position: absolute; top: 64%; right: 40px; transform: translateY(-50%); pointer-events: none;">
                     ▼
                 </div>
             </div>
@@ -417,7 +420,7 @@ select:required.user-interacted:invalid {
                     <option value="251k-300k"style="color: #000;">251k - 300k</option>
                     <option value="300k+" style="color: #000;">Above 300k</option>
                 </select>
-                <div style="position: absolute; top: 60%; right: 40px; transform: translateY(-50%); pointer-events: none;">
+                <div style="position: absolute; top: 64%; right: 40px; transform: translateY(-50%); pointer-events: none;">
                     ▼
                 </div>
             </div>
@@ -431,20 +434,20 @@ select:required.user-interacted:invalid {
                     <option value="1-month" style="color: #000;">1 month</option>
                     <option value="more" style="color: #000;">More</option>
                 </select>
-                <div style="position: absolute; top: 60%; right: 40px; transform: translateY(-50%); pointer-events: none;">
+                <div style="position: absolute; top: 64%; right: 40px; transform: translateY(-50%); pointer-events: none;">
                     ▼
                 </div>
             </div>
             <div class="form-group">
                 <label for="preferredWorkStation">Preferred Work Station</label>
                 <select id="preferredWorkStation" required onchange="updateColor(this)"
-                    style="width: 100%;  border: 1px solid #444; color: rgba(0, 0, 0, 0.4); background: white; appearance: none;">
+                    style="width: 100%; padding: 12px; border: 1px solid #444; color: rgba(0, 0, 0, 0.4); background: white; appearance: none;">
                     <option value="">Choose Work Station</option>
                     <option value="remote" style="color: #000;">Remote</option>
                     <option value="on-site" style="color: #000;">On-site</option>
                     <option value="hybrid" style="color: #000;">Hybrid</option>
                 </select>
-                <div style="position: absolute; top: 60%; right: 40px; transform: translateY(-50%); pointer-events: none;">
+                <div style="position: absolute; top: 64%; right: 40px; transform: translateY(-50%); pointer-events: none;">
                     ▼
                 </div>
             </div>
@@ -462,7 +465,7 @@ select:required.user-interacted:invalid {
                     <option value="freelance"style="color: #000;">Freelance</option>
                     <option value="internship"style="color: #000;">Internship</option>
                 </select>
-                <div style="position: absolute; top: 60%; right: 40px; transform: translateY(-50%); pointer-events: none;">
+                <div style="position: absolute; top: 64%; right: 40px; transform: translateY(-50%); pointer-events: none;">
                     ▼
                 </div>
             </div>
@@ -475,7 +478,7 @@ select:required.user-interacted:invalid {
                     <option value="10-50"style="color: #000;">Above 20 Members</option>
                   
                 </select>
-                <div style="position: absolute; top: 60%; right: 40px; transform: translateY(-50%); pointer-events: none;">
+                <div style="position: absolute; top: 64%; right: 40px; transform: translateY(-50%); pointer-events: none;">
                     ▼
                 </div>
             </div>
