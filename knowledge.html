@@ -153,6 +153,8 @@
             padding-right: 20px;
             padding-top: 20px;
             padding-bottom: 20px;
+            position: relative;
+
           
         }
         .form-group label {
@@ -341,7 +343,7 @@ select:required.user-interacted:invalid {
                 <label for="location">Location</label>
                 <input type="text" id="location" required>
             </div>
-            <div class="form-group" style="padding-top: 5px;">
+            <div class="form-group" style="padding-top: 25px;">
                 <label>Gender</label>
                 <div class="radio-group" style="padding-top: 6px;">
                     <input type="radio" id="male" name="gender" required>
@@ -363,6 +365,9 @@ select:required.user-interacted:invalid {
                     <option value="5-10" style="color: #000;">5-10 Years</option>
                     <option value="10+" style="color: #000;">Above 10 Years</option>
                 </select>
+                <div style="position: absolute; top: 60%; right: 40px; transform: translateY(-50%); pointer-events: none;">
+                    ▼
+                </div>
             </div>
             <div class="form-group">
                 <label for="highestEducation">Highest Education</label>
@@ -375,6 +380,9 @@ select:required.user-interacted:invalid {
                     <option value="masters" style="color: #000;">Masters</option>
                     <option value="doctorate" style="color: #000;">Doctorate</option>
                 </select>
+                <div style="position: absolute; top: 60%; right: 40px; transform: translateY(-50%); pointer-events: none;">
+                    ▼
+                </div>
             </div>
             <div class="form-group">
                 <label for="currentJobLevel">Current Job Level</label>
@@ -388,6 +396,9 @@ select:required.user-interacted:invalid {
                     <option value="executive" style="color: #000;">Executive Leadership (C-Level / Director)</option>
                     <option value="consultant" style="color: #000;">Consultant / Freelancer</option>
                 </select>
+                <div style="position: absolute; top: 60%; right: 40px; transform: translateY(-50%); pointer-events: none;">
+                    ▼
+                </div>
             </div>
         </div>
         
@@ -406,6 +417,9 @@ select:required.user-interacted:invalid {
                     <option value="251k-300k"style="color: #000;">251k - 300k</option>
                     <option value="300k+" style="color: #000;">Above 300k</option>
                 </select>
+                <div style="position: absolute; top: 60%; right: 40px; transform: translateY(-50%); pointer-events: none;">
+                    ▼
+                </div>
             </div>
             <div class="form-group">
                 <label for="availability">Availability</label>
@@ -417,6 +431,9 @@ select:required.user-interacted:invalid {
                     <option value="1-month" style="color: #000;">1 month</option>
                     <option value="more" style="color: #000;">More</option>
                 </select>
+                <div style="position: absolute; top: 60%; right: 40px; transform: translateY(-50%); pointer-events: none;">
+                    ▼
+                </div>
             </div>
             <div class="form-group">
                 <label for="preferredWorkStation">Preferred Work Station</label>
@@ -427,6 +444,9 @@ select:required.user-interacted:invalid {
                     <option value="on-site" style="color: #000;">On-site</option>
                     <option value="hybrid" style="color: #000;">Hybrid</option>
                 </select>
+                <div style="position: absolute; top: 60%; right: 40px; transform: translateY(-50%); pointer-events: none;">
+                    ▼
+                </div>
             </div>
         </div>
         
@@ -442,17 +462,22 @@ select:required.user-interacted:invalid {
                     <option value="freelance"style="color: #000;">Freelance</option>
                     <option value="internship"style="color: #000;">Internship</option>
                 </select>
+                <div style="position: absolute; top: 60%; right: 40px; transform: translateY(-50%); pointer-events: none;">
+                    ▼
+                </div>
             </div>
             <div class="form-group">
                 <label for="teamManaged">Team Managed</label>
                 <select id="teamManaged" required onchange="updateColor(this)"
                     style="width: 100%; padding: 12px; border: 1px solid #444; color: rgba(0, 0, 0, 0.4); background: white; appearance: none;">
                     <option value="">Team Managed</option>
-                    <option value="0-10"style="color: #000;">0-10 Members</option>
-                    <option value="10-50"style="color: #000;">10-50 Members</option>
-                    <option value="50-100"style="color: #000;">50-100 Members</option>
-                    <option value="100+"style="color: #000;">Over 100</option>
+                    <option value="0-10"style="color: #000;">0-20 Members</option>
+                    <option value="10-50"style="color: #000;">Above 20 Members</option>
+                  
                 </select>
+                <div style="position: absolute; top: 60%; right: 40px; transform: translateY(-50%); pointer-events: none;">
+                    ▼
+                </div>
             </div>
         </div>
 
@@ -509,7 +534,7 @@ select:required.user-interacted:invalid {
     </div>
 </div>
         <!-- Repeat similar blocks for other questions -->
-        <div class="upload-section" style="border: 2px dashed black; padding-top: 20px; height: 80px; display: flex; justify-content: center; align-items: center; text-align: center; width: 95%; margin: 0 auto;padding-bottom: 30px;">
+        <div class="upload-section" style="border: 2px dashed black;  height: 80px; display: flex; justify-content: center; align-items: center; text-align: center; width: 95%; margin: 0 auto;">
             <p>Upload Your CV (PDF Only)</p>
         </div>
         
