@@ -162,6 +162,7 @@
       transition: 0.5s ease;
       display: flex;
       flex-direction: column;
+      cursor: default;
       /* Content flows from the top, and .view-more will push to the bottom */
     }
     .overlay .view-more {
@@ -170,6 +171,7 @@
       align-items: center;
       gap: 5px;
       font-size: 16px;
+      cursor: default;
     }
     .info-box {
       padding: 10px;
@@ -193,7 +195,7 @@
     margin: auto;
     padding-left: 6%;
     padding-right: 6%;
-    padding-top: 20px;
+    
     overflow: hidden;
 }
 
@@ -513,7 +515,7 @@ onmouseout="this.style.backgroundColor='white';
 
     <div style="display: flex; justify-content: space-around; background-color: white; padding-top: 30px; padding-left: 6%; padding-right: 6%;">
         <!-- Dava Freed's Card -->
-        <div class="career-card">
+        <div class="career-card" style="cursor: default !important;">
           <img src="https://www.freedassociates.com/wp-content/uploads/2021/07/headshot_dava-freed-400x400.webp" alt="Dava Freed">
           <div class="overlay">
             <h3 style="color: white; margin: 0;">Dava Freed</h3>
@@ -534,7 +536,7 @@ onmouseout="this.style.backgroundColor='white';
         </div>
     
         <!-- Andrew D. Platt's Card -->
-        <div class="career-card">
+        <div class="career-card" style="cursor: default !important;">
           <img src="https://www.freedassociates.com/wp-content/uploads/2023/09/headshot_andrew-platt-400x400.webp" alt="Andrew D. Platt">
           <div class="overlay">
             <h3 style="color: white; margin: 0;">Andrew D. Platt</h3>
@@ -559,13 +561,13 @@ onmouseout="this.style.backgroundColor='white';
         </div>
     
         <!-- Alex Go's Card -->
-        <div class="career-card">
+        <div class="career-card" style="cursor: default !important;">
           <img src="https://www.freedassociates.com/wp-content/uploads/2021/07/headshot_alex-go-400x400.webp" alt="Alex Go">
           <div class="overlay">
             <h3 style="color: white; margin: 0;">Alex Go</h3>
               <p style="color: #c7b8d6; margin: 0;">Executive Vice President, Client Facing</p>
             <p>Executive Vice President, Client Facing with...</p>
-            <div class="view-more">
+            <div class="view-more" style="cursor: default !important;">
               <svg width="20" height="20" viewBox="0 0 448 512" fill="white" xmlns="http://www.w3.org/2000/svg">
                 <path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.63 0 54S24.09-.1 53.79-.1 107.57 24.37 107.57 54 83.49 108.1 53.79 108.1zM447.9 448h-92.68V302.4c0-34.7-.7-79.3-48.4-79.3-48.4 0-55.8 37.8-55.8 76.9V448h-92.68V148.9h89.08v40.8h1.3c12.4-23.5 42.7-48.4 87.88-48.4 94 0 111.28 61.9 111.28 142.3V448z"/>
               </svg>
@@ -585,7 +587,7 @@ onmouseout="this.style.backgroundColor='white';
         
    
 
-      <div style="display: flex; align-items: center; justify-content: space-between; padding: 20px 6%; background-color: white;">
+      <div style="display: flex; align-items: center; justify-content: space-between; padding-top: 60px;padding-left:  6%; background-color: white;padding-right: 6%;padding-bottom: 20px;">
         <p style="font-size: 40px; color: rgb(22, 22, 68); font-weight: 900 !important; text-shadow: 1px 1px 0 rgb(22, 22, 68), -1px -1px 0 rgb(22, 22, 68), 1px -1px 0 rgb(22, 22, 68), -1px 1px 0 rgb(22, 22, 68); margin: 0;">
             Testimonials
         </p>

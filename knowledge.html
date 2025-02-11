@@ -129,18 +129,28 @@
    
         .form-container {
             background-color: white;
-            padding: 20px;
+            padding-left:20px;
+            padding-right: 20px;
+            
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
             
-            margin: auto;
+         
+            
         }
         h2 {
             color: #333;
             margin-bottom: 20px;
+            padding-left: 20px;
+            
         }
         .form-group {
             margin-bottom: 15px;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+          
         }
         .form-group label {
             display: block;
@@ -167,10 +177,10 @@
         }
         .form-group-inline .form-group {
             flex: 1;
-            margin-right: 10px;
+           
         }
         .form-group-inline .form-group:last-child {
-            margin-right: 0;
+            padding-right: 20px;
         }
         .radio-group {
             display: flex;
@@ -187,10 +197,12 @@
         }
         input[type="radio"] {
     accent-color: #451885; /* Purple */
+   
   
 }
 input[type="radio"]:checked + label {
     color: #451885; /* Purple */
+  
    
 }
       
@@ -200,10 +212,12 @@ input[type="radio"]:checked + label {
         
         .upload-section {
             background-color: #e6e6fa;
-            padding: 20px;
             text-align: center;
             border-radius: 4px;
             margin-top: 20px;
+            padding-left: 20px !important;
+            padding-right: 20px !important;
+            cursor:default !important;
         }
         .upload-section p {
             margin: 0;
@@ -216,8 +230,9 @@ input[type="radio"]:checked + label {
             border-radius: 4px;
            
             font-size: 16px;
-            cursor: pointer;
+         
             margin-top: 20px;
+            cursor:default !important;
           
             
         }
@@ -226,30 +241,31 @@ input[type="radio"]:checked + label {
         }
 /* Initially, no border */
 input:required,
-select:required {
-    border: 2px solid transparent;
-    outline: none;
+select:required  {
+    border: 2px solid transparent !important;
+    outline: none !important;
+   
 }
 
 /* On hover, change the border to yellow */
 input:required:hover,
 select:required:hover {
-    border: 2px solid yellow;
+    border: 2px solid yellow !important;
 }
 
 /* When clicked (focused), keep border yellow */
 input:required:focus,
 select:required:focus {
-    border-bottom: 2px solid black;
-    border-top: none;
-    border-right: none;
-    border-left: none;
+    border-bottom: 2px solid black !important;
+    border-top: none !important;
+    border-right: none !important;
+    border-left: none !important;
 }
 
 /* If clicked and left empty, the border turns red and stays red */
 input:required.user-interacted:invalid,
 select:required.user-interacted:invalid {
-    border: 2px solid red;
+    border: 2px solid red !important;
 }
 
     </style>
@@ -280,7 +296,7 @@ select:required.user-interacted:invalid {
         </div>
     </div>
 
-    <div style="background-color: white;padding-right: 6% !important;padding-left: 6% !important;padding-top: 30px;">
+    <div style="background-color: white;padding-right: 6% !important;padding-left: 6% !important;padding-top: 30px;padding-bottom: 30px;">
     <div class="form-container" style="padding-top: 50px !important;background-color: white;">
         <h2 >Personal Details</h2>
         <div class="form-group-inline">
@@ -294,8 +310,11 @@ select:required.user-interacted:invalid {
             </div>
             <div class="form-group">
                 <label for="lastName">Last Name</label>
-                <input type="text" id="lastName" placeholder="Doe" required >
+                <input type="text" id="lastName" placeholder="Doe" required 
+                    style="padding-right: 10px; box-sizing: border-box; width: 100%;">
             </div>
+            
+            
         </div>
         <div class="form-group-inline">
             <div class="form-group">
@@ -304,8 +323,10 @@ select:required.user-interacted:invalid {
             </div>
             <div class="form-group">
                 <label for="mobileNumber">Mobile Number</label>
-                <input type="text" id="mobileNumber" placeholder="+254 700 000 000" required>
+                <input type="text" id="mobileNumber" placeholder="+254 700 000 000" required 
+                    style="padding-right: 10px; box-sizing: border-box; width: 100%;">
             </div>
+            
         </div>
         <div class="form-group-inline">
             <div class="form-group">
@@ -326,162 +347,169 @@ select:required.user-interacted:invalid {
                 </div>
             </div>
         </div>
-
         <h2 style="padding-top: 20px;">Professional Experience</h2>
         <div class="form-group-inline">
             <div class="form-group">
                 <label for="experience">Experience</label>
-                <select id="experience" required>
-                    <option value="">0-2 Years</option>
-                    <option value="">3-5 Years</option>
-                    <option value="">5-10 Years</option>
-                    <option value="">above 10 Years</option>
-                    <!-- Add options as needed -->
+                <select id="experience" required onchange="updateColor(this)"
+                    style="width: 100%; padding: 12px; border: 1px solid #444; color: rgba(0, 0, 0, 0.4); background: white; appearance: none;">
+                    <option value="">Choose Experience</option>
+                    <option value="0-2" style="color: #000;">0-2 Years</option>
+                    <option value="3-5" style="color: #000;">3-5 Years</option>
+                    <option value="5-10" style="color: #000;">5-10 Years</option>
+                    <option value="10+" style="color: #000;">Above 10 Years</option>
                 </select>
             </div>
             <div class="form-group">
                 <label for="highestEducation">Highest Education</label>
-                <select id="highestEducation" required>
+                <select id="highestEducation" required onchange="updateColor(this)"
+                    style="width: 100%; padding: 12px; border: 1px solid #444; color: rgba(0, 0, 0, 0.4); background: white; appearance: none;">
                     <option value="">Select education</option>
-                    <option value="">Certificate</option>
-                    <option value="">Diploma</option>
-                    <option value="">Degree</option>
-                    <option value="">Masters</option>
-                    <option value="">Doctorate</option>
-                    <!-- Add options as needed -->
+                    <option value="certificate" style="color: #000;">Certificate</option>
+                    <option value="diploma" style="color: #000;">Diploma</option>
+                    <option value="degree" style="color: #000;">Degree</option>
+                    <option value="masters" style="color: #000;">Masters</option>
+                    <option value="doctorate" style="color: #000;">Doctorate</option>
                 </select>
             </div>
             <div class="form-group">
                 <label for="currentJobLevel">Current Job Level</label>
-                <select id="currentJobLevel" required>
+                <select id="currentJobLevel" required onchange="updateColor(this)"
+                    style="width: 100%; border: 1px solid #444; color: rgba(0, 0, 0, 0.4); background: white; appearance: none;right: 40px !important;">
                     <option value="">Select your job level</option>
-                    <option value="entry-level">Entry-Level Professional</option>
-                    <option value="mid-level">Experienced Professional (Mid-Level)</option>
-                    <option value="mid-manager">Mid-Level Manager</option>
-                    <option value="senior-manager">Senior Manager / Department Head</option>
-                    <option value="executive">Executive Leadership (C-Level / Director)</option>
-                    <option value="consultant">Consultant / Freelancer</option>
+                    <option value="entry-level" style="color: #000;">Entry-Level Professional</option>
+                    <option value="mid-level" style="color: #000;">Experienced Professional (Mid-Level)</option>
+                    <option value="mid-manager" style="color: #000;">Mid-Level Manager</option>
+                    <option value="senior-manager"style="color: #000;">Senior Manager / Department Head</option>
+                    <option value="executive" style="color: #000;">Executive Leadership (C-Level / Director)</option>
+                    <option value="consultant" style="color: #000;">Consultant / Freelancer</option>
                 </select>
             </div>
-            
         </div>
-
+        
         <h2 style="padding-top: 20px;">Job Preferences</h2>
         <div class="form-group-inline">
             <div class="form-group">
                 <label for="salaryExpectation">Salary Expectation</label>
-                <select id="salaryExpectation" required>
-                    <option value=""> Salary Expectation</option>
-                    <option value=""> 0-50k</option>
-                    <option value="">51k - 100k</option>
-                    <option value="">101k - 150k</option>
-                    <option value="">151k - 200k</option>
-                    <option value="">201k- 250k</option>
-                    <option value="">251k-300k</option>
-                    <option value="">above 300k</option>
-                    <!-- Add options as needed -->
+                <select id="salaryExpectation" required onchange="updateColor(this)"
+                    style="width: 100%; padding: 12px; border: 1px solid #444; color: rgba(0, 0, 0, 0.4); background: white; appearance: none;">
+                    <option value="">Salary Expectation</option>
+                    <option value="0-50k" style="color: #000;">0-50k</option>
+                    <option value="51k-100k" style="color: #000;">51k - 100k</option>
+                    <option value="101k-150k" style="color: #000;">101k - 150k</option>
+                    <option value="151k-200k" style="color: #000;">151k - 200k</option>
+                    <option value="201k-250k"style="color: #000;" >201k - 250k</option>
+                    <option value="251k-300k"style="color: #000;">251k - 300k</option>
+                    <option value="300k+" style="color: #000;">Above 300k</option>
                 </select>
             </div>
             <div class="form-group">
                 <label for="availability">Availability</label>
-                <select id="availability" required>
-                    <option value=""> Availability</option>
-                    <option value=""> Immediate</option>
-                    <option value="">1 week</option>
-                    <option value="">1 month</option>
-                    <option value=""> More</option>
-                    <!-- Add options as needed -->
+                <select id="availability" required onchange="updateColor(this)"
+                    style="width: 100%; padding: 12px; border: 1px solid #444; color: rgba(0, 0, 0, 0.4); background: white; appearance: none;">
+                    <option value="">Availability</option>
+                    <option value="immediate" style="color: #000;">Immediate</option>
+                    <option value="1-week"style="color: #000;">1 week</option>
+                    <option value="1-month" style="color: #000;">1 month</option>
+                    <option value="more" style="color: #000;">More</option>
                 </select>
             </div>
             <div class="form-group">
                 <label for="preferredWorkStation">Preferred Work Station</label>
-                <select id="preferredWorkStation" required>
-                    <option value="">Preferred Work Station</option>
-                    <option value="">Remote</option>
-                    <option value="">On-site</option>
-                    <option value="">Hybrid</option>
-                    <!-- Add options as needed -->
+                <select id="preferredWorkStation" required onchange="updateColor(this)"
+                    style="width: 100%;  border: 1px solid #444; color: rgba(0, 0, 0, 0.4); background: white; appearance: none;">
+                    <option value="">Choose Work Station</option>
+                    <option value="remote" style="color: #000;">Remote</option>
+                    <option value="on-site" style="color: #000;">On-site</option>
+                    <option value="hybrid" style="color: #000;">Hybrid</option>
                 </select>
             </div>
         </div>
+        
         <div class="form-group-inline">
             <div class="form-group">
                 <label for="employmentType">Employment Type</label>
-                <select id="employmentType"required>
+                <select id="employmentType" required onchange="updateColor(this)"
+                    style="width: 100%; padding: 12px; border: 1px solid #444; color: rgba(0, 0, 0, 0.4); background: white; appearance: none;">
                     <option value="">Employment Type</option>
-                    <option value="">Full-time</option>
-                    <option value="">Part-time</option>
-                    <option value="">Contract</option>
-                    <option value="">Freelance</option>
-                    <option value="">Internship</option>
-                    <!-- Add options as needed -->
+                    <option value="full-time"style="color: #000;">Full-time</option>
+                    <option value="part-time"style="color: #000;">Part-time</option>
+                    <option value="contract" style="color: #000;">Contract</option>
+                    <option value="freelance"style="color: #000;">Freelance</option>
+                    <option value="internship"style="color: #000;">Internship</option>
                 </select>
             </div>
-            
+            <div class="form-group">
+                <label for="teamManaged">Team Managed</label>
+                <select id="teamManaged" required onchange="updateColor(this)"
+                    style="width: 100%; padding: 12px; border: 1px solid #444; color: rgba(0, 0, 0, 0.4); background: white; appearance: none;">
+                    <option value="">Team Managed</option>
+                    <option value="0-10"style="color: #000;">0-10 Members</option>
+                    <option value="10-50"style="color: #000;">10-50 Members</option>
+                    <option value="50-100"style="color: #000;">50-100 Members</option>
+                    <option value="100+"style="color: #000;">Over 100</option>
+                </select>
+            </div>
         </div>
 
         <h2 style="padding-top: 20px;">Other Details</h2>
         <div>
-<div style="margin-bottom: 10px; display: flex; justify-content: space-between;">
-    <label>1.Do you have experience managing a team?</label>
-    <div>
-        <input type="radio" name="team" id="teamYes"> <label for="teamYes">Yes</label>
-        <input type="radio" name="team" id="teamNo" > <label for="teamNo">No</label>
-    </div>
-</div>
-<div style="margin-bottom: 10px; display: flex; justify-content: space-between;">
-    <label>2.Would you be interested in relocation opportunities?</label>
+
+<div style="margin-bottom: 10px; display: flex; justify-content: space-between;padding-left: 20px;padding-right: 20px;">
+    <label>1.Would you be interested in relocation opportunities?</label>
     <div>
         <input type="radio" name="relocation" id="relocationYes"> <label for="relocationYes">Yes</label>
         <input type="radio" name="relocation" id="relocationNo" > <label for="relocationNo">No</label>
     </div>
 </div>
-<div style="margin-bottom: 10px; display: flex; justify-content: space-between;">
-    <label>3.Are you open to upskilling opportunities?</label>
+<div style="margin-bottom: 10px; display: flex; justify-content: space-between;padding-left: 20px;padding-right: 20px;">
+    <label>2.Are you open to upskilling opportunities?</label>
     <div>
         <input type="radio" name="upskilling" id="upskillingYes"> <label for="upskillingYes">Yes</label>
         <input type="radio" name="upskilling" id="upskillingNo" > <label for="upskillingNo">No</label>
     </div>
 </div>
-<div style="margin-bottom: 10px; display: flex; justify-content: space-between;">
-    <label>4.Are you open to working outside your current industry?</label>
+<div style="margin-bottom: 10px; display: flex; justify-content: space-between;padding-left: 20px;padding-right: 20px;">
+    <label>3.Are you open to working outside your current industry?</label>
     <div>
         <input type="radio" name="industry" id="industryYes"> <label for="industryYes">Yes</label>
         <input type="radio" name="industry" id="industryNo" > <label for="industryNo">No</label>
     </div>
 </div>
-<div style="margin-bottom: 10px; display: flex; justify-content: space-between;">
-    <label>5.Are you willing to work night shifts or weekends if required?</label>
+<div style="margin-bottom: 10px; display: flex; justify-content: space-between;padding-left: 20px;padding-right: 20px;">
+    <label>4.Are you willing to work night shifts or weekends if required?</label>
     <div>
         <input type="radio" name="nightShifts" id="nightShiftsYes"> <label for="nightShiftsYes">Yes</label>
         <input type="radio" name="nightShifts" id="nightShiftsNo" > <label for="nightShiftsNo">No</label>
     </div>
 </div>
-<div style="margin-bottom: 10px; display: flex; justify-content: space-between;">
-    <label>6.Do you have experience working in a startup environment?</label>
+<div style="margin-bottom: 10px; display: flex; justify-content: space-between;padding-left: 20px;padding-right: 20px;">
+    <label>5.Do you have experience working in a startup environment?</label>
     <div>
         <input type="radio" name="startup" id="startupYes"> <label for="startupYes">Yes</label>
         <input type="radio" name="startup" id="startupNo" > <label for="startupNo">No</label>
     </div>
 </div>
-<div style="margin-bottom: 10px; display: flex; justify-content: space-between;">
-    <label>7.Have you worked in a multinational company before?</label>
+<div style="margin-bottom: 10px; display: flex; justify-content: space-between;padding-left: 20px;padding-right: 20px;">
+    <label>6.Have you worked in a multinational company before?</label>
     <div>
         <input type="radio" name="multinational" id="multinationalYes"> <label for="multinationalYes">Yes</label>
         <input type="radio" name="multinational" id="multinationalNo" > <label for="multinationalNo">No</label>
     </div>
 </div>
-<div style="margin-bottom: 10px; display: flex; justify-content: space-between;">
-    <label>8.Do you have experience with remote work?</label>
+<div style="margin-bottom: 10px; display: flex; justify-content: space-between;padding-left: 20px;padding-right: 20px;padding-bottom: 30px;">
+    <label>7.Do you have experience with remote work?</label>
     <div>
         <input type="radio" name="remoteWork" id="remoteWorkYes"> <label for="remoteWorkYes">Yes</label>
         <input type="radio" name="remoteWork" id="remoteWorkNo" > <label for="remoteWorkNo">No</label>
     </div>
 </div>
         <!-- Repeat similar blocks for other questions -->
-        <div class="upload-section" style="border: 2px dashed black; padding: 10px; height: 90px; display: flex; justify-content: center; align-items: center; text-align: center;">
+        <div class="upload-section" style="border: 2px dashed black; padding: 20px; height: 80px; display: flex; justify-content: center; align-items: center; text-align: center; width: 95%; margin: 0 auto;">
             <p>Upload Your CV (PDF Only)</p>
         </div>
+        
+        
         
         <button class="submit-btn" style=" display: block; margin: auto;margin-top: 10px;width: 80%;height: 70px;">SUBMIT</button>
 
@@ -616,6 +644,14 @@ window.addEventListener('load', function() {
 });
 
     </script>
+
+
+        <script>
+    function updateColor(selectElement) {
+        selectElement.style.color = (selectElement.value === '') ? 'rgba(0, 0, 0, 0.4)' : 'black';
+    }
+</script>
+   
 </body>
 
 </html>
