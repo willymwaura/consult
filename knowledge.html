@@ -85,6 +85,9 @@
 
 <!-- Custom CSS to show background change on click and overlay effect -->
 <style>
+    body {
+        cursor: default !important;
+    }
     /* When the navbar toggle button is clicked, change the background color */
     .navbar-toggler.collapsed {
         background-color: black; /* Blue background on click */
@@ -233,6 +236,7 @@ input[type="radio"]:checked + label {
          
             margin-top: 20px;
             cursor:default !important;
+           
           
             
         }
@@ -242,7 +246,7 @@ input[type="radio"]:checked + label {
 /* Initially, no border */
 input:required,
 select:required  {
-    border: 2px solid transparent !important;
+    border: 2px solid rgba(0, 0, 0, 0.5) !important;
     outline: none !important;
    
 }
@@ -296,7 +300,7 @@ select:required.user-interacted:invalid {
         </div>
     </div>
 
-    <div style="background-color: white;padding-right: 6% !important;padding-left: 6% !important;padding-top: 30px;padding-bottom: 30px;">
+    <div style="background-color: white;padding-right: 6% !important;padding-left: 6% !important;padding-top: 40px;padding-bottom: 40px;">
     <div class="form-container" style="padding-top: 50px !important;background-color: white;">
         <h2 >Personal Details</h2>
         <div class="form-group-inline">
@@ -505,13 +509,16 @@ select:required.user-interacted:invalid {
     </div>
 </div>
         <!-- Repeat similar blocks for other questions -->
-        <div class="upload-section" style="border: 2px dashed black; padding: 20px; height: 80px; display: flex; justify-content: center; align-items: center; text-align: center; width: 95%; margin: 0 auto;">
+        <div class="upload-section" style="border: 2px dashed black; padding-top: 20px; height: 80px; display: flex; justify-content: center; align-items: center; text-align: center; width: 95%; margin: 0 auto;padding-bottom: 30px;">
             <p>Upload Your CV (PDF Only)</p>
+        </div>
+        
+        <div style="padding-bottom: 70px;padding-top: 20px;">
+            <button class="submit-btn" style=" display: block; margin: auto;margin-top: 10px;width: 80%;height: 70px;">SUBMIT</button>
         </div>
         
         
         
-        <button class="submit-btn" style=" display: block; margin: auto;margin-top: 10px;width: 80%;height: 70px;">SUBMIT</button>
 
         </div>
         </div>
