@@ -33,45 +33,38 @@
 <div>
    
     <!-- Topbar End -->
-    <div id="topBannerWrapper" style="overflow: hidden; position: relative; width: 100%; background-color: aquamarine; padding: 10px;">
+    <div id="topBannerWrapper" style="overflow: hidden; position: relative; width: 100%; background-color: aquamarine; padding: 10px; display: flex; align-items: center;">
+    
+        <!-- Fixed "READ MORE" Button -->
+        <button class="watch-now-btn" style="
+            background-color: #451885; 
+            color: white; 
+            border: none; 
+            padding: 10px 20px; 
+            margin-right: 10px; 
+            cursor: pointer;
+            position: relative;
+            z-index: 2;">
+            Annoucement
+        </button>
+    
+        <!-- Scrolling Text Wrapper -->
+        <div id="scrollingTextWrapper" style="flex: 1; overflow: hidden; position: relative; height: 30px;color: #000;">
+            <div id="scrollingText" style="
+                white-space: nowrap; 
+                position: absolute;">
+                <span>Learn how the power of social care and medical care partnerships are improving health equity.</span>
+            </div>
+        </div>
+    
+        <!-- Fixed Close Button -->
         <button class="close-btn" onclick="document.getElementById('topBannerWrapper').style.display = 'none';" 
             style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); 
                    background: none; border: none; color: black; font-size: 20px; cursor: pointer;">
             ✖
         </button>
-    
-        <div id="topBanner" style="
-            display: flex; 
-            align-items: center; 
-            position: relative; 
-            white-space: nowrap; 
-            width: max-content; 
-            animation: scrollBanner 10s linear infinite;">
-            
-            <button class="watch-now-btn" style="
-                background-color: #451885; 
-                color: white; 
-                border: none; 
-                padding: 10px 20px; 
-                margin-right: 10px; 
-                cursor: pointer;">
-                Annoucement
-            </button>
-    
-            <span style="color: black;">Learn how the power of social care and medical care partnerships are improving health equity.</span>
-        </div>
     </div>
     
-    <style>
-        @keyframes scrollBanner {
-            from {
-                transform: translateX(100%);
-            }
-            to {
-                transform: translateX(-100%);
-            }
-        }
-    </style>
     
     
 
@@ -570,8 +563,13 @@ body {
     </div>
 </div>
         <!-- Repeat similar blocks for other questions -->
-        <div class="upload-section" style="border: 2px dashed black;  height: 80px; display: flex; justify-content: center; align-items: center; text-align: center; width: 95%; margin: 0 auto;cursor: pointer !important;">
+        <div class="upload-section" style="border: 2px dashed black;  height: 80px; display: flex; justify-content: center; align-items: center; text-align: center; width: 95%; margin: 0 auto;cursor: pointer !important;padding-bottom: 20px;">
             <p>Upload Your CV (PDF Only)</p>
+        </div>
+
+        <div style="display: flex; align-items: center; justify-content: center; margin-top: 40px;">
+            <input type="checkbox" id="termsCheckbox" style="width: 20px; height: 20px; margin-right: 10px; cursor: pointer;">
+            <label for="termsCheckbox" style="font-size: 16px;">I accept the <a href="terms.html" style="color: blue; text-decoration: underline;">Terms and Conditions</a></label>
         </div>
         
         <div style="padding-bottom: 70px;padding-top: 20px;">
@@ -720,7 +718,39 @@ window.addEventListener('load', function() {
         selectElement.style.color = (selectElement.value === '') ? 'rgba(0, 0, 0, 0.4)' : 'black';
     }
 </script>
-   
+
+<script>
+    function startScrolling() {
+        const text = document.getElementById('scrollingText');
+        const button = document.querySelector('.watch-now-btn');
+        const wrapper = document.getElementById('scrollingTextWrapper');
+
+        function resetAndScroll() {
+            let textPos = window.innerWidth; // Start off-screen right
+            text.style.left = textPos + 'px';
+            text.style.display = 'block'; // Make sure it's visible
+
+            function moveText() {
+                textPos -= 1; // Adjust speed here
+                text.style.left = textPos + 'px';
+
+                // If text reaches the button, hide it and reset
+                if (text.getBoundingClientRect().right <= button.getBoundingClientRect().left) {
+                    text.style.display = 'none';
+                    setTimeout(resetAndScroll, 500); // Wait and restart
+                } else {
+                    requestAnimationFrame(moveText);
+                }
+            }
+
+            moveText();
+        }
+
+        resetAndScroll();
+    }
+
+    window.onload = startScrolling;
+</script>
 </body>
 
 </html>
