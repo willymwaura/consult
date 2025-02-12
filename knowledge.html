@@ -33,14 +33,47 @@
 <div>
    
     <!-- Topbar End -->
-    <div id="topBanner" style="background-color: aquamarine; color: black; padding: 10px; display: flex; justify-content: space-between; align-items: center; position: relative; z-index: 1000;">
-        <div style="display: flex; align-items: center; margin: 0 auto;">
-            <button class="watch-now-btn" style="background-color: #451885; color: white; border: none; padding: 10px 20px; margin-right: 10px; cursor: pointer;">READ MORE </button>
-            <span>Learn how the power of social care and medical care partnerships are improving health equity.</span>
+    <div id="topBannerWrapper" style="overflow: hidden; position: relative; width: 100%; background-color: aquamarine; padding: 10px;">
+        <button class="close-btn" onclick="document.getElementById('topBannerWrapper').style.display = 'none';" 
+            style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); 
+                   background: none; border: none; color: black; font-size: 20px; cursor: pointer;">
+            ✖
+        </button>
+    
+        <div id="topBanner" style="
+            display: flex; 
+            align-items: center; 
+            position: relative; 
+            white-space: nowrap; 
+            width: max-content; 
+            animation: scrollBanner 10s linear infinite;">
+            
+            <button class="watch-now-btn" style="
+                background-color: #451885; 
+                color: white; 
+                border: none; 
+                padding: 10px 20px; 
+                margin-right: 10px; 
+                cursor: pointer;">
+                Annoucement
+            </button>
+    
+            <span style="color: black;">Learn how the power of social care and medical care partnerships are improving health equity.</span>
         </div>
-        <button class="close-btn" onclick="document.getElementById('topBanner').style.display = 'none';" style="background: none; border: none; color: white; font-size: 20px; cursor: pointer;">✖</button>
     </div>
-
+    
+    <style>
+        @keyframes scrollBanner {
+            from {
+                transform: translateX(100%);
+            }
+            to {
+                transform: translateX(-100%);
+            }
+        }
+    </style>
+    
+    
 
     <!-- Navbar Start -->
   <!-- Navbar Start -->
@@ -310,15 +343,15 @@ body {
         <h2 >Personal Details</h2>
         <div class="form-group-inline">
             <div class="form-group">
-                <label for="firstName">First Name</label>
+                <label for="firstName" style="font-size: 18px;font-weight: bolder;">First Name</label>
                 <input type="text" id="firstName" placeholder="John" required >
             </div>
             <div class="form-group">
-                <label for="middleName">Middle Name</label>
+                <label for="middleName " style="font-size: 18px;font-weight: bolder;">Middle Name</label>
                 <input type="text" id="middleName" placeholder="Smith" required>
             </div>
             <div class="form-group">
-                <label for="lastName">Last Name</label>
+                <label for="lastName" style="font-size: 18px;font-weight: bolder;">Last Name</label>
                 <input type="text" id="lastName" placeholder="Doe" required 
                     style="padding-right: 10px; box-sizing: border-box; width: 100%;">
             </div>
@@ -327,11 +360,11 @@ body {
         </div>
         <div class="form-group-inline">
             <div class="form-group">
-                <label for="email">Email Address</label>
+                <label for="email" style="font-size: 18px;font-weight: bolder;">Email Address</label>
                 <input type="email" id="email" placeholder="@gmail.com" required>
             </div>
             <div class="form-group">
-                <label for="mobileNumber">Mobile Number</label>
+                <label for="mobileNumber" style="font-size: 18px;font-weight: bolder;">Mobile Number</label>
                 <input type="text" id="mobileNumber" placeholder="+254 700 000 000" required 
                     style="padding-right: 10px; box-sizing: border-box; width: 100%;">
             </div>
@@ -339,15 +372,15 @@ body {
         </div>
         <div class="form-group-inline">
             <div class="form-group">
-                <label for="nationality">Nationality</label>
+                <label for="nationality" style="font-size: 18px;font-weight: bolder;">Nationality</label>
                 <input type="text" id="nationality" required>
             </div>
             <div class="form-group">
-                <label for="location">Location</label>
+                <label for="location" style="font-size: 18px;font-weight: bolder;">Location</label>
                 <input type="text" id="location" required>
             </div>
             <div class="form-group" style="padding-top: 25px;">
-                <label>Gender</label>
+                <label style="font-size: 18px;font-weight: bolder;">Gender</label>
                 <div class="radio-group" style="padding-top: 6px;">
                     <input type="radio" id="male" name="gender" required>
                     <label for="male">Male</label>
@@ -359,7 +392,7 @@ body {
         <h2 style="padding-top: 20px;">Professional Experience</h2>
         <div class="form-group-inline">
             <div class="form-group">
-                <label for="experience">Experience</label>
+                <label for="experience" style="font-size: 18px;font-weight: bolder;">Experience</label>
                 <select id="experience" required onchange="updateColor(this)"
                     style="width: 100%; padding: 12px; border: 1px solid #444; color: rgba(0, 0, 0, 0.4); background: white; appearance: none;">
                     <option value="">Choose Experience</option>
@@ -373,7 +406,7 @@ body {
                 </div>
             </div>
             <div class="form-group">
-                <label for="highestEducation">Highest Education</label>
+                <label for="highestEducation" style="font-size: 18px;font-weight: bolder;">Highest Education</label>
                 <select id="highestEducation" required onchange="updateColor(this)"
                     style="width: 100%; padding: 12px; border: 1px solid #444; color: rgba(0, 0, 0, 0.4); background: white; appearance: none;">
                     <option value="">Select education</option>
@@ -388,7 +421,7 @@ body {
                 </div>
             </div>
             <div class="form-group">
-                <label for="currentJobLevel">Current Job Level</label>
+                <label for="currentJobLevel" style="font-size: 18px;font-weight: bolder;">Current Job Level</label>
                 <select id="currentJobLevel" required onchange="updateColor(this)"
                     style="width: 100%;padding: 12px; border: 1px solid #444; color: rgba(0, 0, 0, 0.4); background: white; appearance: none;right: 40px !important;">
                     <option value="">Select your job level</option>
@@ -408,7 +441,7 @@ body {
         <h2 style="padding-top: 20px;">Job Preferences</h2>
         <div class="form-group-inline">
             <div class="form-group">
-                <label for="salaryExpectation">Salary Expectation</label>
+                <label for="salaryExpectation" style="font-size: 18px;font-weight: bolder;">Salary Expectation</label>
                 <select id="salaryExpectation" required onchange="updateColor(this)"
                     style="width: 100%; padding: 12px; border: 1px solid #444; color: rgba(0, 0, 0, 0.4); background: white; appearance: none;">
                     <option value="">Salary Expectation</option>
@@ -425,7 +458,7 @@ body {
                 </div>
             </div>
             <div class="form-group">
-                <label for="availability">Availability</label>
+                <label for="availability" style="font-size: 18px;font-weight: bolder;">Availability</label>
                 <select id="availability" required onchange="updateColor(this)"
                     style="width: 100%; padding: 12px; border: 1px solid #444; color: rgba(0, 0, 0, 0.4); background: white; appearance: none;">
                     <option value="">Availability</option>
@@ -439,7 +472,7 @@ body {
                 </div>
             </div>
             <div class="form-group">
-                <label for="preferredWorkStation">Preferred Work Station</label>
+                <label for="preferredWorkStation" style="font-size: 18px;font-weight: bolder;">Preferred Work Station</label>
                 <select id="preferredWorkStation" required onchange="updateColor(this)"
                     style="width: 100%; padding: 12px; border: 1px solid #444; color: rgba(0, 0, 0, 0.4); background: white; appearance: none;">
                     <option value="">Choose Work Station</option>
@@ -455,7 +488,7 @@ body {
         
         <div class="form-group-inline">
             <div class="form-group">
-                <label for="employmentType">Employment Type</label>
+                <label for="employmentType" style="font-size: 18px;font-weight: bolder;">Employment Type</label>
                 <select id="employmentType" required onchange="updateColor(this)"
                     style="width: 100%; padding: 12px; border: 1px solid #444; color: rgba(0, 0, 0, 0.4); background: white; appearance: none;">
                     <option value="">Employment Type</option>
@@ -470,7 +503,7 @@ body {
                 </div>
             </div>
             <div class="form-group">
-                <label for="teamManaged">Team Managed</label>
+                <label for="teamManaged" style="font-size: 18px;font-weight: bolder;">Team Managed</label>
                 <select id="teamManaged" required onchange="updateColor(this)"
                     style="width: 100%; padding: 12px; border: 1px solid #444; color: rgba(0, 0, 0, 0.4); background: white; appearance: none;">
                     <option value="">Team Managed</option>
@@ -537,12 +570,12 @@ body {
     </div>
 </div>
         <!-- Repeat similar blocks for other questions -->
-        <div class="upload-section" style="border: 2px dashed black;  height: 80px; display: flex; justify-content: center; align-items: center; text-align: center; width: 95%; margin: 0 auto;">
+        <div class="upload-section" style="border: 2px dashed black;  height: 80px; display: flex; justify-content: center; align-items: center; text-align: center; width: 95%; margin: 0 auto;cursor: pointer !important;">
             <p>Upload Your CV (PDF Only)</p>
         </div>
         
         <div style="padding-bottom: 70px;padding-top: 20px;">
-            <button class="submit-btn" style="display: flex; justify-content: center; align-items: center; margin: auto; margin-top: 10px; width: 80%; height: 70px; font-size: 40px; font-weight: bold; text-align: center;">Submit</button>
+            <button class="submit-btn" style="display: flex; justify-content: center; align-items: center; margin: auto; margin-top: 10px; width: 80%; height: 70px; font-size: 40px; font-weight: bold; text-align: center;cursor: pointer !important;">Submit</button>
 
         </div>
         
