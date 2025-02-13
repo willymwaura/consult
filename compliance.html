@@ -33,13 +33,39 @@
 <div>
    
     <!-- Topbar End -->
-    <div id="topBanner" style="background-color: aquamarine; color: black; padding: 10px; display: flex; justify-content: space-between; align-items: center; position: relative; z-index: 1000;">
-        <div style="display: flex; align-items: center; margin: 0 auto;">
-            <button class="watch-now-btn" style="background-color: #451885; color: white; border: none; padding: 10px 20px; margin-right: 10px; cursor: pointer;">READ MORE</button>
-            <span>Learn how the power of social care and medical care partnerships are improving health equity.</span>
+     <!-- Topbar End -->
+     <div id="topBannerWrapper" style="overflow: hidden; position: relative; width: 100%; background-color: aquamarine; padding: 10px; display: flex; align-items: center;">
+    
+        <!-- Fixed "READ MORE" Button -->
+        <button class="watch-now-btn" style="
+            background-color: #451885; 
+            color: white; 
+            border: none; 
+            padding: 10px 20px; 
+            margin-right: 10px; 
+            cursor: pointer;
+            position: relative;
+            z-index: 2;">
+            Important Notice
+        </button>
+    
+        <!-- Scrolling Text Wrapper -->
+        <div id="scrollingTextWrapper" style="flex: 1; overflow: hidden; position: relative; height: 30px;color: #000;">
+            <div id="scrollingText" style="
+                white-space: nowrap; 
+                position: absolute;">
+                <span>Learn how the power of social care and medical care partnerships are improving health equity.</span>
+            </div>
         </div>
-        <button class="close-btn" onclick="document.getElementById('topBanner').style.display = 'none';" style="background: none; border: none; color: white; font-size: 20px; cursor: pointer;">✖</button>
+    
+        <!-- Fixed Close Button -->
+        <button class="close-btn" onclick="document.getElementById('topBannerWrapper').style.display = 'none';" 
+            style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); 
+                   background: none; border: none; color: black; font-size: 20px; cursor: pointer;">
+            ✖
+        </button>
     </div>
+
 
 
     <!-- Navbar Start -->
@@ -422,6 +448,7 @@
                 <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Careers</a>
                 <a class="text-secondary" href="contact.html"><i class="bi bi-arrow-right text-primary me-2"></i>Contact</a>
                 <a class="text-secondary" href="index.html#our-solutions"><i class="bi bi-arrow-right text-primary me-2"></i>Solutions</a>
+                <a class="text-secondary" href="terms.html"><i class="bi bi-arrow-right text-primary me-2"></i>Terms and condition</a>
             </div>
         </div>
         <div class="col-lg-3 col-md-6" >
@@ -522,6 +549,39 @@
         
         
                 </script>
+                
+<script>
+    function startScrolling() {
+        const text = document.getElementById('scrollingText');
+        const button = document.querySelector('.watch-now-btn');
+        const wrapper = document.getElementById('scrollingTextWrapper');
+
+        function resetAndScroll() {
+            let textPos = window.innerWidth; // Start off-screen right
+            text.style.left = textPos + 'px';
+            text.style.display = 'block'; // Make sure it's visible
+
+            function moveText() {
+                textPos -= 1; // Adjust speed here
+                text.style.left = textPos + 'px';
+
+                // If text reaches the button, hide it and reset
+                if (text.getBoundingClientRect().right <= button.getBoundingClientRect().left) {
+                    text.style.display = 'none';
+                    setTimeout(resetAndScroll, 500); // Wait and restart
+                } else {
+                    requestAnimationFrame(moveText);
+                }
+            }
+
+            moveText();
+        }
+
+        resetAndScroll();
+    }
+
+    window.onload = startScrolling;
+</script>
    
       
       
