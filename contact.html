@@ -131,6 +131,10 @@
         textarea:required:hover {
             border: 2px solid #451885 !important;
         }
+        input:required.user-interacted:invalid,
+textarea:required.user-interacted:invalid {
+    border: 2px solid red !important;
+}
         .submit-btn {
     background-color: #4b0082;
     color: white; /* Ensures text is visible */
@@ -145,6 +149,7 @@
 
 .submit-btn:hover {
     background-color: #1c032e;
+
 }
 
 
@@ -197,35 +202,34 @@
            
     <div style="display: flex;  background: #4b0082;  overflow: hidden; padding-left: 6%;padding-right: 6%;padding-top: 60px;padding-bottom: 59px;">
 
-        <!-- Form Section (Shifted Left) -->
-        <div style="background: #fff; padding: 20px; flex: 1; margin-right: 50px;">
-            <h2 style="margin-bottom: 10px;">Get in touch.</h2>
-           
-            <form>
-                <input type="text" placeholder="First Name " required style="width: 100%; padding: 10px; margin: 5px 0;">
-                <input type="text" placeholder="Last Name " required style="width: 100%; padding: 10px; margin: 5px 0; ;">
-                <input type="text" placeholder="Title " required style="width: 100%; padding: 10px; margin: 5px 0; ">
-                <input type="email" placeholder="Work Email " required style="width: 100%; padding: 10px; margin: 5px 0; ;">
-                <input type="text" placeholder="Company Name " required style="width: 100%; padding: 10px; margin: 5px 0; ">
-                <input type="tel" placeholder="Phone Number " required style="width: 100%; padding: 10px; margin: 5px 0; ">
-                <textarea placeholder="Comments " required style="width: 100%; padding: 10px; margin: 5px 0;height: 150px;"></textarea>
-                <div style="width: 100%; padding: 10px; margin: 5px 0;">
-                    <input type="checkbox" id="termsCheckbox" style="width: 20px; height: 20px; margin-right: 10px; cursor: pointer;"
-                        onclick="this.style.accentColor = '#4b0082';">
-                    <label for="termsCheckbox" style="font-size: 16px;">
-                        I accept the <a href="terms.html" style="color: blue; text-decoration: underline;">Terms and Conditions</a>
-                    </label>
-                </div>
-                <div>
-                    <button class="submit-btn">Submit</button>
-                </div>
-                
-                
-            </form>
+      <!-- Form Section (Centered and Reduced Width) -->
+<div style="background: #fff; padding: 20px; width: 30%; margin: 0 auto; text-align: center;">
+    <h2 style="margin-bottom: 10px;">Get in touch.</h2>
+
+    <form style="display: flex; flex-direction: column; align-items: center;">
+        <input type="text" placeholder="First Name" required style="width: 95%; padding: 10px; margin: 5px 0;">
+        <input type="text" placeholder="Last Name" required style="width: 95%; padding: 10px; margin: 5px 0;">
+        <input type="text" placeholder="Title" required style="width: 95%; padding: 10px; margin: 5px 0;">
+        <input type="email" placeholder="Work Email" required style="width: 95%; padding: 10px; margin: 5px 0;">
+        <input type="text" placeholder="Company Name" required style="width: 95%; padding: 10px; margin: 5px 0;">
+        <input type="tel" placeholder="Phone Number" required style="width: 95%; padding: 10px; margin: 5px 0;">
+        <textarea placeholder="Comments" required style="width: 95%; padding: 10px; margin: 5px 0; height: 150px;"></textarea>
+
+        <!-- Checkbox Section (Aligned with Input Fields) -->
+        <div style="width: 95%; display: flex; align-items: center; margin: 5px 0;">
+            <input type="checkbox" id="termsCheckbox" style="width: 20px; height: 20px; margin-right: 10px; cursor: pointer;accent-color:#4b0082 ;">
+            <label for="termsCheckbox" style="font-size: 16px; text-align: left;">
+                I accept the <a href="terms.html" style="color: blue; text-decoration: underline;">Terms and Conditions</a>
+            </label>
         </div>
 
+        <button class="submit-btn" style="width: 95%; padding: 10px; margin-top: 10px;">Submit</button>
+    </form>
+</div>
+
+
         <!-- Contact Info Section (Right) -->
-        <div style="background: #4b0082; color: white; padding: 20px; flex: 1; display: flex; flex-direction: column; justify-content: center;top: 10%;position: relative;top: -70px;">
+        <div style="background: #4b0082; color: white; padding-left: 100px; flex: 1; display: flex; flex-direction: column; justify-content: center;top: 10%;position: relative;top: -70px;">
             <h2 style="font-size: 50px;color: white;">Contact Freed.</h2>
             <p style="font-size: 22px;color: white;font-weight: bold;">If you’re interested in learning how Freed can help your organization or interested in joining our team, we’d love to hear from you.</p>
             <p style="display: flex; align-items: center;color: white;">
@@ -315,12 +319,15 @@
             <h3  style="color: #65CFE9;">Explore</h3>
             <div class="d-flex flex-column justify-content-start">
                 <a class="text-secondary mb-2" href="why.html"><i class="bi bi-arrow-right text-primary me-2"></i>Why Freed</a>
-                <a class="text-secondary mb-2" href="knowledge.html"><i class="bi bi-arrow-right text-primary me-2"></i>Knowledge Center</a>
                 <a class="text-secondary mb-2" href="company.html"><i class="bi bi-arrow-right text-primary me-2"></i>company</a>
+                <a class="text-secondary mb-2" href="knowledge.html"><i class="bi bi-arrow-right text-primary me-2"></i>Talents Portal</a>
+         
                 <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Careers</a>
-                <a class="text-secondary" href="contact.html"><i class="bi bi-arrow-right text-primary me-2"></i>Contact</a>
-                <a class="text-secondary" href="index.html#our-solutions"><i class="bi bi-arrow-right text-primary me-2"></i>Solutions</a>
-                <a class="text-secondary" href="terms.html"><i class="bi bi-arrow-right text-primary me-2"></i>Terms and condition</a>
+                <a class="text-secondary" href="contact.html"><i class="bi bi-arrow-right text-primary me-2"></i>Contact us</a>
+
+                <a class="text-secondary" href="terms.html"><i class="bi bi-arrow-right text-primary me-2"></i>Terms & condition</a>
+                
+                <a class="text-secondary" href="privacy.html"><i class="bi bi-arrow-right text-primary me-2"></i>Privacy Policy</a>
             </div>
         </div>
         <div class="col-lg-3 col-md-6"  >
