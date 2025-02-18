@@ -44,6 +44,7 @@
             margin-right: 10px; 
             cursor: pointer;
             position: relative;
+            border-radius: 5px;
             z-index: 2;">
             Important Notice
         </button>
@@ -151,6 +152,16 @@
         text-decoration-color: aquamarine;
         text-underline-offset: 8px;
     }
+    @media (max-width: 768px) {
+    .container {
+        padding-left: 10px !important; /* Remove large padding */
+        padding-right: 10px !important;
+        text-align: center !important; /* Center text */
+        align-items: center !important; /* Center flex items */
+    }
+}
+
+
  
 
 </style>
@@ -184,7 +195,7 @@
     border: 2px solid #65CFE9;
     padding: 10px 20px;
     font-weight: bold;
-    border-radius: 0px;
+    border-radius: 5px;
     background-color: transparent;">
     Book us
 </a>
@@ -291,7 +302,7 @@
                     <div class="position-relative h-100">
                         <img class="position-absolute w-100 h-100" 
                              src="https://www.freedassociates.com/wp-content/uploads/2021/07/photo_home_why-freed-1000x815.webp" 
-                             style="object-fit: cover;">
+                             style="object-fit: cover; border-radius: 5px;">
                     </div>
                 </div>
                 
@@ -338,14 +349,14 @@
   </div>
   <div class="mss" class="bg-secondary" style="padding-left: 6%;padding-right: 6%;"> <!-- Added padding to the main container -->
     <div class="row g-0">
-        <div class="col-12" style="height: 400px;"> <!-- Full screen height -->
+        <div class="col-12" style="height: 400px; border-radius: 5px;"> <!-- Full screen height -->
             <div class="position-relative h-100">
                 <img class="position-absolute w-100 h-100" 
                      src="https://www.carrellclinic.com/sites/carrellclinic.com/files/shoulder.jpg" 
-                     style="object-fit: cover; object-position: center;">
+                     style="object-fit: cover; object-position: center; border-top-right-radius: 5px;border-top-left-radius: 5px;">
             </div>
         </div>
-        <div class="container" style="background-color: #65CFE9; padding: 50px 10px;padding-left: 250px;"> <!-- Removed text-align: center -->
+        <div class="container" style="background-color: #65CFE9; padding: 50px 10px;padding-left: 250px;border-bottom-left-radius: 5px;border-bottom-right-radius: 5px;"> <!-- Removed text-align: center -->
             <p style="color: #6534ac; font-size: 14px; font-weight: bold; text-transform: uppercase; margin-bottom: 10px; text-align: left;">
                 Health Equity Consulting
             </p>
@@ -356,7 +367,7 @@
                 Discover how you can address health inequities with confidence and achieve measurable results.<br> Gain access to expert 
                 health equity insights, articles, case studies and more.
             </p>
-            <a href="#" style="display: inline-block; text-decoration: none; font-size: 16px; color: #6534ac; border: 2px solid #6534ac; padding: 10px 20px; font-weight: bold; border-radius: 0px; text-align: left;">
+            <a href="#" style="display: inline-block; text-decoration: none; font-size: 16px; color: #6534ac; border: 2px solid #6534ac; padding: 10px 20px; font-weight: bold; border-radius: 5px; text-align: left;">
                 Book us
             </a>
         </div>
@@ -371,7 +382,7 @@
   </div>
  
 <div style="display: flex; width: 100%; padding-left: 6%; background-color: #e0e0e0;padding-right: 6%;">
-    <div id="left-panel" style="flex: 1; background-color: #2c2c54; color: white; padding-left: 18px;padding-right: 18px;">
+    <div id="left-panel" style="flex: 1; background-color: #2c2c54; color: white; padding-left: 18px;padding-right: 18px;border-radius: 5px;">
        
         <h2 style="color: white; cursor: pointer;font-size: 25px;padding-top: 18px;" onclick="toggleSection('operations')" onmouseover="this.style.color='aquamarine';" onmouseout="this.style.color='white';">- Healthcare Operations Consulting</h2>
         <div id="operations" style="display: block; padding: 0 10px; margin: 0; transition: max-height 0.5s ease-out; overflow: hidden; max-height: 1000px;">
@@ -415,7 +426,7 @@
             <a href="consulting.html" style="color: #00d1b2; text-decoration: none; margin: 10px 0; display: block;">Learn More »</a>
         </div>
     </div>
-    <div style="flex: 1; background: url('https://www.freedassociates.com/wp-content/uploads/2021/07/photo_home_our-solutions-1000x967.webp') no-repeat center center; background-size: cover; position: relative;">
+    <div style="flex: 1; background: url('https://www.freedassociates.com/wp-content/uploads/2021/07/photo_home_our-solutions-1000x967.webp') no-repeat center center; background-size: cover; position: relative;border-radius: 5px;">
         
     </div>
 </div>
@@ -436,14 +447,14 @@
 
   <div style="display: flex; width: 100%; padding-left: 6%;background-color: #e0e0e0;padding-right: 6%; ">
     <!-- Left Section -->
-    <div style="flex: 1; background-color: #65CFE9; color: white;">
+    <div style="flex: 1; background-color: #65CFE9; color: white;border-radius: 5px;">
       <div >
         <img src="https://www.freedassociates.com/wp-content/uploads/2021/07/hero_we-are-freed-1400x1000.webp" alt="Team Member 1" style="width: 100%; height: 350px;">
       </div>
       <h2 style="font-size: 30px; margin-left: 30px;padding-top: 20px;">The Power of Partnership.</h2>
       <p style="font-size: 18px;color: #000;margin-left: 30px;">How do we strengthen collaborations between healthcare providers and community-based organizations to improve health?</p>
      
-      <a href="#" style="display: inline-block; text-decoration: none; font-size: 16px; color: #6534ac; border: 2px solid #6534ac; padding: 15px 25px; font-weight: bold; border-radius: 0px; margin-left: 30px;margin-bottom: 20px;">
+      <a href="#" style="display: inline-block; text-decoration: none; font-size: 16px; color: #6534ac; border: 2px solid #6534ac; padding: 15px 25px; font-weight: bold; border-radius: 5px; margin-left: 30px;margin-bottom: 20px;">
         Watch Now
     </a>
     </div>
@@ -451,7 +462,7 @@
     <!-- Right Section -->
     <div style="flex: 1;  background-color: #e0e0e0; margin-left: 20px; border-radius: 10px; ">
       <!-- Case Study Section -->
-      <div style="background-color: white !important; padding-left: 20px; margin-bottom: 20px; display: flex; align-items: center; gap: 20px; padding-right: 20px; height: 300px;">
+      <div style="background-color: white !important; padding-left: 20px; margin-bottom: 20px; display: flex; align-items: center; gap: 20px; padding-right: 20px; height: 300px;border-radius: 5px;">
         <div style="flex: 1;">
             <p style="color: #8a2be2; font-size: 18px; margin: 0 0 10px 0; font-weight: bolder;">CASE STUDY</p>
             <h3 style="font-size: 18px; margin: 0 0 10px 0;">Health Plan Improves Quality Scores with Freed Guidance</h3>
@@ -471,7 +482,7 @@
     </div>
   
       <!-- Point of View Section -->
-      <div style="background-color: white; padding-left: 20px; display: flex; align-items: center; gap: 20px;padding-right: 20px;height: 300px;">
+      <div style="background-color: white; padding-left: 20px; display: flex; align-items: center; gap: 20px;padding-right: 20px;height: 300px;border-radius: 5px;">
         <div style="flex: 1;">
           <p style="color: #8a2be2; font-size: 18px; margin: 0 0 10px 0;font-weight: bolder;">POINT OF VIEW</p>
           <h3 style="font-size: 18px;">Improving Healthcare Access by Reducing Transportation Barriers</h3>
@@ -502,7 +513,7 @@
 
   
   <div style="padding-left: 6%; background-color: #e0e0e0; padding-right: 6%;">
-    <div style="max-width: 1200px; margin: 0 auto; background-color: #65CFE9; padding: 30px; box-sizing: border-box; ">
+    <div style="max-width: 1200px; margin: 0 auto; background-color: #65CFE9; padding: 30px; box-sizing: border-box;border-radius: 5px; ">
         <form id="quotationForm">
             <div style="display: flex; flex-wrap: wrap; gap: 15px;">
                 <div style="flex: 1; min-width: 30%; position: relative;">
@@ -515,6 +526,7 @@
                                appearance: none; /* Hides default arrow */
                                background: white; /* Ensures background matches */
                                padding-right: 40px; /* Creates space for custom arrow */
+                               border-radius: 5px;
                                " 
                         onchange="this.style.color = (this.value === '') ? 'rgba(0, 0, 0, 0.4)' : 'black';">
                         <option value="">Select Service</option>
@@ -542,6 +554,7 @@
                                appearance: none; /* Hides default arrow */
                                background: white; /* Ensures background matches */
                                padding-right: 40px; /* Creates space for custom arrow */
+                               border-radius: 5px;
                                " 
                         onchange="this.style.color = (this.value === '') ? 'rgba(0, 0, 0, 0.4)' : 'black';">
                         <option value="">Select Size</option>
@@ -567,6 +580,7 @@
                                appearance: none; /* Hides default arrow */
                                background: white; /* Ensures background matches */
                                padding-right: 40px; /* Creates space for custom arrow */
+                               border-radius: 5px;
                                " 
                         onchange="this.style.color = (this.value === '') ? 'rgba(0, 0, 0, 0.4)' : 'black';">
                         <option value="">Select Number of Employees</option>
@@ -591,6 +605,7 @@
                                appearance: none; /* Hides default arrow */
                                background: white; /* Ensures background matches */
                                padding-right: 40px; /* Creates space for custom arrow */
+                               border-radius: 5px;
                                " 
                         onchange="this.style.color = (this.value === '') ? 'rgba(0, 0, 0, 0.4)' : 'black';">
                         <option value="">Select Years in Operation</option>
@@ -614,6 +629,7 @@
                                appearance: none; /* Hides default arrow */
                                background: white; /* Ensures background matches */
                                padding-right: 40px; /* Creates space for custom arrow */
+                               border-radius: 5px;
                                " 
                         onchange="this.style.color = (this.value === '') ? 'rgba(0, 0, 0, 0.4)' : 'black';">
                         <option value="">Select Scope</option>
@@ -671,8 +687,8 @@
           
             <form class="mx-auto">
                 <div class="input-group">
-                    <input type="text" class="form-control border-white p-3" placeholder="Your Email" style="border-radius: 0px;">
-                    <button class="btn btn-dark px-4 " style="color: #65CFE9;border-radius: 0px !important;" >Sign Up</button>
+                    <input type="text" class="form-control border-white p-3" placeholder="Your Email" style="border-top-left-radius: 5px;border-bottom-left-radius: 5px;">
+                    <button class="btn btn-dark px-4 " style="color: #65CFE9;border-top-right-radius: 5px;border-bottom-right-radius: 5px;" >Sign Up</button>
                     
                 </div>
                 <a href="https://www.linkedin.com" target="_blank" style="text-decoration: none; display: flex; align-items: center; gap: 5px;border-radius: 0px;padding-top: 10px;">
