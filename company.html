@@ -308,12 +308,30 @@
         </div>
     </div>
     
+
     <div style=" padding-top: 20px; background-color: white;padding-left: 6%;padding-right: 6%;padding-top: 60px;">
     
         <p style="font-size: 40px;left: 0%; color: rgb(22, 22, 68); font-weight: 900 !important; text-shadow: 1px 1px 0  rgb(22, 22, 68), -1px -1px 0  rgb(22, 22, 68), 1px -1px 0  rgb(22, 22, 68), -1px 1px 0  rgb(22, 22, 68);">
             About us 
         </p>
     </div>
+    <style>
+@media (max-width: 768px) {
+    .accordion-item {
+        flex-direction: column; /* Stack items vertically */
+    }
+
+    .accordion-title {
+        width: 100% !important; /* Make title full width */
+    }
+
+    .content-section {
+        width: 100% !important; /* Make content full width */
+        padding-left: 0 !important; /* Remove extra padding */
+    }
+}
+
+    </style>
  
 
 
@@ -418,6 +436,23 @@
 
         
     </div>
+    
+    <style>
+ @media screen and (max-width: 768px) {
+    div[style*="display: flex"] {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    div[style*="width: 20%"] {
+        width: 350px !important;  /* Increased width for better fit */
+        height: 350px; /* Keep the height as requested */
+        margin-bottom: 20px;
+    }
+}
+
+
+    </style>
 
 
    
@@ -540,6 +575,43 @@ onmouseout="this.style.backgroundColor='white';
         </p>
     </div>
 
+    <style>
+        @media screen and (max-width: 768px) {
+    /* Stack items vertically on smaller screens */
+    div[style*="display: flex"] {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Adjust card width and spacing */
+    .career-card {
+        width: 300px;  /* Set a fixed width */
+        height: auto;  /* Allow content to define height */
+        margin-bottom: 20px;  /* Add spacing between stacked cards */
+    }
+
+    /* Make images responsive */
+    .career-card img {
+        width: 100%;  
+        height: auto;
+    }
+
+    /* Center text content */
+    .overlay, .info-box {
+        text-align: center;
+    }
+
+    /* Adjust View More section */
+    .view-more {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+}
+
+    </style>
+
 
     <div style="display: flex; justify-content: space-around; background-color: white; padding-top: 30px; padding-left: 6%; padding-right: 6%;">
         <!-- Dava Freed's Card -->
@@ -612,15 +684,69 @@ onmouseout="this.style.backgroundColor='white';
       </div>
 
 
-        
+   
+      <style>
+@media screen and (max-width: 768px) {
+    .buttonss {
+        display: flex;
+        justify-content: flex-end; /* Move buttons to the right */
+        margin-top: 10px;
+    }
+
+    .testimonials-container {
+        display: flex;
+        flex-direction: column; /* Stack testimonials vertically */
+        align-items: center; /* Center testimonials */
+        overflow-y: auto;
+        max-height: 400px; /* Adjust height as needed */
+        width: 90%;
+        margin: auto;
+        scrollbar-width: thin;
+        scrollbar-color: rgba(0, 0, 0, 0.3) transparent;
+    }
+
+    .testimonials-container::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    .testimonials-container::-webkit-scrollbar-thumb {
+        background: rgba(0, 0, 0, 0.3);
+        border-radius: 5px;
+    }
+
+    .testimonials-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center testimonials */
+        gap: 20px; /* Adjust spacing between testimonials */
+    }
+
+    .testimonial-slide {
+        display: flex;
+        flex-direction: column; /* Stack testimonials vertically */
+        gap: 20px; /* Adjust spacing between testimonials */
+        align-items: center; /* Center testimonials */
+    }
+
+    .testimonial-box {
+        width: 300px !important; /* Increase width */
+        text-align: center; /* Center text */
+        padding: 15px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        background-color: rgb(22, 22, 68);
+    }
+}
+
+      </style>
    
 
       <div style="display: flex; align-items: center; justify-content: space-between; padding-top: 60px;padding-left:  6%; background-color: white;padding-right: 6%;padding-bottom: 20px;">
         <p style="font-size: 40px; color: rgb(22, 22, 68); font-weight: 900 !important; text-shadow: 1px 1px 0 rgb(22, 22, 68), -1px -1px 0 rgb(22, 22, 68), 1px -1px 0 rgb(22, 22, 68), -1px 1px 0 rgb(22, 22, 68); margin: 0;">
             Testimonials
         </p>
-        <div style="display: flex; gap: 10px;">
-            <button onclick="prevSlide()" style="border: 2px solid rgb(39, 39, 92); background-color: white; color: rgb(39, 39, 92); padding: 10px; cursor: pointer; display: flex; justify-content: center; align-items: center; width: 60px; height: 60px; box-sizing: border-box; border-radius: 0px; font-size: 24px;">←</button>
+        <div style="display: flex; gap: 10px; top: 0px;right: 0px;" >
+            <button class="buttonss" onclick="prevSlide()" style="border: 2px solid rgb(39, 39, 92); background-color: white; color: rgb(39, 39, 92); padding: 10px; cursor: pointer; display: flex; justify-content: center; align-items: center; width: 60px; height: 60px; box-sizing: border-box; border-radius: 0px; font-size: 24px;right: 0px;">←</button>
             <button onclick="nextSlide()" style="border: 2px solid rgb(39, 39, 92); background-color: white; color: rgb(39, 39, 92); padding: 10px; cursor: pointer; display: flex; justify-content: center; align-items: center; width: 60px; height: 60px; box-sizing: border-box; border-radius: 0px; font-size: 24px;">→</button>
         </div>
     </div>
@@ -658,7 +784,46 @@ onmouseout="this.style.backgroundColor='white';
         </div>
     </div>
     
+    <style>
+        /* Default (Large screens) - Maintain horizontal scrolling with 3 insights visible */
+        #insightsContainer {
+            display: flex;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+            white-space: nowrap;
+            gap: 20px;
+        }
     
+        .insight {
+            max-width: calc(100% / 3); /* Show exactly 3 insights */
+            flex-shrink: 0;
+        }
+    
+        /* Mobile (Small screens) - Show all images stacked vertically */
+        @media (max-width: 768px) {
+            #insightsContainer {
+                flex-direction: column;
+                overflow-x: visible; /* Remove horizontal scrolling */
+                height: auto !important;
+                white-space: normal;
+            }
+    
+            .insight {
+                min-width: 100% !important;
+                width: 100%;
+            }
+    
+            .insight img {
+                height: auto !important;
+                width: 100% !important;
+            }
+    
+            /* Hide navigation buttons on small screens */
+            .nav-button {
+                display: none !important;
+            }
+        }
+    </style>
 
     <div style="font-family: Arial, sans-serif; padding: 20px; background-color: white; position: relative; overflow: hidden;padding-left: 6%;padding-right: 6%;">
         <div style="display: flex; justify-content: space-between; align-items: center;padding-top: 30px;padding-top: 50px;">
@@ -669,7 +834,7 @@ onmouseout="this.style.backgroundColor='white';
             <!-- First Insight -->
             <div class="insight" style="min-width: 33.3%;">
                 <div style="position: relative;">
-                    <img src="https://www.freedassociates.com/wp-content/uploads/2024/08/news_great-place-to-work-2023_social-800x420.webp" alt="Insight 1" style="width: 100%; height: 220px; display: block;">
+                    <img src="https://www.freedassociates.com/wp-content/uploads/2024/08/news_great-place-to-work-2023_social-800x420.webp" alt="Insight 1" style="width: 100%; height: 220px; display: block;border-radius: 5px;">
                     <div style="position: absolute; top: 0px; left: 0px; background-color: #5c2d91; color: white; padding: 5px 10px; font-size: 12px;">AWARDS</div>
                 </div>
                 <h3 style="font-size: 16px; color: #1a1a1a; margin: 10px 0 5px;text-decoration: underline;">Once again, Fortune and Great Place to Work</h3>
@@ -677,7 +842,7 @@ onmouseout="this.style.backgroundColor='white';
             <!-- Second Insight -->
             <div class="insight" style="min-width: 33.3%;height: 200px !important;">
                 <div style="position: relative;">
-                    <img src="https://www.freedassociates.com/wp-content/uploads/2023/10/news_great-place-to-work-2024_featured-800x420.webp" alt="Insight 2" style="width: 100%;  display: block;height: 220px;">
+                    <img src="https://www.freedassociates.com/wp-content/uploads/2023/10/news_great-place-to-work-2024_featured-800x420.webp" alt="Insight 2" style="width: 100%;  display: block;height: 220px;border-radius: 5px;">
                     <div style="position: absolute; top: 0px; left: 0px;background-color: #5c2d91; color: white; padding: 5px 10px; font-size: 12px;">AWARDS</div>
                 </div>
                 <h3 style="font-size: 16px; color: #1a1a1a; margin: 10px 0 5px;text-decoration: underline;">
@@ -687,7 +852,7 @@ onmouseout="this.style.backgroundColor='white';
             <!-- Third Insight -->
             <div class="insight" style="min-width: 33.3%;">
                 <div style="position: relative;">
-                    <img src="https://www.freedassociates.com/wp-content/uploads/2023/03/news_sf-business-times_featured-800x420.webp" alt="Insight 3" style="width: 100%;  display: block;height: 220px;">
+                    <img src="https://www.freedassociates.com/wp-content/uploads/2023/03/news_sf-business-times_featured-800x420.webp" alt="Insight 3" style="width: 100%;  display: block;height: 220px;border-radius: 5px;">
                     <div style="position: absolute; top: 0px; left: 0px; background-color: #5c2d91; color: white; padding: 5px 10px; font-size: 12px;">AWARDS</div>
                 </div>
                 <h3 style="font-size: 16px; color: #1a1a1a; margin: 10px 0 5px;text-decoration: underline;">Four Vital Health Care Leadership Lessons</h3>
@@ -695,7 +860,7 @@ onmouseout="this.style.backgroundColor='white';
             <!-- Fourth Insight (Initially Hidden) -->
             <div class="insight" style="min-width: 33.3%;">
                 <div style="position: relative;">
-                    <img src="https://www.freedassociates.com/wp-content/uploads/2021/07/award_top-100-women-owned-business.webp" alt="Insight 4" style="width: 100%;  display: block;height: 220px;">
+                    <img src="https://www.freedassociates.com/wp-content/uploads/2021/07/award_top-100-women-owned-business.webp" alt="Insight 4" style="width: 100%;  display: block;height: 220px;border-radius: 5px;">
                     <div style="position: absolute; top: 0px; left: 0px; background-color: #5c2d91; color: white; padding: 5px 10px; font-size: 12px;">AWARDS</div>
                 </div>
                 <h3 style="font-size: 16px; color: #1a1a1a; margin: 10px 0 5px;text-decoration: underline;">Why Technology is Driving Change in the Health Sector</h3>
@@ -703,20 +868,24 @@ onmouseout="this.style.backgroundColor='white';
             <!-- Fifth Insight (Initially Hidden) -->
             <div class="insight" style="min-width: 33.3%;">
                 <div style="position: relative;">
-                    <img src="https://www.freedassociates.com/wp-content/uploads/2017/08/five_vital980-800x296.webp" alt="Insight 5" style="width: 100%; display: block;height: 220px;">
+                    <img src="https://www.freedassociates.com/wp-content/uploads/2017/08/five_vital980-800x296.webp" alt="Insight 5" style="width: 100%; display: block;height: 220px;border-radius: 5px;">
                     <div style="position: absolute;top: 0px; left: 0px; background-color: #5c2d91; color: white; padding: 5px 10px; font-size: 12px;">AWARDS</div>
                 </div>
                 <h3 style="font-size: 16px; color: #1a1a1a; margin: 10px 0 5px;text-decoration: underline;">Managing Change During Digital Transformation</h3>
             </div>
         </div>
-        <div style="position: absolute; top: 60px; right: 0px; display: flex; gap: 10px; align-items: center;padding-right: 6%;">
-            <button onclick="scrollInsights('left')" style="border: 2px solid rgb(39, 39, 92); background-color: white; padding: 10px; cursor: pointer; display: flex; justify-content: center; align-items: center; width: 60px; height: 60px; box-sizing: border-box; border-radius: 0px;font-size: 24px;">
-                ←
-            </button>
-            <button onclick="scrollInsights('right')" style="border: 2px solid rgb(39, 39, 92); background-color: white; color: rgb(39, 39, 92); padding: 10px; cursor: pointer; display: flex; justify-content: center; align-items: center; width: 60px; height: 60px; box-sizing: border-box; border-radius: 0px;font-size: 24px;">
-                →
-            </button>
-        </div>
+       
+            <div style="position: absolute; top: 60px; right: 0px; display: flex; gap: 10px; align-items: center;padding-right: 6%;"  >
+                <button class="nav-button onclick="scrollInsights('left')" style="border: 2px solid rgb(39, 39, 92); background-color: white; padding: 10px; cursor: pointer; display: flex; justify-content: center; align-items: center; width: 60px; height: 60px; box-sizing: border-box; border-radius: 5px;font-size: 24px;">
+                    ←
+                </button>
+                <button  class="nav-button"   onclick="scrollInsights('right')" style="border: 2px solid rgb(39, 39, 92); background-color: white; color: rgb(39, 39, 92); padding: 10px; cursor: pointer; display: flex; justify-content: center; align-items: center; width: 60px; height: 60px; box-sizing: border-box; border-radius: 5px;font-size: 24px;">
+                    →
+                </button>
+            </div>
+
+       
+
     </div> 
 
 

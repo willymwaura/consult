@@ -207,6 +207,23 @@
     </div>
 </div>
 
+<style>
+    @media (max-width: 768px) {
+        .accordion-item {
+            flex-direction: column; /* Stack items vertically */
+        }
+    
+        .accordion-title {
+            width: 100% !important; /* Make title full width */
+        }
+    
+        .content-section {
+            width: 100% !important; /* Make content full width */
+            padding-left: 0 !important; /* Remove extra padding */
+        }
+    }
+    
+        </style>
 
 
 
@@ -282,13 +299,50 @@
 
     </div>
 </div>
+<style>
+    /* Default (Large screens) - Maintain horizontal scrolling with 3 insights visible */
+    #insightsContainer {
+        display: flex;
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+        white-space: nowrap;
+        gap: 20px;
+    }
+
+    .insight {
+        max-width: calc(100% / 3); /* Show exactly 3 insights */
+        flex-shrink: 0;
+    }
+
+    /* Mobile (Small screens) - Show all images stacked vertically */
+    @media (max-width: 768px) {
+        #insightsContainer {
+            flex-direction: column;
+            overflow-x: visible; /* Remove horizontal scrolling */
+            height: auto !important;
+            white-space: normal;
+        }
+
+        .insight {
+            min-width: 100% !important;
+            width: 100%;
+        }
+
+        .insight img {
+            height: auto !important;
+            width: 100% !important;
+        }
+
+        /* Hide navigation buttons on small screens */
+        .nav-buttons {
+            display: none !important;
+        }
+    }
+</style>
 
 
 
-
-
-
-  <div style="font-family: Arial, sans-serif; padding: 20px; background-color: white; position: relative; overflow: hidden;padding-left: 6%;padding-right: 6%;">
+<div style="font-family: Arial, sans-serif; padding: 20px; background-color: white; position: relative; overflow: hidden;padding-left: 6%;padding-right: 6%;">
     <div style="display: flex; justify-content: space-between; align-items: center;padding-top: 30px;padding-top: 50px;">
         <h2 style="font-size: 40px; color: rgb(22, 22, 68); font-weight: 900 !important;  rgb(22, 22, 68), -1px -1px 0  rgb(22, 22, 68), 1px -1px 0  rgb(22, 22, 68), -1px 1px 0  rgb(22, 22, 68);">Related insights. &nbsp; <span style="font-size: 20px;text-decoration: underline;">Explore Knowledge Center</span></h2>
        
@@ -297,7 +351,7 @@
         <!-- First Insight -->
         <div class="insight" style="min-width: 33.3%;">
             <div style="position: relative;">
-                <img src="https://www.freedassociates.com/wp-content/uploads/2016/04/cs_change_mindfulness_710_2493-600x210.webp" alt="Insight 1" style="width: 100%; height: 220px; display: block;">
+                <img src="https://www.freedassociates.com/wp-content/uploads/2016/04/cs_change_mindfulness_710_2493-600x210.webp" alt="Insight 1" style="width: 100%; height: 220px; display: block;border-radius: 5px;">
                 <div style="position: absolute; top: 0px; left: 0px; background-color: #5c2d91; color: white; padding: 5px 10px; font-size: 12px;">POINT OF VIEW</div>
             </div>
             <h3 style="font-size: 16px; color: #1a1a1a; margin: 10px 0 5px;text-decoration: underline;">Adopt Mindfulness Principles to Help Facilitate Change</h3>
@@ -305,7 +359,7 @@
         <!-- Second Insight -->
         <div class="insight" style="min-width: 33.3%;height: 200px !important;">
             <div style="position: relative;">
-                <img src="https://www.freedassociates.com/wp-content/uploads/2017/08/five_vital980-800x296.webp" alt="Insight 2" style="width: 100%; height: auto; display: block;height: 220px;">
+                <img src="https://www.freedassociates.com/wp-content/uploads/2017/08/five_vital980-800x296.webp" alt="Insight 2" style="width: 100%; height: auto; display: block;height: 220px;border-radius: 5px;">
                 <div style="position: absolute; top: 0px; left: 0px;background-color: #5c2d91; color: white; padding: 5px 10px; font-size: 12px;">POINT OF VIEW</div>
             </div>
             <h3 style="font-size: 16px; color: #1a1a1a; margin: 10px 0 5px;text-decoration: underline;">Five Vital Steps for Large-Scale Health Care Project Success</h3>
@@ -313,7 +367,7 @@
         <!-- Third Insight -->
         <div class="insight" style="min-width: 33.3%;">
             <div style="position: relative;">
-                <img src="https://www.freedassociates.com/wp-content/uploads/2017/08/five_vital980-800x296.webp" alt="Insight 3" style="width: 100%; height: auto; display: block;height: 220px;">
+                <img src="https://www.freedassociates.com/wp-content/uploads/2017/08/five_vital980-800x296.webp" alt="Insight 3" style="width: 100%; height: auto; display: block;height: 220px;border-radius: 5px;">
                 <div style="position: absolute; top: 0px; left: 0px; background-color: #5c2d91; color: white; padding: 5px 10px; font-size: 12px;">POINT OF VIEW</div>
             </div>
             <h3 style="font-size: 16px; color: #1a1a1a; margin: 10px 0 5px;text-decoration: underline;">Four Vital Health Care Leadership Lessons</h3>
@@ -321,7 +375,7 @@
         <!-- Fourth Insight (Initially Hidden) -->
         <div class="insight" style="min-width: 33.3%;">
             <div style="position: relative;">
-                <img src="https://www.freedassociates.com/wp-content/uploads/2017/08/five_vital980-800x296.webp" alt="Insight 4" style="width: 100%; height: auto; display: block;height: 220px;">
+                <img src="https://www.freedassociates.com/wp-content/uploads/2017/08/five_vital980-800x296.webp" alt="Insight 4" style="width: 100%; height: auto; display: block;height: 220px;border-radius: 5px;">
                 <div style="position: absolute; top: 0px; left: 0px; background-color: #5c2d91; color: white; padding: 5px 10px; font-size: 12px;">POINT OF VIEW</div>
             </div>
             <h3 style="font-size: 16px; color: #1a1a1a; margin: 10px 0 5px;text-decoration: underline;">Why Technology is Driving Change in the Health Sector</h3>
@@ -329,17 +383,17 @@
         <!-- Fifth Insight (Initially Hidden) -->
         <div class="insight" style="min-width: 33.3%;">
             <div style="position: relative;">
-                <img src="https://www.freedassociates.com/wp-content/uploads/2017/08/five_vital980-800x296.webp" alt="Insight 5" style="width: 100%; height: auto; display: block;height: 220px;">
+                <img src="https://www.freedassociates.com/wp-content/uploads/2017/08/five_vital980-800x296.webp" alt="Insight 5" style="width: 100%; height: auto; display: block;height: 220px;border-radius: 5px;">
                 <div style="position: absolute;top: 0px; left: 0px; background-color: #5c2d91; color: white; padding: 5px 10px; font-size: 12px;">POINT OF VIEW</div>
             </div>
             <h3 style="font-size: 16px; color: #1a1a1a; margin: 10px 0 5px;text-decoration: underline;">Managing Change During Digital Transformation</h3>
         </div>
     </div>
-    <div style="position: absolute; top: 60px; right: 0px; display: flex; gap: 10px; align-items: center;padding-right: 6%;">
-        <button onclick="scrollInsights('left')" style="border: 2px solid rgb(39, 39, 92); background-color: white; padding: 10px; cursor: pointer; display: flex; justify-content: center; align-items: center; width: 60px; height: 60px; box-sizing: border-box; border-radius: 0px;font-size: 24px;">
+    <div class="nav-buttons"style="position: absolute; top: 60px; right: 0px; display: flex; gap: 10px; align-items: center;padding-right: 6%;">
+        <button onclick="scrollInsights('left')" style="border: 2px solid rgb(39, 39, 92); background-color: white; padding: 10px; cursor: pointer; display: flex; justify-content: center; align-items: center; width: 60px; height: 60px; box-sizing: border-box; border-radius: 5px;font-size: 24px;">
             ←
         </button>
-        <button onclick="scrollInsights('right')" style="border: 2px solid rgb(39, 39, 92); background-color: white; color: rgb(39, 39, 92); padding: 10px; cursor: pointer; display: flex; justify-content: center; align-items: center; width: 60px; height: 60px; box-sizing: border-box; border-radius: 0px;font-size: 24px;">
+        <button onclick="scrollInsights('right')" style="border: 2px solid rgb(39, 39, 92); background-color: white; color: rgb(39, 39, 92); padding: 10px; cursor: pointer; display: flex; justify-content: center; align-items: center; width: 60px; height: 60px; box-sizing: border-box; border-radius: 5px;font-size: 24px;">
             →
         </button>
     </div>
