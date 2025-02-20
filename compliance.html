@@ -33,39 +33,50 @@
 <div>
    
     <!-- Topbar End -->
-     <!-- Topbar End -->
-     <div id="topBannerWrapper" style="overflow: hidden; position: relative; width: 100%; background-color: aquamarine; padding: 10px; display: flex; align-items: center;">
+  <!-- Topbar End -->
+
+  <style>
+    @media (max-width: 768px) {
+    .important-notice-btn {
+        padding: 1px; /* Reduce padding */
+        font-size: 10px; /* Reduce font size */
+        border-radius: 3px; /* Adjust border radius */
+    }
+}
+
+  </style>
+  <div id="topBannerWrapper" style="overflow: hidden; position: relative; width: 100%; background-color: aquamarine; padding: 10px; display: flex; align-items: center;">
     
-        <!-- Fixed "READ MORE" Button -->
-        <button class="watch-now-btn" style="
-            background-color: #451885; 
-            color: white; 
-            border: none; 
-            padding: 10px 20px; 
-            margin-right: 10px; 
-            cursor: pointer;
-            border-radius: 5px;
-            position: relative;
-            z-index: 2;">
-            Important Notice
-        </button>
-    
-        <!-- Scrolling Text Wrapper -->
-        <div id="scrollingTextWrapper" style="flex: 1; overflow: hidden; position: relative; height: 30px;color: #000;">
-            <div id="scrollingText" style="
-                white-space: nowrap; 
-                position: absolute;">
-                <span>Learn how the power of social care and medical care partnerships are improving health equity.</span>
-            </div>
+    <!-- Fixed "READ MORE" Button -->
+    <button class="watch-now-btn important-notice-btn" style="
+        background-color: #451885; 
+        color: white; 
+        border: none; 
+        padding: 10px 20px; 
+        margin-right: 10px; 
+        cursor: pointer;
+        border-radius: 5px;
+        position: relative;
+        z-index: 2;">
+        Important Notice
+    </button>
+
+    <!-- Scrolling Text Wrapper -->
+    <div id="scrollingTextWrapper" style="flex: 1; overflow: hidden; position: relative; height: 30px;color: #000;">
+        <div id="scrollingText" style="
+            white-space: nowrap; 
+            position: absolute;">
+            <span>Learn how the power of social care and medical care partnerships are improving health equity.</span>
         </div>
-    
-        <!-- Fixed Close Button -->
-        <button class="close-btn" onclick="document.getElementById('topBannerWrapper').style.display = 'none';" 
-            style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); 
-                   background: none; border: none; color: black; font-size: 20px; cursor: pointer;">
-            ✖
-        </button>
     </div>
+
+    <!-- Fixed Close Button -->
+    <button class="close-btn" onclick="document.getElementById('topBannerWrapper').style.display = 'none';" 
+        style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); 
+               background: none; border: none; color: black; font-size: 20px; cursor: pointer;">
+        ✖
+    </button>
+</div>
 
 
 
